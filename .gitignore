@@ -1,0 +1,12 @@
+debug.log
+.idea/workspace.xml
+.idea/tasks.xml
+proj.win32/Debug.win32
+proj.win32/CrazyIQ.opensdf
+proj.win32/CrazyIQ.sdf
+proj.win32/CrazyIQ.v11.suo
+proj.android/assets
+proj.android/bin
+proj.android/gen
+proj.android/obj
+proj.android/libs
