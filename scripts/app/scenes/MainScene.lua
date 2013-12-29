@@ -4,9 +4,13 @@ local MainScene = class("MainScene", function()
 end)
 
 function MainScene:ctor()
-    ui.newTTFLabel({text = "Hello, World", size = 64, align = ui.TEXT_ALIGN_CENTER})
-        :pos(display.cx, display.cy)
-        :addTo(self)
+--    ui.newTTFLabel({text = "Hello, World", size = 64, align = ui.TEXT_ALIGN_CENTER})
+--        :pos(display.cx, display.cy)
+--        :addTo(self)
+
+    local layer = CCLayerColor:create(ccc4(192, 0, 0, 255))
+    self:addChild(layer);
+
 end
 
 function MainScene:onEnter()
