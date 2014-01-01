@@ -5,6 +5,8 @@
 #include "support/CCNotificationCenter.h"
 #include "CCLuaEngine.h"
 #include <string>
+#include "luabinding/ActionEaseExtension_luabinding.h"
+#include "luabinding/TransitionExtension_luabinding.h"
 
 using namespace std;
 using namespace cocos2d;
@@ -83,6 +85,10 @@ bool AppDelegate::applicationDidFinishLaunching()
     CCLOG("LOAD LUA FILE: %s", path.c_str());
     CCLOG("------------------------------------------------");
     pEngine->executeScriptFile(path.c_str());
+
+	lua_State* L = pStack->getLuaState();
+	luaopen_ActionEaseExtension_luabinding(L);
+	luaopen_TransitionExtension_luabinding(L);
 
     return true;
 }

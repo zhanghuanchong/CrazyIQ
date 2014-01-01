@@ -1,11 +1,3 @@
---
--- Created by IntelliJ IDEA.
--- User: Huanchong
--- Date: 12/29/13
--- Time: 5:07 PM
--- To change this template use File | Settings | File Templates.
---
-
 local SplashScene = class('SplashScene', function()
     return display.newScene('SplashScene')
 end)
@@ -32,7 +24,7 @@ function SplashScene:onEnter()
     })
     scheduler.performWithDelayGlobal(function()
         app:enterMenuScene()
-    end, 1.0)
+    end, 1.5)
 end
 
 return SplashScene

@@ -1,0 +1,25 @@
+$#include "../ext/CrazyIQ.h"
+$#include "../ext/TransitionExtension.h"
+$#include "tolua_fix.h"
+
+class CCTransitionMoveInBackR :
+	public CCTransitionMoveInR
+{
+public:
+	virtual CCActionInterval* easeActionWithAction(CCActionInterval * action);
+
+    static CCTransitionMoveInBackR* create(float t, CCScene* scene);
+};
+
+class CCTransitionMoveOutBackR :
+	public CCTransitionScene, public CCTransitionEaseScene
+{
+public:
+	virtual void sceneOrder();
+	virtual CCActionInterval* easeActionWithAction(CCActionInterval * action);
+
+	static CCTransitionMoveOutBackR* create(float t, CCScene* scene);
+
+	virtual void onEnter();
+
+};

@@ -7,6 +7,12 @@
     <Filter Include="win32">
       <UniqueIdentifier>{54d36d2c-b373-4c65-962b-76ff1fedc28b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="sources\ext">
+      <UniqueIdentifier>{9e1d990e-1bfe-4018-86e1-59e3eab0475d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sources\luabinding">
+      <UniqueIdentifier>{27a47f0b-e4e5-424a-9dae-12f8113be6ff}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -23,6 +29,18 @@
     </ClCompile>
     <ClCompile Include="crazyiq.cpp">
       <Filter>win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sources\ext\ActionEaseExtension.cpp">
+      <Filter>sources\ext</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sources\ext\TransitionExtension.cpp">
+      <Filter>sources\ext</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sources\luabinding\ActionEaseExtension_luabinding.cpp">
+      <Filter>sources\luabinding</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sources\luabinding\TransitionExtension_luabinding.cpp">
+      <Filter>sources\luabinding</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -46,6 +64,21 @@
     </ClInclude>
     <ClInclude Include="crazyiq.h">
       <Filter>win32</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sources\ext\ActionEaseExtension.h">
+      <Filter>sources\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sources\ext\CrazyIQ.h">
+      <Filter>sources\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sources\ext\TransitionExtension.h">
+      <Filter>sources\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sources\luabinding\ActionEaseExtension_luabinding.h">
+      <Filter>sources\luabinding</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sources\luabinding\TransitionExtension_luabinding.h">
+      <Filter>sources\luabinding</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
