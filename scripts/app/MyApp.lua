@@ -5,6 +5,7 @@ require("framework.shortcodes")
 require("framework.cc.init")
 scheduler = require("framework.scheduler")
 WoodScene = require("app.scenes.WoodScene")
+WoodButton = require('app.ui.WoodButton')
 
 local MyApp = class("MyApp", cc.mvc.AppBase)
 

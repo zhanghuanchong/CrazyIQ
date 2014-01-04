@@ -1,14 +1,17 @@
-local WoodButton = {}
+local WoodButton = class('WoodButton', function()
+    return CCMenuItemSprite:create()
+end)
 
 -- create bubble button
-function WoodButton.new(params)
+-- params: title, listener
+function WoodButton:ctor(params)
     params.image = 'image/btn.png'
     params.imageSelected = 'image/btnActive.png'
     params.imageDisabled = params.imageSelected
     params.sound = 'sound/click.mp3'
 
     local listener = params.listener
-    local button -- pre-reference
+    local button = self
 
     params.listener = function(tag)
         if params.prepare then
@@ -58,7 +61,6 @@ function WoodButton.new(params)
         end)
     end
 
-    button = ui.newImageMenuItem(params)
     if params.title then
         local pos = button:getContentSize()
         local label = ui.newTTFLabel{
@@ -66,13 +68,21 @@ function WoodButton.new(params)
             font = 'HOPE',
             size = 45,
             color = ez.COLOR_BROWN,
-            textAlign = ui.TEXT_ALIGN_CENTER,
-            x = pos.x * 0.5,
-            y = pos.y * 0.5
+            align = ui.TEXT_ALIGN_CENTER,
+            x = pos.width * 0.5,
+            y = pos.height * 0.55
         }
         button:addChild(label)
+        self.label = label
     end
-    return button
+end
+
+function WoodButton:selected()
+    self.label:setPositionY(pos.height * 0.5)
+end
+
+function WoodButton:unselected()
+    self.label:setPositionY(pos.height * 0.55)
 end
 
 return WoodButton

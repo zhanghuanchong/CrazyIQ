@@ -5,11 +5,27 @@ local MenuScene = class("MenuScene", function()
 end)
 
 function MenuScene:ctor()
---    local layer = display.newLayer()
     local logoLayer = LogoLayer.new()
     self:addChild(logoLayer)
-    logoLayer:setPosition(ccp(display.cx, display.height * 0.8))
+    logoLayer:setPosition(ccp(display.cx, display.height * 0.85))
     self.logoLayer = logoLayer
+
+    local titleSprite = display.newSprite("image/title.png")
+    self:addChild(titleSprite)
+    titleSprite:setPosition(ccp(display.cx, display.height * 0.67))
+    self.titleSprite = titleSprite
+
+    local btnStartGame = WoodButton.new{
+        title = "开始游戏",
+        listener = function()
+            print("Start game")
+        end
+    }
+    local mainMenu = ui.newMenu{btnStartGame }
+    self:addChild(mainMenu)
+    mainMenu:setPosition(ccp(display.cx, display.cy))
+    mainMenu:alignItemsVerticallyWithPadding(10)
+    self.mainMenu = mainMenu
 end
 
 function MenuScene:onEnterTransitionFinish()
