@@ -1,6 +1,6 @@
 /*
 ** Lua binding: TransitionExtension_luabinding
-** Generated automatically by tolua++-1.0.92 on 01/01/14 17:55:35.
+** Generated automatically by tolua++-1.0.92 on 01/05/14 09:33:36.
 */
 
 #ifndef __cplusplus

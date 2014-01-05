@@ -29,7 +29,6 @@ function MenuScene:ctor()
 end
 
 function MenuScene:onEnterTransitionFinish()
-    self.logoLayer:onEnterTransitionFinish()
 end
 
 function MenuScene:onExit()

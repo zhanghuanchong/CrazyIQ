@@ -1,13 +1,14 @@
 local WoodButton = class('WoodButton', function()
-    return CCMenuItemSprite:create()
+    local imageNormal = display.newSprite('image/btn.png')
+    local imageSelected = display.newSprite('image/btnActive.png')
+    local item = MenuItemSpriteExtension:create(imageNormal, imageSelected)
+    CCSpriteExtend.extend(item)
+    return item
 end)
 
 -- create bubble button
 -- params: title, listener
 function WoodButton:ctor(params)
-    params.image = 'image/btn.png'
-    params.imageSelected = 'image/btnActive.png'
-    params.imageDisabled = params.imageSelected
     params.sound = 'sound/click.mp3'
 
     local listener = params.listener
@@ -61,6 +62,16 @@ function WoodButton:ctor(params)
         end)
     end
 
+    self:registerScriptTapHandler(function(tag)
+        if params.sound then audio.playSound(params.sound) end
+        params.listener(tag)
+    end)
+
+    local x, y = params.x, params.y
+    local tag = params.tag
+    if x and y then item:setPosition(x, y) end
+    if tag then item:setTag(tag) end
+
     if params.title then
         local pos = button:getContentSize()
         local label = ui.newTTFLabel{
@@ -74,15 +85,15 @@ function WoodButton:ctor(params)
         }
         button:addChild(label)
         self.label = label
+
+        button:setSelectedCallback(function()
+            label:setPositionY(pos.height * 0.5)
+        end);
+
+        button:setUnselectedCallback(function()
+            label:setPositionY(pos.height * 0.55)
+        end)
     end
-end
-
-function WoodButton:selected()
-    self.label:setPositionY(pos.height * 0.5)
-end
-
-function WoodButton:unselected()
-    self.label:setPositionY(pos.height * 0.55)
 end
 
 return WoodButton

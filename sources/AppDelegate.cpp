@@ -7,6 +7,7 @@
 #include <string>
 #include "luabinding/ActionEaseExtension_luabinding.h"
 #include "luabinding/TransitionExtension_luabinding.h"
+#include "luabinding/MenuItemSpriteExtension_luabinding.h"
 
 using namespace std;
 using namespace cocos2d;
@@ -89,6 +90,7 @@ bool AppDelegate::applicationDidFinishLaunching()
 	lua_State* L = pStack->getLuaState();
 	luaopen_ActionEaseExtension_luabinding(L);
 	luaopen_TransitionExtension_luabinding(L);
+	luaopen_MenuItemSpriteExtension_luabinding(L);
 
     return true;
 }

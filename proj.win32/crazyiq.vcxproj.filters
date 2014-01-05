@@ -42,6 +42,15 @@
     <ClCompile Include="..\sources\luabinding\TransitionExtension_luabinding.cpp">
       <Filter>sources\luabinding</Filter>
     </ClCompile>
+    <ClCompile Include="..\sources\ext\Util.cpp">
+      <Filter>sources\ext</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sources\ext\MenuItemSpriteExtension.cpp">
+      <Filter>sources\ext</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sources\luabinding\MenuItemSpriteExtension_luabinding.cpp">
+      <Filter>sources\luabinding</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="resource.h">
@@ -78,6 +87,15 @@
       <Filter>sources\luabinding</Filter>
     </ClInclude>
     <ClInclude Include="..\sources\luabinding\TransitionExtension_luabinding.h">
+      <Filter>sources\luabinding</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sources\ext\Util.h">
+      <Filter>sources\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sources\ext\MenuItemSpriteExtension.h">
+      <Filter>sources\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sources\luabinding\MenuItemSpriteExtension_luabinding.h">
       <Filter>sources\luabinding</Filter>
     </ClInclude>
   </ItemGroup>

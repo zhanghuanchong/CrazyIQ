@@ -1,0 +1,16 @@
+$#include "../ext/Util.h"
+$#include "../ext/MenuItemSpriteExtension.h"
+$#include "tolua_fix.h"
+
+class MenuItemSpriteExtension :
+	public CCMenuItemSprite
+{
+public:
+	static MenuItemSpriteExtension* create(CCNode* normalSprite, CCNode* selectedSprite);
+	
+	void setSelectedCallback(LUA_FUNCTION callback);
+
+	void setUnselectedCallback(LUA_FUNCTION callback);
+
+};
+
