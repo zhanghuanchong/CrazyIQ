@@ -6,6 +6,7 @@ require("framework.cc.init")
 scheduler = require("framework.scheduler")
 WoodScene = require("app.scenes.WoodScene")
 WoodButton = require('app.ui.WoodButton')
+WoodSquare = require('app.ui.WoodSquare')
 
 local MyApp = class("MyApp", cc.mvc.AppBase)
 
@@ -15,6 +16,9 @@ end
 
 function MyApp:run()
     CCFileUtils:sharedFileUtils():addSearchPath("res/")
+
+    audio.preloadEffect("sound/click.mp3")
+
     self:enterScene("SplashScene")
 end
 
