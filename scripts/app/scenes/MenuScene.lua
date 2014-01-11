@@ -53,7 +53,7 @@ function MenuScene:ctor()
         image = 'image/setting.png',
         imageActive = 'image/settingActive.png',
         listener = function()
-            print("Setting")
+            self:showSettingLayer()
         end
     }
     local settingMenu = ui.newMenu{btnFavorite, btnSetting}
@@ -80,6 +80,21 @@ function MenuScene:onEnterTransitionFinish()
     } do
         self:easeIn(v, i * 0.1)
     end
+end
+
+function MenuScene:showSettingLayer()
+    local node = display:newNode()
+
+    local bgLayer = self:newWoodLayer()
+    bgLayer:addTo(node)
+
+    local backMenu, backButton = self:newBackMenu(function()
+        node:removeFromParent()
+    end)
+    node:addChild(backMenu)
+
+    self:addChild(node)
+    self:showBackButton(backMenu, backButton, true)
 end
 
 function MenuScene:onExit()

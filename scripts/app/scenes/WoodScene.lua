@@ -3,35 +3,42 @@ local WoodScene = class('WoodScene', function()
 end)
 
 function WoodScene:ctor()
-    local layer = display.newSprite('image/bgWood.jpg')
-    layer:setPosition(ccp(display.cx, display.cy))
+    local layer = self:newWoodLayer()
     layer:setZOrder(-1)
     layer:addTo(self)
+end
 
-    self.backButton = ui.newImageMenuItem{
+function WoodScene:newWoodLayer()
+    local layer = display.newSprite('image/bgWood.jpg')
+    layer:setPosition(ccp(display.cx, display.cy))
+    return layer
+end
+
+function WoodScene:newBackMenu(listener)
+    local backButton = ui.newImageMenuItem{
         image = 'image/back.png',
         imageSelected = 'image/backActive.png',
         x = 80,
         y = display.height - 80,
-        listener = function()
+        listener = listener or function()
             app:popWoodScene()
         end
     }
-    self.backButton:setScale(0.1)
+    backButton:setScale(0.1)
 
-    self.backMenu = ui.newMenu{self.backButton}
-    self.backMenu:setVisible(false)
-    self:addChild(self.backMenu)
+    local backMenu = ui.newMenu{backButton}
+    backMenu:setVisible(false)
+    return backMenu, backButton
 end
 
-function WoodScene:showBackButton(animation)
-    self.backMenu:setVisible(true)
+function WoodScene:showBackButton(backMenu, backButton, animation)
+    backMenu:setVisible(true)
     if animation then
-        transition.execute(self.backButton, CCScaleTo:create(0.3, 1), {
+        transition.execute(backButton, CCScaleTo:create(0.3, 1), {
             easing = 'backOut'
         })
     else
-        self.backButton:setScale(1)
+        backButton:setScale(1)
     end
 end
 
