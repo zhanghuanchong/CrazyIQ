@@ -16,4 +16,8 @@ function ez:newLabel(t)
     return ui.newTTFLabel(t)
 end
 
+function ez:playEffect()
+    
+end
+
 require("app.MyApp").new():run()

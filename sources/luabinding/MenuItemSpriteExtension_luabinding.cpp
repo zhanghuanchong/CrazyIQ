@@ -1,6 +1,6 @@
 /*
 ** Lua binding: MenuItemSpriteExtension_luabinding
-** Generated automatically by tolua++-1.0.92 on 01/05/14 09:33:36.
+** Generated automatically by tolua++-1.0.92 on 01/11/14 17:22:32.
 */
 
 #ifndef __cplusplus
@@ -13,7 +13,7 @@
 /* Exported function */
 TOLUA_API int  tolua_MenuItemSpriteExtension_luabinding_open (lua_State* tolua_S);
 
-#include "../ext/Util.h"
+#include "../ext/CrazyIQ.h"
 #include "../ext/MenuItemSpriteExtension.h"
 #include "tolua_fix.h"
 

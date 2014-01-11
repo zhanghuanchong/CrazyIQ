@@ -1,4 +1,4 @@
-$#include "../ext/Util.h"
+$#include "../ext/CrazyIQ.h"
 $#include "../ext/MenuItemSpriteExtension.h"
 $#include "tolua_fix.h"
 

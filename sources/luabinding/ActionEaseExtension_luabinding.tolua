@@ -6,13 +6,6 @@ class CCEaseCubicIn :
 	public CCActionEase
 {
 public:
-
-	virtual CCObject* copyWithZone( CCZone* pZone );
-
-	virtual void update( float time );
-
-	virtual CCActionInterval* reverse( void );
-
 	static CCEaseCubicIn* create(CCActionInterval *pAction);
 
 };
@@ -21,13 +14,6 @@ class CCEaseCubicOut :
 	public CCActionEase
 {
 public:
-
-	virtual CCObject* copyWithZone( CCZone* pZone );
-
-	virtual void update( float time );
-
-	virtual CCActionInterval* reverse( void );
-
 	static CCEaseCubicOut* create(CCActionInterval *pAction);
 
 };
@@ -36,13 +22,6 @@ class CCEaseCubicInOut :
 	public CCActionEase
 {
 public:
-
-	virtual CCObject* copyWithZone( CCZone* pZone );
-
-	virtual void update( float time );
-
-	virtual CCActionInterval* reverse( void );
-
 	static CCEaseCubicInOut* create(CCActionInterval *pAction);
 
 };
