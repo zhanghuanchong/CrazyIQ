@@ -73,6 +73,7 @@ function MenuScene:easeIn(node, delay)
 end
 
 function MenuScene:onEnterTransitionFinish()
+    ez.playBackgroundMusic("sound/bg.mp3", true)
     for i,v in ipairs{
         self.logoLayer,
         self.titleSprite,

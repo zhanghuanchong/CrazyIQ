@@ -16,8 +16,16 @@ end
 
 function MyApp:run()
     CCFileUtils:sharedFileUtils():addSearchPath("res/")
+    ez.init()
 
-    audio.preloadEffect("sound/click.mp3")
+    for k, v in pairs{
+        "bg",
+        "click",
+        "on",
+        "off"
+    } do
+        audio.preloadMusic("sound/"..v..".mp3")
+    end
 
     self:enterScene("SplashScene")
 end

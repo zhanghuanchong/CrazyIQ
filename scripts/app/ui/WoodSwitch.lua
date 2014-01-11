@@ -15,4 +15,15 @@ local WoodSwitch = class('WoodSwitch', function()
     )
 end)
 
+function WoodSwitch:setHandler(listener)
+    self:addHandleOfControlEvent(function()
+        listener()
+        if self:isOn() then
+            ez.playEffect("sound/on.mp3")
+        else
+            ez.playEffect("sound/off.mp3")
+        end
+    end, CCControlEventValueChanged)
+end
+
 return WoodSwitch
