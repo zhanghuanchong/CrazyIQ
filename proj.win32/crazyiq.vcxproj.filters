@@ -51,12 +51,6 @@
     <ClCompile Include="..\sources\luabinding\MenuItemSpriteExtension_luabinding.cpp">
       <Filter>sources\luabinding</Filter>
     </ClCompile>
-    <ClCompile Include="..\sources\ext\WoodSwitch.cpp">
-      <Filter>sources\ext</Filter>
-    </ClCompile>
-    <ClCompile Include="..\sources\luabinding\WoodSwitch_luabinding.cpp">
-      <Filter>sources\luabinding</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="resource.h">
@@ -102,12 +96,6 @@
       <Filter>sources\ext</Filter>
     </ClInclude>
     <ClInclude Include="..\sources\luabinding\MenuItemSpriteExtension_luabinding.h">
-      <Filter>sources\luabinding</Filter>
-    </ClInclude>
-    <ClInclude Include="..\sources\ext\WoodSwitch.h">
-      <Filter>sources\ext</Filter>
-    </ClInclude>
-    <ClInclude Include="..\sources\luabinding\WoodSwitch_luabinding.h">
       <Filter>sources\luabinding</Filter>
     </ClInclude>
   </ItemGroup>

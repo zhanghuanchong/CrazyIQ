@@ -93,6 +93,23 @@ function MenuScene:showSettingLayer()
     settingNode:setPosition(display.cx, display.height * 0.85)
     node:addChild(settingNode)
 
+    local logo = display.newSprite("image/logo_wood.png")
+    logo:setPosition(ccp(display.cx, display.cy))
+    node:addChild(logo)
+
+    for i, v in ipairs{
+        {text = "程序： Hans Zhang", y = 260},
+        {text = "美术： Ruth Wu", y = 180},
+        {text = "音乐： Frank Meacham", y = 100}
+    } do
+        ez:newLabel{
+            text = v.text,
+            align = ui.TEXT_ALIGN_CENTER,
+            x = display.cx,
+            y = v.y
+        }:addTo(node)
+    end
+
     local backMenu, backButton = self:newBackMenu(function()
         node:removeFromParent()
     end)
