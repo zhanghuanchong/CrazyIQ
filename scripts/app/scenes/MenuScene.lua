@@ -8,12 +8,12 @@ function MenuScene:ctor()
     -- add the title
     local logoLayer = LogoLayer.new()
     self:addChild(logoLayer)
-    logoLayer:setPosition(ccp(display.cx, display.height * 0.85))
+    logoLayer:setPosition(ccp(display.width * 1.5, display.height * 0.85))
     self.logoLayer = logoLayer
 
     local titleSprite = display.newSprite("image/title.png")
     self:addChild(titleSprite)
-    titleSprite:setPosition(ccp(display.cx, display.height * 0.67))
+    titleSprite:setPosition(ccp(display.width * 1.5, display.height * 0.67))
     self.titleSprite = titleSprite
 
     -- add the main menu
@@ -37,7 +37,7 @@ function MenuScene:ctor()
     }
     local mainMenu = ui.newMenu{btnStartGame, btnInvite, btnCoin}
     self:addChild(mainMenu)
-    mainMenu:setPosition(ccp(display.cx, display.height * 0.4))
+    mainMenu:setPosition(ccp(display.width * 1.5, display.height * 0.4))
     mainMenu:alignItemsVerticallyWithPadding(display.height * 0.04)
     self.mainMenu = mainMenu
 
@@ -58,12 +58,28 @@ function MenuScene:ctor()
     }
     local settingMenu = ui.newMenu{btnFavorite, btnSetting}
     self:addChild(settingMenu)
-    settingMenu:setPosition(ccp(display.cx, display.height * 0.1))
+    settingMenu:setPosition(ccp(display.width * 1.5, display.height * 0.1))
     settingMenu:alignItemsHorizontallyWithPadding(display.cx)
     self.settingMenu = settingMenu
 end
 
+function MenuScene:easeIn(node, delay)
+    node:setPositionX(display.width * 1.5);
+    transition.execute(node, CCMoveBy:create(0.6, ccp(-display.width, 0)), {
+        delay = delay,
+        easing = 'exponentialOut'
+    })
+end
+
 function MenuScene:onEnterTransitionFinish()
+    for i,v in ipairs{
+        self.logoLayer,
+        self.titleSprite,
+        self.mainMenu,
+        self.settingMenu
+    } do
+        self:easeIn(v, i * 0.1)
+    end
 end
 
 function MenuScene:onExit()
