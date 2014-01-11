@@ -111,12 +111,29 @@ function MenuScene:showSettingLayer()
     end
 
     local backMenu, backButton = self:newBackMenu(function()
-        node:removeFromParent()
+        transition.execute(node, CCMoveTo:create(0.5, ccp(display.width, 0)), {
+            easing = "backIn",
+            onComplete = function()
+                node:removeFromParent()
+                self.settingMenu:setEnabled(true)
+                self.mainMenu:setEnabled(true)
+            end
+        })
     end)
     node:addChild(backMenu)
 
+    node:setPositionX(display.width)
     self:addChild(node)
-    self:showBackButton(backMenu, backButton, true)
+
+    self.settingMenu:setEnabled(false)
+    self.mainMenu:setEnabled(false)
+
+    transition.execute(node, CCMoveTo:create(0.5, ccp(0, 0)), {
+        easing = "backOut",
+        onComplete = function()
+            self:showBackButton(backMenu, backButton, true)
+        end
+    })
 end
 
 function MenuScene:onExit()

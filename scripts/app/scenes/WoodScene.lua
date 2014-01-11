@@ -15,9 +15,9 @@ function WoodScene:newWoodLayer()
 end
 
 function WoodScene:newBackMenu(listener)
-    local backButton = ui.newImageMenuItem{
+    local backButton = WoodSquare.new{
         image = 'image/back.png',
-        imageSelected = 'image/backActive.png',
+        imageActive = 'image/backActive.png',
         x = 80,
         y = display.height - 80,
         listener = listener or function()
@@ -34,7 +34,7 @@ end
 function WoodScene:showBackButton(backMenu, backButton, animation)
     backMenu:setVisible(true)
     if animation then
-        transition.execute(backButton, CCScaleTo:create(0.3, 1), {
+        transition.execute(backButton, CCScaleTo:create(0.5, 1), {
             easing = 'backOut'
         })
     else

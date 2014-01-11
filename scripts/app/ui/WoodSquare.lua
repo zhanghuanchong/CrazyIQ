@@ -69,8 +69,8 @@ function WoodSquare:ctor(params)
 
     local x, y = params.x, params.y
     local tag = params.tag
-    if x and y then item:setPosition(x, y) end
-    if tag then item:setTag(tag) end
+    if x and y then self:setPosition(x, y) end
+    if tag then self:setTag(tag) end
 end
 
 return WoodSquare
