@@ -1,0 +1,11 @@
+$#include "../ext/Util.h"
+$#include "../ext/WoodSwitch.h"
+$#include "tolua_fix.h"
+
+class WoodSwitch :
+	public CCControlSwitch
+{
+public:
+	static WoodSwitch* create(LUA_FUNCTION nFuncID);
+};
+

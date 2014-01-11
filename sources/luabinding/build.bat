@@ -7,3 +7,4 @@ cd /d "%DIR%"
 call %MAKE_LUABINDING% -E CCOBJECTS=CCEaseCubicIn,CCEaseCubicOut,CCEaseCubicInOut -d %OUTPUT_DIR% ActionEaseExtension_luabinding.tolua
 call %MAKE_LUABINDING% -E CCOBJECTS=CCTransitionMoveInBackR,CCTransitionMoveOutBackR -d %OUTPUT_DIR% TransitionExtension_luabinding.tolua
 call %MAKE_LUABINDING% -E CCOBJECTS=MenuItemSpriteExtension -d %OUTPUT_DIR% MenuItemSpriteExtension_luabinding.tolua
+call %MAKE_LUABINDING% -E CCOBJECTS=WoodSwitch -d %OUTPUT_DIR% WoodSwitch_luabinding.tolua

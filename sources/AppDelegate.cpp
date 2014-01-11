@@ -5,9 +5,11 @@
 #include "support/CCNotificationCenter.h"
 #include "CCLuaEngine.h"
 #include <string>
+#include "ext/Util.h"
 #include "luabinding/ActionEaseExtension_luabinding.h"
 #include "luabinding/TransitionExtension_luabinding.h"
 #include "luabinding/MenuItemSpriteExtension_luabinding.h"
+#include "luabinding/WoodSwitch_luabinding.h"
 
 using namespace std;
 using namespace cocos2d;
@@ -91,6 +93,9 @@ bool AppDelegate::applicationDidFinishLaunching()
 	luaopen_ActionEaseExtension_luabinding(L);
 	luaopen_TransitionExtension_luabinding(L);
 	luaopen_MenuItemSpriteExtension_luabinding(L);
+	luaopen_WoodSwitch_luabinding(L);
+
+	Util::init();
 
     return true;
 }

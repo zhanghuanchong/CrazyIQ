@@ -16,9 +16,11 @@
     <ClCompile Include="..\sources\ext\TransitionExtension.cpp" />
     <ClCompile Include="..\sources\ext\Util.cpp" />
     <ClCompile Include="..\sources\ext\MenuItemSpriteExtension.cpp" />
+    <ClCompile Include="..\sources\ext\WoodSwitch.cpp" />
     <ClCompile Include="..\sources\luabinding\ActionEaseExtension_luabinding.cpp" />
     <ClCompile Include="..\sources\luabinding\MenuItemSpriteExtension_luabinding.cpp" />
     <ClCompile Include="..\sources\luabinding\TransitionExtension_luabinding.cpp" />
+    <ClCompile Include="..\sources\luabinding\WoodSwitch_luabinding.cpp" />
     <ClCompile Include="..\sources\SimulatorConfig.cpp" />
     <ClCompile Include="crazyiq.cpp" />
     <ClCompile Include="ProjectConfigDialog.cpp" />
@@ -31,9 +33,11 @@
     <ClInclude Include="..\sources\ext\TransitionExtension.h" />
     <ClInclude Include="..\sources\ext\Util.h" />
     <ClInclude Include="..\sources\ext\MenuItemSpriteExtension.h" />
+    <ClInclude Include="..\sources\ext\WoodSwitch.h" />
     <ClInclude Include="..\sources\luabinding\ActionEaseExtension_luabinding.h" />
     <ClInclude Include="..\sources\luabinding\MenuItemSpriteExtension_luabinding.h" />
     <ClInclude Include="..\sources\luabinding\TransitionExtension_luabinding.h" />
+    <ClInclude Include="..\sources\luabinding\WoodSwitch_luabinding.h" />
     <ClInclude Include="..\sources\SimulatorConfig.h" />
     <ClInclude Include="crazyiq.h" />
     <ClInclude Include="ProjectConfigDialog.h" />

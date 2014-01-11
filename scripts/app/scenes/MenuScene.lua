@@ -1,4 +1,5 @@
 local LogoLayer = require('app.ui.LogoLayer');
+local SettingNode = require('app.ui.SettingNode')
 
 local MenuScene = class("MenuScene", function()
     return WoodScene.new()
@@ -87,6 +88,10 @@ function MenuScene:showSettingLayer()
 
     local bgLayer = self:newWoodLayer()
     bgLayer:addTo(node)
+
+    local settingNode = SettingNode.new()
+    settingNode:setPosition(display.cx, display.height * 0.85)
+    node:addChild(settingNode)
 
     local backMenu, backButton = self:newBackMenu(function()
         node:removeFromParent()

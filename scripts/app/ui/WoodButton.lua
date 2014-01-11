@@ -74,11 +74,8 @@ function WoodButton:ctor(params)
 
     if params.title then
         local pos = button:getContentSize()
-        local label = ui.newTTFLabel{
+        local label = ez:newLabel{
             text = params.title,
-            font = 'HOPE',
-            size = 45,
-            color = ez.COLOR_BROWN,
             align = ui.TEXT_ALIGN_CENTER,
             x = pos.width * 0.5,
             y = pos.height * 0.55
