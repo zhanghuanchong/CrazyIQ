@@ -1,5 +1,5 @@
 local LogoLayer = require('app.ui.LogoLayer');
-local SettingNode = require('app.ui.SettingNode')
+local SettingNode = require('app.ui.menu.SettingNode')
 
 local MenuScene = class("MenuScene", function()
     return WoodScene.new()
