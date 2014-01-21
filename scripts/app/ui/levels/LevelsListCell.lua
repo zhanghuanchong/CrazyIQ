@@ -62,7 +62,7 @@ end
 function LevelsListCell:onTap(x, y)
     local button = self:checkButton(x, y)
     if button then
-        self:dispatchEvent({name = "onTapLevelIcon", levelIndex = button.levelIndex})
+--        self:dispatchEvent({name = "onTapLevelIcon", levelIndex = button.levelIndex})
     end
 end
 

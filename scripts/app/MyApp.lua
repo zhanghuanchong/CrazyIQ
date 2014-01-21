@@ -5,6 +5,7 @@ require("framework.shortcodes")
 require("framework.cc.init")
 scheduler = require("framework.scheduler")
 WoodScene = require("app.scenes.WoodScene")
+LevelsScene = require('app.scenes.LevelsScene')
 WoodButton = require('app.ui.WoodButton')
 WoodSquare = require('app.ui.WoodSquare')
 
@@ -31,7 +32,11 @@ function MyApp:run()
 end
 
 function MyApp:enterMenuScene()
-    self:enterScene('MenuScene', nil, 'fade', 0.5, display.COLOR_BLACK);
+    self:enterScene('MenuScene', nil, 'fade', 0.5, display.COLOR_BLACK)
+end
+
+function MyApp:enterLevelsScene()
+    self:enterScene('LevelsScene', nil, 'fade', 0.5, display.COLOR_BLACK)
 end
 
 function MyApp:pushWoodScene()

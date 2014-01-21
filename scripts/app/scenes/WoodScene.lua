@@ -34,7 +34,7 @@ end
 function WoodScene:showBackButton(backMenu, backButton, animation)
     backMenu:setVisible(true)
     if animation then
-        transition.execute(backButton, CCScaleTo:create(0.5, 1), {
+        transition.execute(backButton, CCScaleTo:create(0.3, 1), {
             easing = 'backOut'
         })
     else

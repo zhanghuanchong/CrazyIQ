@@ -21,7 +21,7 @@ function MenuScene:ctor()
     local btnStartGame = WoodButton.new{
         title = "开始游戏",
         listener = function()
-            print("Start game")
+            app:enterLevelsScene()
         end
     }
     local btnInvite = WoodButton.new{
