@@ -63,7 +63,7 @@ function WoodButton:ctor(params)
     end
 
     self:registerScriptTapHandler(function(tag)
-        if params.sound then ez.playEffect(params.sound) end
+        if params.sound then ez:playEffect(params.sound) end
         params.listener(tag)
     end)
 

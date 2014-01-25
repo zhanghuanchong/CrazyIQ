@@ -17,7 +17,7 @@ end
 
 function MyApp:run()
     CCFileUtils:sharedFileUtils():addSearchPath("res/")
-    ez.init()
+    ez:init()
 
     for k, v in pairs{
         "bg",
@@ -27,6 +27,9 @@ function MyApp:run()
     } do
         audio.preloadMusic("sound/"..v..".mp3")
     end
+
+    display.addSpriteFramesWithFile("image/levels.plist", "image/levels.png")
+    display.addSpriteFramesWithFile("image/levels_locked.plist", "image/levels_locked.png")
 
     self:enterScene("SplashScene")
 end

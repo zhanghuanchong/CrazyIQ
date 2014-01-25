@@ -22,13 +22,13 @@ function ez:newLabel(t)
     return ui.newTTFLabel(t)
 end
 
-function ez.playEffect(...)
+function ez:playEffect(...)
     if ez.isEffectEnabled then
         audio.playEffect(...)
     end
 end
 
-function ez.playBackgroundMusic(...)
+function ez:playBackgroundMusic(...)
     if ez.isBgMusicEnabled then
         audio.playBackgroundMusic(...)
     end

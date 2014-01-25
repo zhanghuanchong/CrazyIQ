@@ -19,7 +19,7 @@ function SettingNode:ctor()
         ez.userDefault:setBoolForKey("bgMusic", isOn)
         ez.isBgMusicEnabled = isOn
         if isOn then
-            ez.playBackgroundMusic("sound/bg.mp3", true)
+            ez:playBackgroundMusic("sound/bg.mp3", true)
         else
             audio.stopBackgroundMusic("sound/bg.mp3")
         end

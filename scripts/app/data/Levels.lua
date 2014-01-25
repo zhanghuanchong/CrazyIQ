@@ -1,13 +1,31 @@
 local Levels = {}
 
-Levels[1] = {}
-Levels[2] = {}
-Levels[3] = {}
-Levels[4] = {}
-Levels[5] = {}
-Levels[6] = {}
-Levels[7] = {}
-Levels[8] = {}
-Levels[9] = {}
+Levels[1] = {
+    title = '幼儿园'
+}
+Levels[2] = {
+    title = '小学'
+}
+Levels[3] = {
+    title = '初中'
+}
+Levels[4] = {
+    title = '高中'
+}
+Levels[5] = {
+    title = '大学'
+}
+Levels[6] = {
+    title = '研究生'
+}
+Levels[7] = {
+    title = '博士'
+}
+Levels[8] = {
+    title = '博士后'
+}
+Levels[9] = {
+    title = '院士'
+}
 
 return Levels
