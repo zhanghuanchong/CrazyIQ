@@ -4,7 +4,6 @@ local LevelsListCell = class("LevelsListCell", ScrollViewCell)
 
 function LevelsListCell:ctor(size, levelIndex, title)
     self.levelIcon = display.newSprite("#level_" .. levelIndex .. ".png", display.cx, display.height * .6)
-    self.levelIcon:setScale(2)
     self.levelIcon:setTouchEnabled(true)
     self.levelIcon:addTouchEventListener(function()
         jumpAnimate(self.levelIcon, function()

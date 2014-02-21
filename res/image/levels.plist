@@ -7,119 +7,119 @@
             <key>level_1.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,2},{128,128}}</string>
+                <string>{{2,2},{256,256}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{128,128}}</string>
+                <string>{{0,0},{256,256}}</string>
                 <key>sourceSize</key>
-                <string>{128,128}</string>
+                <string>{256,256}</string>
             </dict>
             <key>level_2.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{132,2},{128,128}}</string>
+                <string>{{260,2},{256,256}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{128,128}}</string>
+                <string>{{0,0},{256,256}}</string>
                 <key>sourceSize</key>
-                <string>{128,128}</string>
+                <string>{256,256}</string>
             </dict>
             <key>level_3.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{262,2},{128,128}}</string>
+                <string>{{518,2},{256,256}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{128,128}}</string>
+                <string>{{0,0},{256,256}}</string>
                 <key>sourceSize</key>
-                <string>{128,128}</string>
+                <string>{256,256}</string>
             </dict>
             <key>level_4.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,132},{128,128}}</string>
+                <string>{{2,260},{256,256}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{128,128}}</string>
+                <string>{{0,0},{256,256}}</string>
                 <key>sourceSize</key>
-                <string>{128,128}</string>
+                <string>{256,256}</string>
             </dict>
             <key>level_5.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{132,132},{128,128}}</string>
+                <string>{{260,260},{256,256}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{128,128}}</string>
+                <string>{{0,0},{256,256}}</string>
                 <key>sourceSize</key>
-                <string>{128,128}</string>
+                <string>{256,256}</string>
             </dict>
             <key>level_6.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{262,132},{128,128}}</string>
+                <string>{{518,260},{256,256}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{128,128}}</string>
+                <string>{{0,0},{256,256}}</string>
                 <key>sourceSize</key>
-                <string>{128,128}</string>
+                <string>{256,256}</string>
             </dict>
             <key>level_7.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,262},{128,128}}</string>
+                <string>{{2,518},{256,256}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{128,128}}</string>
+                <string>{{0,0},{256,256}}</string>
                 <key>sourceSize</key>
-                <string>{128,128}</string>
+                <string>{256,256}</string>
             </dict>
             <key>level_8.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{132,262},{128,128}}</string>
+                <string>{{260,518},{256,256}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{128,128}}</string>
+                <string>{{0,0},{256,256}}</string>
                 <key>sourceSize</key>
-                <string>{128,128}</string>
+                <string>{256,256}</string>
             </dict>
             <key>level_9.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{262,262},{128,128}}</string>
+                <string>{{518,518},{256,256}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{128,128}}</string>
+                <string>{{0,0},{256,256}}</string>
                 <key>sourceSize</key>
-                <string>{128,128}</string>
+                <string>{256,256}</string>
             </dict>
         </dict>
         <key>metadata</key>
@@ -129,9 +129,9 @@
             <key>realTextureFileName</key>
             <string>levels.png</string>
             <key>size</key>
-            <string>{512,512}</string>
+            <string>{1024,1024}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:f6d546bbb329d3fe45b292195b9d00b5:1/1$</string>
+            <string>$TexturePacker:SmartUpdate:f58f2f15d99796c58c41cbfa2beac253:1/1$</string>
             <key>textureFileName</key>
             <string>levels.png</string>
         </dict>

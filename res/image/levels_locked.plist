@@ -7,119 +7,119 @@
             <key>level_1_locked.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,2},{128,128}}</string>
+                <string>{{2,2},{256,256}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{128,128}}</string>
+                <string>{{0,0},{256,256}}</string>
                 <key>sourceSize</key>
-                <string>{128,128}</string>
+                <string>{256,256}</string>
             </dict>
             <key>level_2_locked.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{132,2},{128,128}}</string>
+                <string>{{260,2},{256,256}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{128,128}}</string>
+                <string>{{0,0},{256,256}}</string>
                 <key>sourceSize</key>
-                <string>{128,128}</string>
+                <string>{256,256}</string>
             </dict>
             <key>level_3_locked.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{262,2},{128,128}}</string>
+                <string>{{518,2},{256,256}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{128,128}}</string>
+                <string>{{0,0},{256,256}}</string>
                 <key>sourceSize</key>
-                <string>{128,128}</string>
+                <string>{256,256}</string>
             </dict>
             <key>level_4_locked.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,132},{128,128}}</string>
+                <string>{{2,260},{256,256}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{128,128}}</string>
+                <string>{{0,0},{256,256}}</string>
                 <key>sourceSize</key>
-                <string>{128,128}</string>
+                <string>{256,256}</string>
             </dict>
             <key>level_5_locked.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{132,132},{128,128}}</string>
+                <string>{{260,260},{256,256}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{128,128}}</string>
+                <string>{{0,0},{256,256}}</string>
                 <key>sourceSize</key>
-                <string>{128,128}</string>
+                <string>{256,256}</string>
             </dict>
             <key>level_6_locked.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{262,132},{128,128}}</string>
+                <string>{{518,260},{256,256}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{128,128}}</string>
+                <string>{{0,0},{256,256}}</string>
                 <key>sourceSize</key>
-                <string>{128,128}</string>
+                <string>{256,256}</string>
             </dict>
             <key>level_7_locked.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,262},{128,128}}</string>
+                <string>{{2,518},{256,256}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{128,128}}</string>
+                <string>{{0,0},{256,256}}</string>
                 <key>sourceSize</key>
-                <string>{128,128}</string>
+                <string>{256,256}</string>
             </dict>
             <key>level_8_locked.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{132,262},{128,128}}</string>
+                <string>{{260,518},{256,256}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{128,128}}</string>
+                <string>{{0,0},{256,256}}</string>
                 <key>sourceSize</key>
-                <string>{128,128}</string>
+                <string>{256,256}</string>
             </dict>
             <key>level_9_locked.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{262,262},{128,128}}</string>
+                <string>{{518,518},{256,256}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{128,128}}</string>
+                <string>{{0,0},{256,256}}</string>
                 <key>sourceSize</key>
-                <string>{128,128}</string>
+                <string>{256,256}</string>
             </dict>
         </dict>
         <key>metadata</key>
@@ -129,9 +129,9 @@
             <key>realTextureFileName</key>
             <string>levels_locked.png</string>
             <key>size</key>
-            <string>{512,512}</string>
+            <string>{1024,1024}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:bfc1f1faca904a50bcb792a05695ccd8:1/1$</string>
+            <string>$TexturePacker:SmartUpdate:c8f4e8a8c8663d0ca5c8833f7c6ed05f:1/1$</string>
             <key>textureFileName</key>
             <string>levels_locked.png</string>
         </dict>
