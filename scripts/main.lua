@@ -53,6 +53,10 @@ function ez:init()
     ez.isEffectEnabled = ez.userDefault:getBoolForKey("effect", true)
 end
 
+function ez:getCurrentLevel()
+    return ez.userDefault:getIntegerForKey('currentLevel', 1)
+end
+
 function ez:newLabel(t)
     t.font = t.font or 'HOPE';
     t.size = t.size or 45;
