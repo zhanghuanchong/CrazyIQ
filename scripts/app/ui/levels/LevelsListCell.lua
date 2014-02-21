@@ -7,14 +7,9 @@ function LevelsListCell:ctor(size, levelIndex, title)
     self.levelIcon:setScale(2)
     self.levelIcon:setTouchEnabled(true)
     self.levelIcon:addTouchEventListener(function()
-        local actions = CCArray:create()
-        actions:addObject(CCEaseSineIn:create(CCScaleTo:create(.5, 2.5)))
-        actions:addObject(CCEaseSineOut:create(CCScaleTo:create(.5, 2)))
-        transition.execute(self.levelIcon, CCSequence:create(actions), {
-            onComplete = function()
-                print('level'..levelIndex)
-            end
-        })
+        jumpAnimate(self.levelIcon, function()
+            print('level' .. levelIndex)
+        end)
     end)
     self:addChild(self.levelIcon)
 
