@@ -3,14 +3,21 @@ local ScrollViewCell = import(".ScrollViewCell")
 local LevelsListCell = class("LevelsListCell", ScrollViewCell)
 
 function LevelsListCell:ctor(size, levelIndex, title)
+    local disable = ez:getCurrentLevel() < levelIndex
+
     local function gotoLevel()
+        if disable then
+            return
+        end
         jumpAnimate(self.levelIcon, function()
+            ez:playEffect('sound/click.mp3')
             print('level' .. levelIndex)
+            app:enterGameScene()
         end)
     end
 
     local imageSuffix = ''
-    if ez:getCurrentLevel() < levelIndex then
+    if disable then
        imageSuffix = '_locked'
     end
 
@@ -29,6 +36,10 @@ function LevelsListCell:ctor(size, levelIndex, title)
     self.levelTitle:setTouchEnabled(true)
     self.levelTitle:addTouchEventListener(gotoLevel)
     self:addChild(self.levelTitle)
+
+    self.scoreLabel = ez:newLabel{
+        text = ''
+    }
 end
 
 return LevelsListCell

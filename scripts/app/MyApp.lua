@@ -6,6 +6,7 @@ require("framework.cc.init")
 scheduler = require("framework.scheduler")
 WoodScene = require("app.scenes.WoodScene")
 LevelsScene = require('app.scenes.LevelsScene')
+GameScene = require('app.scenes.GameScene')
 WoodButton = require('app.ui.WoodButton')
 WoodSquare = require('app.ui.WoodSquare')
 
@@ -30,6 +31,7 @@ function MyApp:run()
 
     display.addSpriteFramesWithFile("image/levels.plist", "image/levels.png")
     display.addSpriteFramesWithFile("image/levels_locked.plist", "image/levels_locked.png")
+    display.addSpriteFramesWithFile("image/game_scene.plist", "image/game_scene.png")
 
     self:enterScene("SplashScene")
 end
@@ -40,6 +42,10 @@ end
 
 function MyApp:enterLevelsScene()
     self:enterScene('LevelsScene', nil, 'fade', 0.5, display.COLOR_BLACK)
+end
+
+function MyApp:enterGameScene()
+    self:enterScene('GameScene', nil, 'fade', 0.5, display.COLOR_BLACK)
 end
 
 function MyApp:pushWoodScene()
