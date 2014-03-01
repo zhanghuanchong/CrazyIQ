@@ -1,42 +1,51 @@
+local BaseQuestion = import("app.ui.questions.BaseQuestion")
+
 local GameScene = class('GameScene', function()
     return WoodScene.new()
 end)
 
 function GameScene:ctor()
-    self.tipPaper = display.newSprite("#paper_" .. math.random(5) .. '.png')
-    self.tipPaper:setAnchorPoint(ccp(0.5, 1))
-    self:addChild(self.tipPaper)
-    self.tipPaper:setPosition(ccp(display.cx, display.height - 80))
+    self.top = display.newLayer()
+
+    local topBg = display.newSprite('image/bgWoodTop.png', display.cx, display.height - 45)
+    self.top:addChild(topBg)
 
     local pauseButton = WoodSquare.new{
-        image = 'image/pause.png',
-        imageActive = 'image/pauseActive.png',
-        x = 40,
-        y = display.height - 40,
+        image = 'image/back.png',
+        imageActive = 'image/backActive.png',
+        x = 45,
+        y = display.height - 45,
         listener = function()
-            app:enterPauseScene()
+--            app:enterPauseScene()
+            app:enterLevelsScene()
         end
     }
 
     local buyButton = WoodSquare.new{
         image = 'image/buy.png',
         imageActive = 'image/buyActive.png',
-        x = display.width - 40,
-        y = display.height - 40,
+        x = display.width - 45,
+        y = display.height - 45,
         listener = function()
         end
     }
 
     local topMenu = ui.newMenu{pauseButton, buyButton}
-    self:addChild(topMenu)
+    self.top:addChild(topMenu)
+
+    self.top:setPosition(ccp(0, 0))
+    self:addChild(self.top, 10)
+
+    local bqLayer = BaseQuestion.new()
+    self:addChild(bqLayer)
 end
 
 function GameScene:onEnterTransitionFinish()
     local count = 4
     for i = 1, count do
         local heart = display.newSprite('image/heart.png')
-        heart:setPosition(ccp(display.cx - (count / 2.0 + 0.5 - i) * 70, display.height - 40))
-        self:addChild(heart)
+        heart:setPosition(ccp(display.cx - (count / 2.0 + 0.5 - i) * 70, display.height - 45))
+        self.top:addChild(heart)
         heart:setScale(0.1)
         transition.execute(heart, CCScaleTo:create(0.3, 1), {
             easing = 'backOut',
