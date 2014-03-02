@@ -14,7 +14,7 @@ function BaseQuestion:ctor()
         align = ui.TEXT_ALIGN_CENTER,
         x = display.cx,
         y = height / 2 + 8,
-        size = 45
+        size = 40
     }
     self.tipText:setAnchorPoint(ccp(0.5, 0.5))
 
@@ -64,16 +64,15 @@ function BaseQuestion:hideTip(animation)
     end
 end
 
+function BaseQuestion:getAvailableHeight()
+    return display.height - 95 - self.tip:getContentSize().height
+end
+
 function BaseQuestion:onEnter()
 
 end
 
 function BaseQuestion:onEnterTransitionFinish()
-    self:setTip("请点击红色的按钮。\n请点击红色的按钮。\n请点击红色的按钮。\n请点击红色的按钮。", 30)
-    self:showTip(true)
---    scheduler.performWithDelayGlobal(function()
---         self:hideTip(true)
---    end, 1)
 end
 
 return BaseQuestion

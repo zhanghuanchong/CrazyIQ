@@ -1,4 +1,5 @@
 local BaseQuestion = import("app.ui.questions.BaseQuestion")
+local ClickRedBtnQuestion = import("app.ui.questions.ClickRedBtnQuestion")
 
 local GameScene = class('GameScene', function()
     return WoodScene.new()
@@ -36,7 +37,7 @@ function GameScene:ctor()
     self.top:setPosition(ccp(0, 0))
     self:addChild(self.top, 10)
 
-    local bqLayer = BaseQuestion.new()
+    local bqLayer = ClickRedBtnQuestion.new()
     self:addChild(bqLayer)
 end
 
