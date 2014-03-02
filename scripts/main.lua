@@ -61,6 +61,8 @@ function ez:newLabel(t)
     t.font = t.font or 'HOPE';
     t.size = t.size or 45;
     t.color = t.color or ez.COLOR_BROWN;
+    t.x = t.x or 0;
+    t.y = t.y or 0;
     return ui.newTTFLabel(t)
 end
 
