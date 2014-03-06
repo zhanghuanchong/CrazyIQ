@@ -49,6 +49,11 @@ function MyApp:enterGameScene()
     self:enterScene('GameScene', nil, 'fade', 0.5, display.COLOR_BLACK)
 end
 
+function MyApp:enterGameOverScene()
+--    self:enterScene('GameOverScene', nil, 'fade', 0.5, display.COLOR_BLACK)
+    self:enterScene('LevelsScene', nil, 'fade', 0.5, display.COLOR_BLACK)
+end
+
 function MyApp:enterPauseScene()
 
 end

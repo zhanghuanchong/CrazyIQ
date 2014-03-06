@@ -45,6 +45,7 @@ end
 
 function GameScene:onEnterTransitionFinish()
     local count = self.heartCount
+    self.hearts = {}
     for i = 1, count do
         local heart = display.newSprite('image/heart.png')
         heart:setPosition(ccp(display.cx - (count / 2.0 + 0.5 - i) * 70, display.height - 45))
@@ -54,6 +55,7 @@ function GameScene:onEnterTransitionFinish()
             easing = 'backOut',
             delay = 0.1 * (i - 1)
         })
+        table.insert(self.hearts, heart)
     end
 end
 
@@ -70,7 +72,21 @@ function GameScene:addModalLayer()
 end
 
 function GameScene:dieHeart()
-
+    if table.getn(self.hearts) == 1 then
+        app:enterGameOverScene()
+        return
+    end
+    local heart = table.remove(self.hearts)
+    transition.execute(heart, CCScaleTo:create(0.2, 0.1), {
+        easing = 'backIn',
+        onComplete = function()
+            heart:removeFromParent()
+            for i = 1, table.getn(self.hearts) do
+                local _heart = self.hearts[i]
+                transition.execute(_heart, CCMoveBy:create(0.2, ccp(35, 0)))
+            end
+        end
+    })
 end
 
 function GameScene:alertError()
