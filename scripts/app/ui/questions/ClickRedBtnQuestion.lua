@@ -9,9 +9,8 @@ function ClickRedBtnQuestion:ctor()
     self.btnGreen:setVisible(false)
     self.btnGreen:setTouchEnabled(true)
     self.btnGreen:addTouchEventListener(function()
-        jumpAnimate(self.btnGreen, function()
-
-        end)
+        self:alertError()
+        jumpAnimate(self.btnGreen)
     end)
     self:addChild(self.btnGreen)
 
@@ -19,9 +18,8 @@ function ClickRedBtnQuestion:ctor()
     self.btnRed:setVisible(false)
     self.btnRed:setTouchEnabled(true)
     self.btnRed:addTouchEventListener(function()
-        jumpAnimate(self.btnRed, function()
-
-        end)
+        ez:playEffect('sound/click.mp3')
+        jumpAnimate(self.btnRed)
     end)
     self:addChild(self.btnRed)
 end

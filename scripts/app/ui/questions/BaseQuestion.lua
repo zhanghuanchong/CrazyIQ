@@ -68,6 +68,11 @@ function BaseQuestion:getAvailableHeight()
     return display.height - 95 - self.tip:getContentSize().height
 end
 
+function BaseQuestion:alertError()
+    local scene = display.getRunningScene()
+    scene:alertError()
+end
+
 function BaseQuestion:onEnter()
 
 end
