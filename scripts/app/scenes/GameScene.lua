@@ -41,10 +41,12 @@ function GameScene:ctor()
     self.currentLevel = Levels[ez:getCurrentLevel()]
     self.questions = self.currentLevel['questions']
     self.currentQuestionIndex = 0
+--    for test
+    self.currentQuestionIndex = 2
 end
 
 function GameScene:gotoNextQuestion()
-    if self.currentQuestionIndex > 0 then
+    if self.currentQuestionIndex > 0 and self.currentQuestionLayer then
         self.currentQuestionLayer:removeFromParent()
     end
     self.currentQuestionIndex = self.currentQuestionIndex + 1

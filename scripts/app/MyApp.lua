@@ -34,7 +34,7 @@ function MyApp:run()
     display.addSpriteFramesWithFile("image/game_scene.plist", "image/game_scene.png")
     display.addSpriteFramesWithFile("image/buttons.plist", "image/buttons.png")
 
-    self:enterScene("SplashScene")
+    self:enterScene("GameScene")
 end
 
 function MyApp:enterMenuScene()
