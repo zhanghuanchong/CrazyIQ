@@ -74,23 +74,32 @@ function GameScene:onEnterTransitionFinish()
     self:gotoNextQuestion()
 end
 
-function GameScene:addModalLayer(param)
+function GameScene:newModalLayer(param)
     if param == nil then
         param = {}
     end
     local layer = display.newSprite()
     layer:setCascadeBoundingBox(CCRect(0, 0, display.width, display.height))
+    layer:setTouchEnabled(true)
+    layer:addTouchEventListener(function()
+        if param.listener then
+            param.listener(param.scope)
+        end
+        return true
+    end, false, -128, true)
+
+    return layer
+end
+
+function GameScene:addModalLayer(param)
+    if param == nil then
+        param = {}
+    end
+    local layer = self:newModalLayer(param)
     if param.zOrder == nil then
         param.zOrder = 100
     end
     self:addChild(layer, param.zOrder)
-    layer:setTouchEnabled(true)
-    layer:addTouchEventListener(function()
-        if param.listener then
-            param.listener()
-        end
-        return true
-    end, false, -128, true)
 
     return layer
 end

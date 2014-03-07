@@ -5,19 +5,19 @@ local BallPrepareQuestion = class('BallPrepareQuestion', function()
 end)
 
 function BallPrepareQuestion:ctor()
+    self:setTip("注意！！！ 点击任意处继续。")
+
     self.football_field = display.newSprite('image/football_field.png', display.cx, self:cy())
     self:addChild(self.football_field)
 
-    self:addModalLayer{
-        listener = function()
-            self:gotoNextQuestion()
-        end
+    self.layer = self:newModalLayer{
+        listener = function(scope)
+            scope.layer:removeFromParent()
+            scope:gotoNextQuestion()
+        end,
+        scope = self
     }
-end
-
-function BallPrepareQuestion:onEnterTransitionFinish()
-    self:setTip("注意！！！ 点击任意处继续。")
-    self:showTip(true)
+    self:addChild(self.layer)
 end
 
 return BallPrepareQuestion

@@ -1,19 +1,15 @@
 local ClickRedBtnQuestion = import("app.ui.questions.ClickRedBtnQuestion")
 local BallPrepareQuestion = import("app.ui.questions.BallPrepareQuestion")
+local BallQuestion = import("app.ui.questions.BallQuestion")
 
 local Levels = {}
 
 Levels[1] = {
     title = '幼儿园',
     questions = {
-        {
-            class = ClickRedBtnQuestion,
-            param = {}
-        },
-        {
-            class = BallPrepareQuestion,
-            param = {}
-        }
+        {class = ClickRedBtnQuestion},
+        {class = BallPrepareQuestion},
+        {class = BallQuestion}
     }
 }
 Levels[2] = {

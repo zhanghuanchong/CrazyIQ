@@ -65,7 +65,7 @@ function BaseQuestion:hideTip(animation)
 end
 
 function BaseQuestion:getAvailableHeight()
-    return display.height - 95 - self.tip:getContentSize().height
+    return display.height - 80 - self.tip:getContentSize().height
 end
 
 function BaseQuestion:cy()
@@ -82,16 +82,16 @@ function BaseQuestion:gotoNextQuestion()
     scene:gotoNextQuestion()
 end
 
-function BaseQuestion:addModalLayer(param)
+function BaseQuestion:newModalLayer(param)
     local scene = display.getRunningScene()
-    scene:addModalLayer(param)
+    return scene:newModalLayer(param)
 end
 
 function BaseQuestion:onEnter()
-
 end
 
 function BaseQuestion:onEnterTransitionFinish()
+    self:showTip(true)
 end
 
 return BaseQuestion
