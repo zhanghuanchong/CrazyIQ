@@ -1,8 +1,5 @@
 local Levels = import("app.data.Levels")
 
-local BaseQuestion = import("app.ui.questions.BaseQuestion")
-local ClickRedBtnQuestion = import("app.ui.questions.ClickRedBtnQuestion")
-
 local GameScene = class('GameScene', function()
     return WoodScene.new()
 end)
@@ -56,7 +53,7 @@ function GameScene:gotoNextQuestion()
         return
     end
     self.currentQuestion = self.questions[self.currentQuestionIndex]
-    self.currentQuestionLayer = ClickRedBtnQuestion.new()
+    self.currentQuestionLayer = self.currentQuestion.class.new()
     self:addChild(self.currentQuestionLayer)
 end
 
@@ -77,12 +74,21 @@ function GameScene:onEnterTransitionFinish()
     self:gotoNextQuestion()
 end
 
-function GameScene:addModalLayer()
+function GameScene:addModalLayer(param)
+    if param == nil then
+        param = {}
+    end
     local layer = display.newSprite()
     layer:setCascadeBoundingBox(CCRect(0, 0, display.width, display.height))
-    self:addChild(layer, 100)
+    if param.zOrder == nil then
+        param.zOrder = 100
+    end
+    self:addChild(layer, param.zOrder)
     layer:setTouchEnabled(true)
     layer:addTouchEventListener(function()
+        if param.listener then
+            param.listener()
+        end
         return true
     end, false, -128, true)
 

@@ -68,6 +68,10 @@ function BaseQuestion:getAvailableHeight()
     return display.height - 95 - self.tip:getContentSize().height
 end
 
+function BaseQuestion:cy()
+    return self:getAvailableHeight() / 2
+end
+
 function BaseQuestion:alertError()
     local scene = display.getRunningScene()
     scene:alertError()
@@ -76,6 +80,11 @@ end
 function BaseQuestion:gotoNextQuestion()
     local scene = display.getRunningScene()
     scene:gotoNextQuestion()
+end
+
+function BaseQuestion:addModalLayer(param)
+    local scene = display.getRunningScene()
+    scene:addModalLayer(param)
 end
 
 function BaseQuestion:onEnter()
