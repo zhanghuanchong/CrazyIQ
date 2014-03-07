@@ -1,7 +1,13 @@
 local Levels = {}
 
 Levels[1] = {
-    title = '幼儿园'
+    title = '幼儿园',
+    questions = {
+        {
+            class = 'ClickRedBtn',
+            param = {}
+        }
+    }
 }
 Levels[2] = {
     title = '小学'

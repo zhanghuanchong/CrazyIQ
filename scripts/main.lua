@@ -78,4 +78,12 @@ function ez:playBackgroundMusic(...)
     end
 end
 
+function ez:getHeartCount()
+    return ez.userDefault:getIntegerForKey('heartCount', 4)
+end
+
+function ez:setHeartCount(count)
+    ez.userDefault:setIntegerForKey('heartCount', count)
+end
+
 require("app.MyApp").new():run()

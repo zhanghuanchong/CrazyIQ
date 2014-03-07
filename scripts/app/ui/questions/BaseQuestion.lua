@@ -73,6 +73,11 @@ function BaseQuestion:alertError()
     scene:alertError()
 end
 
+function BaseQuestion:gotoNextQuestion()
+    local scene = display.getRunningScene()
+    scene:gotoNextQuestion()
+end
+
 function BaseQuestion:onEnter()
 
 end

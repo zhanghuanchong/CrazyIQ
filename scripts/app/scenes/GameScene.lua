@@ -1,3 +1,5 @@
+local Levels = import("app.data.Levels")
+
 local BaseQuestion = import("app.ui.questions.BaseQuestion")
 local ClickRedBtnQuestion = import("app.ui.questions.ClickRedBtnQuestion")
 
@@ -8,7 +10,7 @@ end)
 function GameScene:ctor()
     self.top = display.newLayer()
 
-    self.heartCount = 4
+    self.heartCount = ez:getHeartCount()
 
     local topBg = display.newSprite('image/bgWoodTop.png', display.cx, display.height - 45)
     self.top:addChild(topBg)
@@ -39,8 +41,23 @@ function GameScene:ctor()
     self.top:setPosition(ccp(0, 0))
     self:addChild(self.top, 10)
 
-    local bqLayer = ClickRedBtnQuestion.new()
-    self:addChild(bqLayer)
+    self.currentLevel = Levels[ez:getCurrentLevel()]
+    self.questions = self.currentLevel['questions']
+    self.currentQuestionIndex = 0
+end
+
+function GameScene:gotoNextQuestion()
+    if self.currentQuestionIndex > 0 then
+        self.currentQuestionLayer:removeFromParent()
+    end
+    self.currentQuestionIndex = self.currentQuestionIndex + 1
+    if self.currentQuestionIndex > table.getn(self.questions) then
+        app:enterLevelClearScene()
+        return
+    end
+    self.currentQuestion = self.questions[self.currentQuestionIndex]
+    self.currentQuestionLayer = ClickRedBtnQuestion.new()
+    self:addChild(self.currentQuestionLayer)
 end
 
 function GameScene:onEnterTransitionFinish()
@@ -57,6 +74,7 @@ function GameScene:onEnterTransitionFinish()
         })
         table.insert(self.hearts, heart)
     end
+    self:gotoNextQuestion()
 end
 
 function GameScene:addModalLayer()
