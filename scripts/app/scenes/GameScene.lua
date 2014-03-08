@@ -5,6 +5,8 @@ local GameScene = class('GameScene', function()
 end)
 
 function GameScene:ctor()
+    ez.gameScene = self
+
     self.top = display.newLayer()
 
     self.heartCount = ez:getHeartCount()
@@ -42,7 +44,7 @@ function GameScene:ctor()
     self.questions = self.currentLevel['questions']
     self.currentQuestionIndex = 0
 --    for test
-    self.currentQuestionIndex = 1
+    self.currentQuestionIndex = 3
 end
 
 function GameScene:gotoNextQuestion()
@@ -132,7 +134,7 @@ function GameScene:alertError()
 
     local layer = self:addModalLayer()
 
-    transition.execute(warning, CCMoveTo:create(0.3, ccp(display.cx, display.cy)), {
+    transition.execute(warning, CCMoveTo:create(0.2, ccp(display.cx, display.cy)), {
         easing = 'backOut',
         onComplete = function()
             ez:playEffect('sound/error.mp3')

@@ -21,7 +21,7 @@ function LevelsListCell:ctor(size, levelIndex, title)
        imageSuffix = '_locked'
     end
 
-    self.levelIcon = display.newSprite("#level_" .. levelIndex .. imageSuffix .. ".png", display.cx, display.height * .65)
+    self.levelIcon = display.newSprite("#level_" .. levelIndex .. imageSuffix .. ".png", display.cx, display.height * .6)
     self.levelIcon:setTouchEnabled(true)
     self.levelIcon:addTouchEventListener(gotoLevel)
     self:addChild(self.levelIcon)
@@ -30,7 +30,7 @@ function LevelsListCell:ctor(size, levelIndex, title)
         text = title,
         align = ui.TEXT_ALIGN_CENTER,
         x = display.cx,
-        y = display.height * 0.45,
+        y = display.height * 0.4,
         size = 60
     }
     self.levelTitle:setTouchEnabled(true)

@@ -7,25 +7,28 @@ end)
 function BallQuestion:ctor()
     self:setTip("请选择正确的球。")
 
+    local height = self:getAvailableHeight()
+
     display.addSpriteFramesWithFile("image/balls.plist", "image/balls.png")
-    local balls = {'football', 'baseball', 'basketball', 'rugby', 'tennis', 'volleyball' }
-    for i = 1, #balls do
-        local ball = display.newSprite("#"..balls[i]..'.png',
+    local items = {'football', 'baseball', 'basketball', 'rugby', 'tennis', 'volleyball' }
+
+    for i = 1, #items do
+        local item = display.newSprite("#"..items[i]..'.png',
             display.width * (math.floor((i - 1) / 3) * 2 + 1) / 4,
-            self:getAvailableHeight() * (math.abs(3 - i) % 3 + 1) / 4
+            height * (math.abs(3 - i) % 3 + 1) / 4
         )
-        ball.name = balls[i]
-        ball:setTouchEnabled(true)
-        ball:addTouchEventListener(function()
-            jumpAnimate(ball, function()
-                if ball.name == 'basketball' then
+        item.name = items[i]
+        item:setTouchEnabled(true)
+        item:addTouchEventListener(function()
+            jumpAnimate(item, function()
+                if item.name == 'basketball' then
                     self:gotoNextQuestion()
                 else
                     self:alertError()
                 end
             end)
         end)
-        self:addChild(ball)
+        self:addChild(item)
     end
 end
 

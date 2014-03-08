@@ -73,18 +73,15 @@ function BaseQuestion:cy()
 end
 
 function BaseQuestion:alertError()
-    local scene = display.getRunningScene()
-    scene:alertError()
+    ez.gameScene:alertError()
 end
 
 function BaseQuestion:gotoNextQuestion()
-    local scene = display.getRunningScene()
-    scene:gotoNextQuestion()
+    ez.gameScene:gotoNextQuestion()
 end
 
 function BaseQuestion:newModalLayer(param)
-    local scene = display.getRunningScene()
-    return scene:newModalLayer(param)
+    return ez.gameScene:newModalLayer(param)
 end
 
 function BaseQuestion:onEnter()
