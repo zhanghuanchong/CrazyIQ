@@ -7,8 +7,8 @@ end)
 function BallPrepareQuestion:ctor()
     self:setTip("注意！！！ 点击任意处继续。")
 
-    self.football_field = display.newSprite('image/football_field.png', display.cx, self:cy())
-    self:addChild(self.football_field)
+    self.basketball_field = display.newSprite('image/basketball_field.png', display.cx, self:cy())
+    self:addChild(self.basketball_field)
 
     self.layer = self:newModalLayer{
         listener = function(scope)

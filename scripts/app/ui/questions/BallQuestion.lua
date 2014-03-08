@@ -8,7 +8,7 @@ function BallQuestion:ctor()
     self:setTip("请选择正确的球。")
 
     display.addSpriteFramesWithFile("image/balls.plist", "image/balls.png")
-    local balls = {'baseball', 'basketball', 'football', 'rugby', 'tennis', 'volleyball' }
+    local balls = {'football', 'baseball', 'basketball', 'rugby', 'tennis', 'volleyball' }
     for i = 1, #balls do
         local ball = display.newSprite("#"..balls[i]..'.png',
             display.width * (math.floor((i - 1) / 3) * 2 + 1) / 4,
@@ -18,7 +18,7 @@ function BallQuestion:ctor()
         ball:setTouchEnabled(true)
         ball:addTouchEventListener(function()
             jumpAnimate(ball, function()
-                if ball.name == 'football' then
+                if ball.name == 'basketball' then
                     self:gotoNextQuestion()
                 else
                     self:alertError()
