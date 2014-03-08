@@ -1,11 +1,11 @@
 local BaseQuestion = import('.BaseQuestion')
 
-local ClickOrderQuestion = class('ClickOrderQuestion', function()
+local ColorOrderQuestion = class('ColorOrderQuestion', function()
     return BaseQuestion.new()
 end)
 
-function ClickOrderQuestion:ctor()
-    self:setTip("从大到小点击五角星。")
+function ColorOrderQuestion:ctor()
+    self:setTip("依次点击红色、绿色、蓝色。")
 
     local height = self:getAvailableHeight()
 
@@ -44,8 +44,8 @@ function ClickOrderQuestion:ctor()
     end
 end
 
-function ClickOrderQuestion:onExit()
+function ColorOrderQuestion:onExit()
     display.removeSpriteFramesWithFile("image/stars.plist", "image/stars.png")
 end
 
-return ClickOrderQuestion
+return ColorOrderQuestion

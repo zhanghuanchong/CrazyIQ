@@ -7,6 +7,8 @@ end)
 function GameScene:ctor()
     ez.gameScene = self
 
+    display.addSpriteFramesWithFile("image/game_scene.plist", "image/game_scene.png")
+
     self.top = display.newLayer()
 
     self.heartCount = ez:getHeartCount()
@@ -149,6 +151,10 @@ function GameScene:alertError()
             })
         end
     })
+end
+
+function GameScene:onExit()
+    display.removeSpriteFramesWithFile("image/game_scene.plist", "image/game_scene.png")
 end
 
 return GameScene

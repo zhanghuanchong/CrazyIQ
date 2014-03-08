@@ -29,11 +29,6 @@ function MyApp:run()
         audio.preloadMusic("sound/"..v..".mp3")
     end
 
-    display.addSpriteFramesWithFile("image/levels.plist", "image/levels.png")
-    display.addSpriteFramesWithFile("image/levels_locked.plist", "image/levels_locked.png")
-    display.addSpriteFramesWithFile("image/game_scene.plist", "image/game_scene.png")
-    display.addSpriteFramesWithFile("image/buttons.plist", "image/buttons.png")
-
     self:enterScene("GameScene")
 end
 

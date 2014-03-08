@@ -7,80 +7,80 @@
             <key>star_0.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,2},{238,230}}</string>
+                <string>{{2,2},{243,235}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{238,230}}</string>
+                <string>{{0,0},{243,235}}</string>
                 <key>sourceSize</key>
-                <string>{238,230}</string>
+                <string>{243,235}</string>
             </dict>
             <key>star_1.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{242,2},{200,191}}</string>
+                <string>{{247,2},{210,201}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{200,191}}</string>
+                <string>{{0,0},{210,201}}</string>
                 <key>sourceSize</key>
-                <string>{200,191}</string>
+                <string>{210,201}</string>
             </dict>
             <key>star_2.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,234},{160,170}}</string>
+                <string>{{2,239},{170,180}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{160,170}}</string>
+                <string>{{0,0},{170,180}}</string>
                 <key>sourceSize</key>
-                <string>{160,170}</string>
+                <string>{170,180}</string>
             </dict>
             <key>star_3.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{164,234},{140,140}}</string>
+                <string>{{174,239},{147,148}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{140,140}}</string>
+                <string>{{0,0},{147,148}}</string>
                 <key>sourceSize</key>
-                <string>{140,140}</string>
+                <string>{147,148}</string>
             </dict>
             <key>star_4.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{306,234},{112,110}}</string>
+                <string>{{323,239},{118,117}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{112,110}}</string>
+                <string>{{0,0},{118,117}}</string>
                 <key>sourceSize</key>
-                <string>{112,110}</string>
+                <string>{118,117}</string>
             </dict>
             <key>star_5.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{420,234},{77,80}}</string>
+                <string>{{2,421},{82,85}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{77,80}}</string>
+                <string>{{0,0},{82,85}}</string>
                 <key>sourceSize</key>
-                <string>{77,80}</string>
+                <string>{82,85}</string>
             </dict>
         </dict>
         <key>metadata</key>
@@ -92,7 +92,7 @@
             <key>size</key>
             <string>{512,512}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:782d99a92be5bfc97589510992f4982b:1/1$</string>
+            <string>$TexturePacker:SmartUpdate:b25abbcff40cfec6ed68f9c63637d76e:1/1$</string>
             <key>textureFileName</key>
             <string>stars.png</string>
         </dict>

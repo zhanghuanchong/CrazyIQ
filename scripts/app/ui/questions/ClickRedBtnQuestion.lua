@@ -9,6 +9,8 @@ function ClickRedBtnQuestion:ctor()
 
     local height = self:getAvailableHeight()
 
+    display.addSpriteFramesWithFile("image/buttons.plist", "image/buttons.png")
+
     self.btnGreen = display.newSprite('#btn_continue.png')
     self.btnGreen:setTouchEnabled(true)
     self.btnGreen:setPosition(ccp(display.cx, height * 2 / 3))
@@ -28,6 +30,10 @@ function ClickRedBtnQuestion:ctor()
         end)
     end)
     self:addChild(self.btnRed)
+end
+
+function ClickRedBtnQuestion:onExit()
+    display:removeSpriteFramesWithFile("image/buttons.plist", "image/buttons.png")
 end
 
 return ClickRedBtnQuestion
