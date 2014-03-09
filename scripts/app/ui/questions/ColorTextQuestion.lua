@@ -7,8 +7,8 @@ local ColorTextQuestion = class('ColorTextQuestion', function()
 end)
 
 function ColorTextQuestion:ctor()
-    self:setTip("按照指示点击相应的按钮。")
-    self:setTipHeightPercent(1.5)
+    self:setTip("按照指示点击相应的按钮。\n必须选对三次哦！")
+    self.tipHeight = self.tip:getContentSize().height
 
     local timeCounter = TimeCounter.new{
         total = 10
@@ -39,10 +39,37 @@ function ColorTextQuestion:ctor()
         end)
         self:addChild(btn)
     end
+
+    self.modal = self:newModalLayer()
+    self:addChild(self.modal)
 end
 
 function ColorTextQuestion:onEnterTransitionFinish()
     self:showTip(true)
+
+    local seq = transition.sequence({
+        CCDelayTime:create(3),
+        CCCallFunc:create(function()
+            self.modal:removeFromParent()
+            self:setTip("")
+            self:setTipHeight(self.tipHeight)
+
+
+        end),
+    })
+    self:runAction(seq)
+end
+
+function ColorTextQuestion:showCountDown()
+    local number = ez:newLabel{
+        text = ez:getFormattedTime(param.total),
+        align = ui.TEXT_ALIGN_CENTER,
+        font = "Pixel LCD7",
+        color = ccc3(0, 180, 0),
+        size = 55,
+        x = 0,
+        y = 0
+    }
 end
 
 function ColorTextQuestion:onExit()

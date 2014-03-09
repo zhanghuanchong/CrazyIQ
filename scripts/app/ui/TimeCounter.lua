@@ -37,9 +37,7 @@ function TimeCounter:ctor(param)
         align = ui.TEXT_ALIGN_CENTER,
         font = "Pixel LCD7",
         color = ccc3(0, 180, 0),
-        size = 55,
-        x = 0,
-        y = 0
+        size = 55
     }
     self:addChild(title)
     self.title = title
