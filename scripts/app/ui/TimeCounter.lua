@@ -28,7 +28,7 @@ function TimeCounter:ctor(param)
     clipper:addChild(front)
 
     param = param or {}
-    param.total = param.total or 60
+    param.total = param.total or 10
     self.total = param.total
     self.current = self.total
 
@@ -36,6 +36,7 @@ function TimeCounter:ctor(param)
         text = ez:getFormattedTime(param.total),
         align = ui.TEXT_ALIGN_CENTER,
         font = "Pixel LCD7",
+        color = ccc3(0, 180, 0),
         size = 55,
         x = 0,
         y = 0
@@ -67,6 +68,9 @@ function TimeCounter:tick()
             self.title:setString(ez:getFormattedTime(newCurrent))
         end
     })
+    local green = 180 * newCurrent / self.total
+    local red = 255 * (1 - newCurrent / self.total)
+    transition.execute(self.title, CCTintTo:create(1, red, green, 0))
 
     if self.current <= 0 then
         scheduler.unscheduleGlobal(self.scheduler)
