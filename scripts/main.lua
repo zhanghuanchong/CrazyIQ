@@ -86,4 +86,16 @@ function ez:setHeartCount(count)
     ez.userDefault:setIntegerForKey('heartCount', count)
 end
 
+function ez:getFormattedTime(second)
+    local a = math.floor(second / 60)
+    local b = second - a * 60
+    if a < 10 then
+        a = '0' .. a
+    end
+    if b < 10 then
+        b = '0' .. b
+    end
+    return a .. ':' .. b
+end
+
 require("app.MyApp").new():run()

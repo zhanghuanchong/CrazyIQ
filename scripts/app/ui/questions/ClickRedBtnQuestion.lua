@@ -33,7 +33,7 @@ function ClickRedBtnQuestion:ctor()
 end
 
 function ClickRedBtnQuestion:onExit()
-    display:removeSpriteFramesWithFile("image/buttons.plist", "image/buttons.png")
+    display.removeSpriteFramesWithFile("image/buttons.plist")
 end
 
 return ClickRedBtnQuestion

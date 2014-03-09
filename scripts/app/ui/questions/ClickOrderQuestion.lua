@@ -45,7 +45,7 @@ function ClickOrderQuestion:ctor()
 end
 
 function ClickOrderQuestion:onExit()
-    display.removeSpriteFramesWithFile("image/stars.plist", "image/stars.png")
+    display.removeSpriteFramesWithFile("image/stars.plist")
 end
 
 return ClickOrderQuestion

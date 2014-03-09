@@ -33,7 +33,7 @@ function BallQuestion:ctor()
 end
 
 function BallQuestion:onExit()
-    display:removeSpriteFramesWithFile("image/balls.plist", "image/balls.png")
+    display.removeSpriteFramesWithFile("image/balls.plist")
 end
 
 return BallQuestion

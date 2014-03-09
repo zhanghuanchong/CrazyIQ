@@ -24,8 +24,8 @@ function LevelsScene:onEnterTransitionFinish()
 end
 
 function LevelsScene:onExit()
-    display.removeSpriteFramesWithFile("image/levels.plist", "image/levels.png")
-    display.removeSpriteFramesWithFile("image/levels_locked.plist", "image/levels_locked.png")
+    display.removeSpriteFramesWithFile("image/levels.plist")
+    display.removeSpriteFramesWithFile("image/levels_locked.plist")
 end
 
 return LevelsScene

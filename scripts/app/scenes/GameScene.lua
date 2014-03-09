@@ -46,7 +46,7 @@ function GameScene:ctor()
     self.questions = self.currentLevel['questions']
     self.currentQuestionIndex = 0
 --    for test
-    self.currentQuestionIndex = 3
+    self.currentQuestionIndex = 4
 end
 
 function GameScene:gotoNextQuestion()
@@ -81,9 +81,7 @@ function GameScene:onEnterTransitionFinish()
 end
 
 function GameScene:newModalLayer(param)
-    if param == nil then
-        param = {}
-    end
+    param = param or {}
     local layer = display.newSprite()
     layer:setCascadeBoundingBox(CCRect(0, 0, display.width, display.height))
     layer:setTouchEnabled(true)
@@ -98,14 +96,9 @@ function GameScene:newModalLayer(param)
 end
 
 function GameScene:addModalLayer(param)
-    if param == nil then
-        param = {}
-    end
+    param = param or {}
     local layer = self:newModalLayer(param)
-    if param.zOrder == nil then
-        param.zOrder = 100
-    end
-    self:addChild(layer, param.zOrder)
+    self:addChild(layer, param.zOrder or 100)
 
     return layer
 end
@@ -154,7 +147,7 @@ function GameScene:alertError()
 end
 
 function GameScene:onExit()
-    display.removeSpriteFramesWithFile("image/game_scene.plist", "image/game_scene.png")
+    display.removeSpriteFramesWithFile("image/game_scene.plist")
 end
 
 return GameScene
