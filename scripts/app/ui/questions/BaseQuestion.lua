@@ -35,11 +35,20 @@ function BaseQuestion:setTip(text, fontSize)
         self.tipText:setFontSize(fontSize)
     end
     local height = self.tipText:getContentSize().height + 45
+    self:setTipHeight(height)
+end
+
+function BaseQuestion:setTipHeight(height)
     local size = CCSize(self.tip:getContentSize().width, height)
     self.tip:setContentSize(size)
     self.tipBg:setContentSize(size)
     self.tipBg:setPositionY(height)
     self.tipText:setPositionY(height / 2 + 8)
+end
+
+function BaseQuestion:setTipHeightPercent(percent)
+    local height = self.tip:getContentSize().height * percent
+    self:setTipHeight(height)
 end
 
 function BaseQuestion:showTip(animation)

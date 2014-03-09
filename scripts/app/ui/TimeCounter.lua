@@ -43,8 +43,14 @@ function TimeCounter:ctor(param)
     }
     self:addChild(title)
     self.title = title
+end
 
-    self:start()
+function TimeCounter:reset(total)
+    self:stop()
+    if total then
+        self.total = total
+        self.current = total
+    end
 end
 
 function TimeCounter:start()
