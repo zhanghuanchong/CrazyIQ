@@ -29,13 +29,16 @@ function BaseQuestion:ctor()
     self:addChild(self.tip)
 end
 
-function BaseQuestion:setTip(text, fontSize)
+function BaseQuestion:setTip(text, fontSize, height)
     self.tipText:setString(text)
     if fontSize then
         self.tipText:setFontSize(fontSize)
     end
-    local height = self.tipText:getContentSize().height + 45
-    self:setTipHeight(height)
+    local h = self.tipText:getContentSize().height + 45
+    if height then
+        h = height
+    end
+    self:setTipHeight(h)
 end
 
 function BaseQuestion:setTipHeight(height)

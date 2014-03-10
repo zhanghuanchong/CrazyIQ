@@ -48,28 +48,22 @@ function ColorTextQuestion:onEnterTransitionFinish()
     self:showTip(true)
 
     local seq = transition.sequence({
-        CCDelayTime:create(3),
+        CCDelayTime:create(5),
         CCCallFunc:create(function()
-            self.modal:removeFromParent()
-            self:setTip("")
-            self:setTipHeight(self.tipHeight)
+            self:setTip("", nil, self.tipHeight)
 
+            ez.gameScene:showCountDown{
+                from = 3,
+                y = self.tip:getPositionY() - self.tipHeight / 2,
+                onComplete = function()
+                    self.modal:removeFromParent()
 
+                    self:setTip("红色按钮", 60, self.tipHeight)
+                end
+            }
         end),
     })
     self:runAction(seq)
-end
-
-function ColorTextQuestion:showCountDown()
-    local number = ez:newLabel{
-        text = ez:getFormattedTime(param.total),
-        align = ui.TEXT_ALIGN_CENTER,
-        font = "Pixel LCD7",
-        color = ccc3(0, 180, 0),
-        size = 55,
-        x = 0,
-        y = 0
-    }
 end
 
 function ColorTextQuestion:onExit()

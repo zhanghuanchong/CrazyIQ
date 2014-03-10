@@ -146,6 +146,44 @@ function GameScene:alertError()
     })
 end
 
+function GameScene:showCountDown(param)
+    param = param or {}
+    param.from = param.from or 3
+
+    local function countDown(i)
+        local text = string.format('%i', i)
+        if i == 0 then
+            text = 'GO'
+        elseif i < 0 then
+            if param.onComplete then
+                param.onComplete()
+            end
+            return
+        end
+        local number = ez:newLabel{
+            text = text,
+            align = ui.TEXT_ALIGN_CENTER,
+            color = ccc3(222, 0, 0),
+            size = 160,
+            x = display.cx,
+            y = param.y or display.height - 140
+        }
+        self:addChild(number)
+        number:setZOrder(11)
+        number:setScale(5)
+
+        transition.execute(number, CCScaleTo:create(1, 1), {
+            easing = 'elasticOut',
+            onComplete = function()
+                number:removeFromParent()
+                countDown(i - 1)
+            end
+        })
+    end
+
+    countDown(param.from)
+end
+
 function GameScene:onExit()
     display.removeSpriteFramesWithFile("image/game_scene.plist")
 end
