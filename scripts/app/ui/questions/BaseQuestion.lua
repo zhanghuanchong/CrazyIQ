@@ -54,25 +54,41 @@ function BaseQuestion:setTipHeightPercent(percent)
     self:setTipHeight(height)
 end
 
-function BaseQuestion:showTip(animation)
+function BaseQuestion:showTip(animation, onComplete)
     if animation then
         self.tip:setPosition(ccp(display.cx, display.height + self.tip:getContentSize().height))
         self.tip:setVisible(true)
         transition.execute(self.tip, CCMoveTo:create(0.5, ccp(display.cx, display.height - 95)), {
-            easing = 'backOut'
+            easing = 'backOut',
+            onComplete = function()
+                if onComplete then
+                    onComplete()
+                end
+            end
         })
     else
         self.tip:setVisible(true)
+        if onComplete then
+            onComplete()
+        end
     end
 end
 
-function BaseQuestion:hideTip(animation)
+function BaseQuestion:hideTip(animation, onComplete)
     if animation then
         transition.execute(self.tip, CCMoveTo:create(0.5, ccp(display.cx, display.height + self.tip:getContentSize().height)), {
-            easing = 'backIn'
+            easing = 'backIn',
+            onComplete = function()
+                if onComplete then
+                    onComplete()
+                end
+            end
         })
     else
         self.tip:setVisible(false)
+        if onComplete then
+            onComplete()
+        end
     end
 end
 

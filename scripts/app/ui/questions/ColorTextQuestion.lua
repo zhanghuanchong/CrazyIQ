@@ -28,40 +28,75 @@ function ColorTextQuestion:ctor()
 
     display.addSpriteFramesWithFile("image/rect_btn.plist", "image/rect_btn.png")
 
+    self.buttons = {}
+    self.buttonPosition = {}
     local colors = {'green', 'yellow', 'blue', 'red' }
+    self.colors = colors
     for i = 1, #colors do
         local color = colors[i]
         local btn = display.newSprite('#rect_btn_'..color..'.png')
-        btn:setPosition(ccp(display.width * ((i % 2) * 2 + 1) / 4, baseHeight + height * (math.floor(i / 3) + 1) * 0.25))
+        local pos = ccp(display.width * (((i + 1) % 2) * 2 + 1) / 4, baseHeight + height * (math.floor((5 - i) / 3) + 1) * 0.25)
+        btn:setPosition(pos)
+        self.buttonPosition[i] = pos
+        btn.color = color
+        btn.index = i
         btn:setTouchEnabled(true)
         btn:addTouchEventListener(function()
             jumpAnimate(btn)
         end)
         self:addChild(btn)
+        self.buttons[i] = btn
     end
 
     self.modal = self:newModalLayer()
     self:addChild(self.modal)
 end
 
+function ColorTextQuestion:resetButtons(showText)
+    local max = table.getn(self.colors)
+    local start = math.random(max)
+    for j = start, max + start - 1 do
+        local i = j
+        if j > max then
+            i = j - max
+        end
+        local btn = self.buttons[i]
+        local pos = self.buttonPosition[j - start + 1]
+        btn:setPosition(pos)
+    end
+end
+
 function ColorTextQuestion:onEnterTransitionFinish()
     self:showTip(true)
+
+    self:schedule(function()
+        self:resetButtons()
+    end, 1)
 
     local seq = transition.sequence({
         CCDelayTime:create(5),
         CCCallFunc:create(function()
-            self:setTip("", nil, self.tipHeight)
+            self:hideTip(true, function()
+                self:setTip('', nil, self.tipHeight)
+                self:showTip(true, function()
+                    ez.gameScene:showCountDown{
+                        from = 3,
+                        y = self.tip:getPositionY() - self.tipHeight / 2 + 10,
+                        onComplete = function()
+                            self:hideTip(true, function()
+                                self:setTip('', nil, self.tipHeight)
+                                self:showTip(true, function()
+                                    self.modal:removeFromParent()
 
-            ez.gameScene:showCountDown{
-                from = 3,
-                y = self.tip:getPositionY() - self.tipHeight / 2,
-                onComplete = function()
-                    self.modal:removeFromParent()
-
-                    self:setTip("红色按钮", 60, self.tipHeight)
-                end
-            }
-        end),
+--                                    self:setTip("红色按钮", 60, self.tipHeight)
+                                    self:resetButtons()
+                                end)
+                            end)
+                        end
+                    }
+                end)
+            end)
+        end)
     })
     self:runAction(seq)
 end

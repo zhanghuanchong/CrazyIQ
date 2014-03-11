@@ -20,6 +20,8 @@ function MyApp:run()
     CCFileUtils:sharedFileUtils():addSearchPath("res/")
     ez:init()
 
+    math.randomseed(os.time());
+
     for k, v in pairs{
         "bg",
         "click",
