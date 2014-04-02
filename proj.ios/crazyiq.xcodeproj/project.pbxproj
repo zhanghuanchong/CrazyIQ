@@ -7,7 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F4323CF716D3298E0072B773 /* libquickcocos2dx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F48F590816D21F8C000651BE /* libquickcocos2dx.a */; };
+		840FB65A18EB23B800C64F4B /* ActionEaseExtension.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 840FB65318EB23B800C64F4B /* ActionEaseExtension.cpp */; };
+		840FB65B18EB23B800C64F4B /* MenuItemSpriteExtension.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 840FB65618EB23B800C64F4B /* MenuItemSpriteExtension.cpp */; };
+		840FB65C18EB23B800C64F4B /* TransitionExtension.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 840FB65818EB23B800C64F4B /* TransitionExtension.cpp */; };
+		840FB66818EB23F200C64F4B /* ActionEaseExtension_luabinding.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 840FB65E18EB23F200C64F4B /* ActionEaseExtension_luabinding.cpp */; };
+		840FB66918EB23F200C64F4B /* ActionEaseExtension_luabinding.tolua in Resources */ = {isa = PBXBuildFile; fileRef = 840FB66018EB23F200C64F4B /* ActionEaseExtension_luabinding.tolua */; };
+		840FB66A18EB23F200C64F4B /* build.bat in Resources */ = {isa = PBXBuildFile; fileRef = 840FB66118EB23F200C64F4B /* build.bat */; };
+		840FB66B18EB23F200C64F4B /* MenuItemSpriteExtension_luabinding.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 840FB66218EB23F200C64F4B /* MenuItemSpriteExtension_luabinding.cpp */; };
+		840FB66C18EB23F200C64F4B /* MenuItemSpriteExtension_luabinding.tolua in Resources */ = {isa = PBXBuildFile; fileRef = 840FB66418EB23F200C64F4B /* MenuItemSpriteExtension_luabinding.tolua */; };
+		840FB66D18EB23F200C64F4B /* TransitionExtension_luabinding.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 840FB66518EB23F200C64F4B /* TransitionExtension_luabinding.cpp */; };
+		840FB66E18EB23F200C64F4B /* TransitionExtension_luabinding.tolua in Resources */ = {isa = PBXBuildFile; fileRef = 840FB66718EB23F200C64F4B /* TransitionExtension_luabinding.tolua */; };
+		84FF67B518EB0F5D006AA7D6 /* libquickcocos2dx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F48F590816D21F8C000651BE /* libquickcocos2dx.a */; };
 		F4482F2116A0555000FDDDAD /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F4482F1A16A0555000FDDDAD /* Default-568h@2x.png */; };
 		F4482F2216A0555000FDDDAD /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = F4482F1B16A0555000FDDDAD /* Default.png */; };
 		F4482F2316A0555000FDDDAD /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F4482F1C16A0555000FDDDAD /* Default@2x.png */; };
@@ -49,6 +59,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		840FB64F18EB22C200C64F4B /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
+		840FB65318EB23B800C64F4B /* ActionEaseExtension.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ActionEaseExtension.cpp; sourceTree = "<group>"; };
+		840FB65418EB23B800C64F4B /* ActionEaseExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionEaseExtension.h; sourceTree = "<group>"; };
+		840FB65518EB23B800C64F4B /* CrazyIQ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrazyIQ.h; sourceTree = "<group>"; };
+		840FB65618EB23B800C64F4B /* MenuItemSpriteExtension.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MenuItemSpriteExtension.cpp; sourceTree = "<group>"; };
+		840FB65718EB23B800C64F4B /* MenuItemSpriteExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuItemSpriteExtension.h; sourceTree = "<group>"; };
+		840FB65818EB23B800C64F4B /* TransitionExtension.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TransitionExtension.cpp; sourceTree = "<group>"; };
+		840FB65918EB23B800C64F4B /* TransitionExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransitionExtension.h; sourceTree = "<group>"; };
+		840FB65E18EB23F200C64F4B /* ActionEaseExtension_luabinding.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ActionEaseExtension_luabinding.cpp; sourceTree = "<group>"; };
+		840FB65F18EB23F200C64F4B /* ActionEaseExtension_luabinding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionEaseExtension_luabinding.h; sourceTree = "<group>"; };
+		840FB66018EB23F200C64F4B /* ActionEaseExtension_luabinding.tolua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ActionEaseExtension_luabinding.tolua; sourceTree = "<group>"; };
+		840FB66118EB23F200C64F4B /* build.bat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = build.bat; sourceTree = "<group>"; };
+		840FB66218EB23F200C64F4B /* MenuItemSpriteExtension_luabinding.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MenuItemSpriteExtension_luabinding.cpp; sourceTree = "<group>"; };
+		840FB66318EB23F200C64F4B /* MenuItemSpriteExtension_luabinding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuItemSpriteExtension_luabinding.h; sourceTree = "<group>"; };
+		840FB66418EB23F200C64F4B /* MenuItemSpriteExtension_luabinding.tolua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MenuItemSpriteExtension_luabinding.tolua; sourceTree = "<group>"; };
+		840FB66518EB23F200C64F4B /* TransitionExtension_luabinding.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TransitionExtension_luabinding.cpp; sourceTree = "<group>"; };
+		840FB66618EB23F200C64F4B /* TransitionExtension_luabinding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransitionExtension_luabinding.h; sourceTree = "<group>"; };
+		840FB66718EB23F200C64F4B /* TransitionExtension_luabinding.tolua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TransitionExtension_luabinding.tolua; sourceTree = "<group>"; };
 		F4482F1A16A0555000FDDDAD /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		F4482F1B16A0555000FDDDAD /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		F4482F1C16A0555000FDDDAD /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
@@ -93,7 +121,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4323CF716D3298E0072B773 /* libquickcocos2dx.a in Frameworks */,
+				84FF67B518EB0F5D006AA7D6 /* libquickcocos2dx.a in Frameworks */,
 				F452BFD01687F0F200DC5BCC /* UIKit.framework in Frameworks */,
 				F456F0FD15EE0CF600FCF3E2 /* SystemConfiguration.framework in Frameworks */,
 				F456ECC615EE018E00FCF3E2 /* QuartzCore.framework in Frameworks */,
@@ -115,6 +143,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		840FB65218EB23B800C64F4B /* ext */ = {
+			isa = PBXGroup;
+			children = (
+				840FB65318EB23B800C64F4B /* ActionEaseExtension.cpp */,
+				840FB65418EB23B800C64F4B /* ActionEaseExtension.h */,
+				840FB65518EB23B800C64F4B /* CrazyIQ.h */,
+				840FB65618EB23B800C64F4B /* MenuItemSpriteExtension.cpp */,
+				840FB65718EB23B800C64F4B /* MenuItemSpriteExtension.h */,
+				840FB65818EB23B800C64F4B /* TransitionExtension.cpp */,
+				840FB65918EB23B800C64F4B /* TransitionExtension.h */,
+			);
+			path = ext;
+			sourceTree = "<group>";
+		};
+		840FB65D18EB23F200C64F4B /* luabinding */ = {
+			isa = PBXGroup;
+			children = (
+				840FB65E18EB23F200C64F4B /* ActionEaseExtension_luabinding.cpp */,
+				840FB65F18EB23F200C64F4B /* ActionEaseExtension_luabinding.h */,
+				840FB66018EB23F200C64F4B /* ActionEaseExtension_luabinding.tolua */,
+				840FB66118EB23F200C64F4B /* build.bat */,
+				840FB66218EB23F200C64F4B /* MenuItemSpriteExtension_luabinding.cpp */,
+				840FB66318EB23F200C64F4B /* MenuItemSpriteExtension_luabinding.h */,
+				840FB66418EB23F200C64F4B /* MenuItemSpriteExtension_luabinding.tolua */,
+				840FB66518EB23F200C64F4B /* TransitionExtension_luabinding.cpp */,
+				840FB66618EB23F200C64F4B /* TransitionExtension_luabinding.h */,
+				840FB66718EB23F200C64F4B /* TransitionExtension_luabinding.tolua */,
+			);
+			path = luabinding;
+			sourceTree = "<group>";
+		};
 		F456ECB615EE018E00FCF3E2 = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +196,7 @@
 		F456ECC415EE018E00FCF3E2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				840FB64F18EB22C200C64F4B /* libstdc++.dylib */,
 				F4949C781699553B00DB561E /* AddressBook.framework */,
 				F456ECCB15EE018E00FCF3E2 /* AudioToolbox.framework */,
 				F456ECCD15EE018E00FCF3E2 /* AVFoundation.framework */,
@@ -215,6 +275,8 @@
 		F4E50FE216CF7B6500AA7E90 /* sources */ = {
 			isa = PBXGroup;
 			children = (
+				840FB65D18EB23F200C64F4B /* luabinding */,
+				840FB65218EB23B800C64F4B /* ext */,
 				F4E50FE316CF7B6500AA7E90 /* AppDelegate.cpp */,
 				F4E50FE416CF7B6500AA7E90 /* AppDelegate.h */,
 				F4F34ED0183CD04B0077580F /* SimulatorConfig.cpp */,
@@ -293,10 +355,14 @@
 			files = (
 				F4482F2116A0555000FDDDAD /* Default-568h@2x.png in Resources */,
 				F4482F2216A0555000FDDDAD /* Default.png in Resources */,
+				840FB66918EB23F200C64F4B /* ActionEaseExtension_luabinding.tolua in Resources */,
 				F4482F2316A0555000FDDDAD /* Default@2x.png in Resources */,
 				F4482F2416A0555000FDDDAD /* Icon-72.png in Resources */,
 				F4482F2516A0555000FDDDAD /* Icon.png in Resources */,
+				840FB66A18EB23F200C64F4B /* build.bat in Resources */,
+				840FB66E18EB23F200C64F4B /* TransitionExtension_luabinding.tolua in Resources */,
 				F4482F2616A0555000FDDDAD /* Icon@2x.png in Resources */,
+				840FB66C18EB23F200C64F4B /* MenuItemSpriteExtension_luabinding.tolua in Resources */,
 				F4730C1E16C1509700280298 /* res in Resources */,
 				F4730C1F16C1509700280298 /* scripts in Resources */,
 			);
@@ -309,9 +375,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				840FB65C18EB23B800C64F4B /* TransitionExtension.cpp in Sources */,
 				F4D26BCC16C7D0D2004442B6 /* AppController.mm in Sources */,
+				840FB66818EB23F200C64F4B /* ActionEaseExtension_luabinding.cpp in Sources */,
 				F4D26BCD16C7D0D2004442B6 /* main.m in Sources */,
 				F4F34ED2183CD04B0077580F /* SimulatorConfig.cpp in Sources */,
+				840FB66D18EB23F200C64F4B /* TransitionExtension_luabinding.cpp in Sources */,
+				840FB66B18EB23F200C64F4B /* MenuItemSpriteExtension_luabinding.cpp in Sources */,
+				840FB65A18EB23B800C64F4B /* ActionEaseExtension.cpp in Sources */,
+				840FB65B18EB23B800C64F4B /* MenuItemSpriteExtension.cpp in Sources */,
 				F4D26BCE16C7D0D2004442B6 /* RootViewController.mm in Sources */,
 				F4E50FE516CF7B6500AA7E90 /* AppDelegate.cpp in Sources */,
 			);

@@ -1,17 +1,15 @@
 /*
 ** Lua binding: TransitionExtension_luabinding
-** Generated automatically by tolua++-1.0.92 on 01/11/14 17:22:32.
+** Generated automatically by tolua++-1.0.92 on Wed Apr  2 07:57:48 2014.
 */
 
-#ifndef __cplusplus
-#include "stdlib.h"
-#endif
-#include "string.h"
+#include "TransitionExtension_luabinding.h"
+#include "CCLuaEngine.h"
 
-#include "tolua++.h"
+using namespace cocos2d;
 
-/* Exported function */
-TOLUA_API int  tolua_TransitionExtension_luabinding_open (lua_State* tolua_S);
+
+
 
 #include "../ext/CrazyIQ.h"
 #include "../ext/TransitionExtension.h"
@@ -20,12 +18,12 @@ TOLUA_API int  tolua_TransitionExtension_luabinding_open (lua_State* tolua_S);
 /* function to register type */
 static void tolua_reg_types (lua_State* tolua_S)
 {
- tolua_usertype(tolua_S,"CCTransitionScene"); toluafix_add_type_mapping(typeid(CCTransitionScene).hash_code(), "CCTransitionScene");
- tolua_usertype(tolua_S,"CCTransitionEaseScene"); toluafix_add_type_mapping(typeid(CCTransitionEaseScene).hash_code(), "CCTransitionEaseScene");
- tolua_usertype(tolua_S,"CCTransitionMoveOutBackR"); toluafix_add_type_mapping(typeid(CCTransitionMoveOutBackR).hash_code(), "CCTransitionMoveOutBackR");
- tolua_usertype(tolua_S,"CCTransitionMoveInBackR"); toluafix_add_type_mapping(typeid(CCTransitionMoveInBackR).hash_code(), "CCTransitionMoveInBackR");
- tolua_usertype(tolua_S,"CCScene"); toluafix_add_type_mapping(typeid(CCScene).hash_code(), "CCScene");
- tolua_usertype(tolua_S,"CCTransitionMoveInR"); toluafix_add_type_mapping(typeid(CCTransitionMoveInR).hash_code(), "CCTransitionMoveInR");
+ tolua_usertype(tolua_S,"CCTransitionScene");
+ tolua_usertype(tolua_S,"CCTransitionEaseScene");
+ tolua_usertype(tolua_S,"CCTransitionMoveOutBackR");
+ tolua_usertype(tolua_S,"CCTransitionMoveInBackR");
+ tolua_usertype(tolua_S,"CCScene");
+ tolua_usertype(tolua_S,"CCTransitionMoveInR");
 }
 
 /* method: create of class  CCTransitionMoveInBackR */
