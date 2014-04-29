@@ -7,14 +7,16 @@ function Checkbox:ctor(param)
     self:addChild(self.unchecked)
 
     self.checked = display.newSprite("image/checkbox_checked.png")
+    self:addChild(self.checked)
+    self.checked:setVisible(false)
 
     param = param or {}
     if param.touchable then
         self:setTouchEnabled(true)
         self.unchecked:setTouchEnabled(true)
         self.unchecked:addTouchEventListener(function()
-            self.unchecked:removeFromParent()
-            self:addChild(self.checked)
+            self.unchecked:setVisible(false)
+            self.checked:setVisible(true)
             if param.onChecked then
                 param.onChecked()
             end
@@ -22,8 +24,8 @@ function Checkbox:ctor(param)
 
         self.checked:setTouchEnabled(true)
         self.checked:addTouchEventListener(function()
-            self.checked:removeFromParent()
-            self:addChild(self.unchecked)
+            self.checked:setVisible(false)
+            self.unchecked:setVisible(true)
             if param.onUnchecked then
                 param.onUnchecked()
             end
@@ -33,16 +35,16 @@ end
 
 function Checkbox:setChecked(bChecked)
     if bChecked then
-        self.unchecked:removeFromParent()
-        self:addChild(self.checked)
+        self.unchecked:setVisible(false)
+        self.checked:setVisible(true)
     else
-        self.checked:removeFromParent()
-        self:addChild(self.unchecked)
+        self.checked:setVisible(false)
+        self.unchecked:setVisible(true)
     end
 end
 
 function Checkbox:isChecked()
-    return self.checked:getParent() ~= nil
+    return self.checked:isVisible()
 end
 
 return Checkbox

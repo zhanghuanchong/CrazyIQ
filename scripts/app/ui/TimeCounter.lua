@@ -47,12 +47,12 @@ function TimeCounter:reset(total)
     self:stop()
     if total then
         self.total = total
-        self.current = total
     end
+    self.current = self.total
 end
 
 function TimeCounter:start()
-    self:tick()
+    self:reset()
     self.scheduler = scheduler.scheduleGlobal(handler(self, self.tick), 1)
 end
 
@@ -60,11 +60,22 @@ function TimeCounter:stop()
     if self.scheduler then
         scheduler.unscheduleGlobal(self.scheduler)
     end
+    self:update()
 end
 
 function TimeCounter:tick()
     self.current = self.current - 1
 
+    self:update()
+
+    if self.current <= 0 then
+        scheduler.unscheduleGlobal(self.scheduler)
+        self.scheduler = nil
+        return
+    end
+end
+
+function TimeCounter:update()
     local newPos = ccp((self.current / self.total - 3 / 2) * self.bgSize.width, 0)
     local newCurrent = self.current
     transition.execute(self.front, CCMoveTo:create(1, newPos), {
@@ -75,12 +86,6 @@ function TimeCounter:tick()
     local green = 180 * newCurrent / self.total
     local red = 255 * (1 - newCurrent / self.total)
     transition.execute(self.title, CCTintTo:create(1, red, green, 0))
-
-    if self.current <= 0 then
-        scheduler.unscheduleGlobal(self.scheduler)
-        self.scheduler = nil
-        return
-    end
 end
 
 function TimeCounter:onExit()

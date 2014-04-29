@@ -98,4 +98,26 @@ function ez:getFormattedTime(second)
     return a .. ':' .. b
 end
 
+function ez:swap(array, i, j)
+    local t = array[i]
+    array[i] = array[j]
+    array[j] = t
+end
+
+function ez:randomSequence(max)
+    local bits = {}
+    for i = 1, max do
+        bits[i] = i
+    end
+    local it = max
+    while it > 1 do
+        local n = math.random(1, it)
+        if n ~= it then
+            ez:swap(bits, n, it)
+        end
+        it = it - 1
+    end
+    return bits
+end
+
 require("app.MyApp").new():run()

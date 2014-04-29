@@ -33,6 +33,7 @@ function GameScene:ctor()
         x = display.width - 45,
         y = display.height - 45,
         listener = function()
+            print("Buy...")
         end
     }
 
@@ -121,7 +122,7 @@ function GameScene:dieHeart()
     })
 end
 
-function GameScene:alertError()
+function GameScene:alertError(completeListener)
     local warning = display.newSprite('image/warning.png')
     local width = warning:getContentSize().width
     warning:setPosition(ccp(-width, display.cy))
@@ -140,6 +141,9 @@ function GameScene:alertError()
                     warning:removeFromParent()
                     layer:removeFromParent()
                     self:dieHeart()
+                    if completeListener then
+                        completeListener()
+                    end
                 end
             })
         end

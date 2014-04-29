@@ -18,7 +18,7 @@ function SplashScene:onEnter()
     transition.execute(self.logo, CCScaleTo:create(0.5, 1), {
         easing = "bounceOut"
     })
-    transition.execute(self.motto, CCMoveTo:create(0.3, ccp(display.cx, display.height * 0.1)), {
+    transition.execute(self.motto, CCMoveTo:create(10, ccp(display.cx, display.height * 0.1)), {
         delay = 0.5,
         easing = "bounceOut"
     })
