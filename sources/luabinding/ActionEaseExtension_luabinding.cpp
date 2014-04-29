@@ -1,17 +1,15 @@
 /*
 ** Lua binding: ActionEaseExtension_luabinding
-** Generated automatically by tolua++-1.0.92 on 01/11/14 17:22:32.
+** Generated automatically by tolua++-1.0.92 on Wed Apr  2 07:57:48 2014.
 */
 
-#ifndef __cplusplus
-#include "stdlib.h"
-#endif
-#include "string.h"
+#include "ActionEaseExtension_luabinding.h"
+#include "CCLuaEngine.h"
 
-#include "tolua++.h"
+using namespace cocos2d;
 
-/* Exported function */
-TOLUA_API int  tolua_ActionEaseExtension_luabinding_open (lua_State* tolua_S);
+
+
 
 #include "../ext/CrazyIQ.h"
 #include "../ext/ActionEaseExtension.h"
@@ -20,11 +18,11 @@ TOLUA_API int  tolua_ActionEaseExtension_luabinding_open (lua_State* tolua_S);
 /* function to register type */
 static void tolua_reg_types (lua_State* tolua_S)
 {
- tolua_usertype(tolua_S,"CCEaseCubicIn"); toluafix_add_type_mapping(typeid(CCEaseCubicIn).hash_code(), "CCEaseCubicIn");
- tolua_usertype(tolua_S,"CCEaseCubicOut"); toluafix_add_type_mapping(typeid(CCEaseCubicOut).hash_code(), "CCEaseCubicOut");
- tolua_usertype(tolua_S,"CCActionInterval"); toluafix_add_type_mapping(typeid(CCActionInterval).hash_code(), "CCActionInterval");
- tolua_usertype(tolua_S,"CCActionEase"); toluafix_add_type_mapping(typeid(CCActionEase).hash_code(), "CCActionEase");
- tolua_usertype(tolua_S,"CCEaseCubicInOut"); toluafix_add_type_mapping(typeid(CCEaseCubicInOut).hash_code(), "CCEaseCubicInOut");
+ tolua_usertype(tolua_S,"CCEaseCubicIn");
+ tolua_usertype(tolua_S,"CCEaseCubicOut");
+ tolua_usertype(tolua_S,"CCActionInterval");
+ tolua_usertype(tolua_S,"CCActionEase");
+ tolua_usertype(tolua_S,"CCEaseCubicInOut");
 }
 
 /* method: create of class  CCEaseCubicIn */

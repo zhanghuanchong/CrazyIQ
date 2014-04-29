@@ -1,17 +1,15 @@
 /*
 ** Lua binding: MenuItemSpriteExtension_luabinding
-** Generated automatically by tolua++-1.0.92 on 01/11/14 17:22:32.
+** Generated automatically by tolua++-1.0.92 on Wed Apr  2 07:57:48 2014.
 */
 
-#ifndef __cplusplus
-#include "stdlib.h"
-#endif
-#include "string.h"
+#include "MenuItemSpriteExtension_luabinding.h"
+#include "CCLuaEngine.h"
 
-#include "tolua++.h"
+using namespace cocos2d;
 
-/* Exported function */
-TOLUA_API int  tolua_MenuItemSpriteExtension_luabinding_open (lua_State* tolua_S);
+
+
 
 #include "../ext/CrazyIQ.h"
 #include "../ext/MenuItemSpriteExtension.h"
@@ -21,9 +19,9 @@ TOLUA_API int  tolua_MenuItemSpriteExtension_luabinding_open (lua_State* tolua_S
 static void tolua_reg_types (lua_State* tolua_S)
 {
  
- tolua_usertype(tolua_S,"MenuItemSpriteExtension"); toluafix_add_type_mapping(typeid(MenuItemSpriteExtension).hash_code(), "MenuItemSpriteExtension");
- tolua_usertype(tolua_S,"CCNode"); toluafix_add_type_mapping(typeid(CCNode).hash_code(), "CCNode");
- tolua_usertype(tolua_S,"CCMenuItemSprite"); toluafix_add_type_mapping(typeid(CCMenuItemSprite).hash_code(), "CCMenuItemSprite");
+ tolua_usertype(tolua_S,"MenuItemSpriteExtension");
+ tolua_usertype(tolua_S,"CCNode");
+ tolua_usertype(tolua_S,"CCMenuItemSprite");
 }
 
 /* method: create of class  MenuItemSpriteExtension */

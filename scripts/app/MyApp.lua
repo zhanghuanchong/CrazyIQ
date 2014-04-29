@@ -32,6 +32,8 @@ function MyApp:run()
     end
 
     self:enterScene("GameScene")
+--  for test
+    self:enterScene("SplashScene")
 end
 
 function MyApp:enterMenuScene()
