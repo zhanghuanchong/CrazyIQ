@@ -30,6 +30,8 @@ function TimeCounter:ctor(param)
     param = param or {}
     param.total = param.total or 10
     self.total = param.total
+    self.listener = param.listener
+
     self.current = self.total
 
     local title = ez:newLabel{
@@ -75,6 +77,9 @@ function TimeCounter:tick()
 
     if self.current < 0 then
         self:stop()
+        if self.listener then
+            self.listener()
+        end
         return
     end
 end
@@ -86,10 +91,7 @@ function TimeCounter:update()
     end
     self.title:setString(ez:getFormattedTime(current))
     local newPos = ccp((self.current / self.total - 3 / 2) * self.bgSize.width, 0)
-    transition.execute(self.front, CCMoveTo:create(1, newPos), {
-        onComplete = function()
-        end
-    })
+    transition.execute(self.front, CCMoveTo:create(1, newPos))
     local green = 180 * self.current / self.total
     local red = 255 * (1 - self.current / self.total)
     transition.execute(self.title, CCTintTo:create(1, red, green, 0))

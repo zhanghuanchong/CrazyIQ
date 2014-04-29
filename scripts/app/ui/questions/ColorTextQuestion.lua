@@ -11,7 +11,11 @@ function ColorTextQuestion:ctor()
     self.tipHeight = self.tip:getContentSize().height
 
     self.timeCounter = TimeCounter.new{
-        total = 10
+        total = 10,
+        listener = function()
+            self:alertError()
+            self:newLevel()
+        end
     }
     self.timeCounter:setPosition(ccp(display.cx, 80))
     self:addChild(self.timeCounter)
@@ -34,6 +38,7 @@ function ColorTextQuestion:ctor()
     self.buttonPosition = {}
     local colors = {'green', 'yellow', 'blue', 'red' }
     local buttonText = {'绿色', '黄色', '蓝色', '红色'}
+    self.centerPos = ccp(display.cx, baseHeight + height * 0.5)
     self.buttonText = buttonText
     self.colors = colors
     for i = 1, #colors do
@@ -46,22 +51,16 @@ function ColorTextQuestion:ctor()
         btn.index = i
         btn:setTouchEnabled(true)
         btn:addTouchEventListener(function()
-            local t = self.randomTargetType
-            local pass = (t == 1 and btn.index == self.randomIndex)
-                    or (t == 2 and btn.label.randomIndex == self.randomIndex)
-            if pass then
-                self.timeCounter:reset()
-            end
+            self:setButtonEnabled(false)
             jumpAnimate(btn, function()
+                local t = self.randomTargetType
+                local pass = (t == 1 and btn.index == self.randomIndex)
+                        or (t == 2 and btn.label.randomIndex == self.randomIndex)
                 if pass then
-                    -- self:passLevel()
-                    print("RIGHT")
-                    self:newLevel()
+                    self:passLevel()
                 else
-                    print("WRONG XXXXXX")
-                    -- self:alertError(function()
-                    --     self:newLevel()
-                    -- end)
+                    self:alertError()
+                    self:newLevel()
                 end
             end)
         end)
@@ -85,8 +84,13 @@ function ColorTextQuestion:ctor()
 
     self.targetType = {'按钮', '文字'}
 
-    self.modal = self:newModalLayer()
-    self:addChild(self.modal)
+    self:setButtonEnabled(false)
+end
+
+function ColorTextQuestion:setButtonEnabled(bEnabled)
+    for i,btn in ipairs(self.buttons) do
+        btn:setTouchEnabled(bEnabled)
+    end
 end
 
 function ColorTextQuestion:resetButtons()
@@ -95,19 +99,24 @@ function ColorTextQuestion:resetButtons()
     local positions2 = ez:randomSequence(max)
     for i, btn in ipairs(self.buttons) do
         local index = positions[i]
-        btn:setPosition(self.buttonPosition[index])
+        transition.execute(btn, CCMoveTo:create(0.5, self.centerPos), {
+            easing = 'backIn',
+            onComplete = function()
+                transition.execute(btn, CCMoveTo:create(0.5, self.buttonPosition[index]), {
+                    easing = 'backOut'
+                })
+            end
+        })
         index = positions2[i]
         btn.label.randomIndex = index
         btn.label:setString(self.buttonText[index])
     end
 end
 
-function ColorTextQuestion:newLevel()
-    if self.modal then
-        self.modal:removeFromParent()
-    end
-    self.modal = self:newModalLayer()
-    self:addChild(self.modal)
+function ColorTextQuestion:newLevel()    
+    self:setButtonEnabled(false)
+
+    self.timeCounter:reset()
 
     local max = table.getn(self.colors)
     local random = math.random(max)
@@ -124,8 +133,7 @@ function ColorTextQuestion:newLevel()
     self:hideTip(true, function()
         self:setTip(target, 60, self.tipHeight)
         self:showTip(true, function()
-            self.modal:removeFromParent()
-            self.modal = nil
+            self:setButtonEnabled(true)
             self.timeCounter:start()
         end)
     end)

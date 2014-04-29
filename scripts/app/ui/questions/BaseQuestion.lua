@@ -100,8 +100,8 @@ function BaseQuestion:cy()
     return self:getAvailableHeight() / 2
 end
 
-function BaseQuestion:alertError()
-    ez.gameScene:alertError()
+function BaseQuestion:alertError(completeListener)
+    ez.gameScene:alertError(completeListener)
 end
 
 function BaseQuestion:gotoNextQuestion()
