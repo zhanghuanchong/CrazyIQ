@@ -103,6 +103,12 @@ function ColorTextQuestion:resetButtons()
 end
 
 function ColorTextQuestion:newLevel()
+    if self.modal then
+        self.modal:removeFromParent()
+    end
+    self.modal = self:newModalLayer()
+    self:addChild(self.modal)
+
     local max = table.getn(self.colors)
     local random = math.random(max)
     self.randomIndex = random
@@ -112,11 +118,17 @@ function ColorTextQuestion:newLevel()
     self.randomTargetType = randomTargetType
     local targetType = self.targetType[randomTargetType]
     local target = color .. targetType 
-    self:setTip(target, 60, self.tipHeight)
 
     self:resetButtons()
 
-    self.timeCounter:start()
+    self:hideTip(true, function()
+        self:setTip(target, 60, self.tipHeight)
+        self:showTip(true, function()
+            self.modal:removeFromParent()
+            self.modal = nil
+            self.timeCounter:start()
+        end)
+    end)
 end
 
 function ColorTextQuestion:passLevel()
@@ -148,13 +160,7 @@ function ColorTextQuestion:onEnterTransitionFinish()
                         -- from = 3,
                         y = self.tip:getPositionY() - self.tipHeight / 2 + 10,
                         onComplete = function()
-                            self:hideTip(true, function()
-                                self:setTip('', nil, self.tipHeight)
-                                self:showTip(true, function()
-                                    self.modal:removeFromParent()
-                                    self:newLevel()
-                                end)
-                            end)
+                            self:newLevel()
                         end
                     }
                 end)

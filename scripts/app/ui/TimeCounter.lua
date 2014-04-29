@@ -49,42 +49,49 @@ function TimeCounter:reset(total)
         self.total = total
     end
     self.current = self.total
+    self:update()
 end
 
 function TimeCounter:start()
-    self:reset()
+    if self.current ~= self.total then
+        self:reset()
+    end
+    self:tick()
     self.scheduler = scheduler.scheduleGlobal(handler(self, self.tick), 1)
 end
 
 function TimeCounter:stop()
+    self.front:stopAllActions()
+    self.title:stopAllActions()
     if self.scheduler then
         scheduler.unscheduleGlobal(self.scheduler)
+        self.scheduler = nil
     end
-    self:update()
 end
 
 function TimeCounter:tick()
     self.current = self.current - 1
-
     self:update()
 
-    if self.current <= 0 then
-        scheduler.unscheduleGlobal(self.scheduler)
-        self.scheduler = nil
+    if self.current < 0 then
+        self:stop()
         return
     end
 end
 
 function TimeCounter:update()
+    local current = self.current + 1
+    if self.current == self.total then
+        current = self.current
+    end
+    self.title:setString(ez:getFormattedTime(current))
     local newPos = ccp((self.current / self.total - 3 / 2) * self.bgSize.width, 0)
-    local newCurrent = self.current
     transition.execute(self.front, CCMoveTo:create(1, newPos), {
         onComplete = function()
-            self.title:setString(ez:getFormattedTime(newCurrent))
         end
     })
-    local green = 180 * newCurrent / self.total
-    local red = 255 * (1 - newCurrent / self.total)
+    local green = 180 * self.current / self.total
+    local red = 255 * (1 - self.current / self.total)
     transition.execute(self.title, CCTintTo:create(1, red, green, 0))
 end
 

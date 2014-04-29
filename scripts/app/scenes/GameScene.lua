@@ -45,9 +45,9 @@ function GameScene:ctor()
 
     self.currentLevel = Levels[ez:getCurrentLevel()]
     self.questions = self.currentLevel['questions']
-    self.currentQuestionIndex = 0
---    for test
---    self.currentQuestionIndex = 4
+    -- self.currentQuestionIndex = 0
+    --    for test
+    self.currentQuestionIndex = 4
 end
 
 function GameScene:gotoNextQuestion()
