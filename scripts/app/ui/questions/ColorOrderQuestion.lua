@@ -9,12 +9,12 @@ function ColorOrderQuestion:ctor()
 
     local height = self:getAvailableHeight()
 
---    display.addSpriteFramesWithFile("image/stars.plist", "image/stars.png")
+    display.addSpriteFramesWithFile("image/rect_btn.plist", "image/rect_btn.png")
 
 end
 
 function ColorOrderQuestion:onExit()
---    display.removeSpriteFramesWithFile("image/stars.plist")
+   display.removeSpriteFramesWithFile("image/rect_btn.plist")
 end
 
 return ColorOrderQuestion

@@ -30,15 +30,20 @@ function ClickOrderQuestion:ctor()
         )
         item:setTouchEnabled(true)
         item:addTouchEventListener(function()
-            if i ~= currentIndex then
-                self:alertError()
-            else
-                item:removeFromParent()
-                currentIndex = currentIndex + 1
-                if currentIndex == 7 then
-                    self:gotoNextQuestion()
+            transition.execute(item, CCScaleTo:create(0.3, 0.1), {
+                easing = "backIn",
+                onComplete = function()
+                    if i ~= currentIndex then
+                        self:alertError()
+                    else
+                        item:removeFromParent()
+                        currentIndex = currentIndex + 1
+                        if currentIndex == 7 then
+                            self:gotoNextQuestion()
+                        end
+                    end
                 end
-            end
+            })
         end)
         self:addChild(item)
     end
