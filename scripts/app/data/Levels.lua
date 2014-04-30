@@ -2,7 +2,9 @@ local ClickRedBtnQuestion = import("app.ui.questions.ClickRedBtnQuestion")
 local BallPrepareQuestion = import("app.ui.questions.BallPrepareQuestion")
 local BallQuestion = import("app.ui.questions.BallQuestion")
 local ClickOrderQuestion = import("app.ui.questions.ClickOrderQuestion")
+local ColorOrderQuestion = import("app.ui.questions.ColorOrderQuestion")
 local ColorTextQuestion = import("app.ui.questions.ColorTextQuestion")
+
 
 local Levels = {}
 
@@ -13,6 +15,7 @@ Levels[1] = {
         {class = BallPrepareQuestion},
         {class = BallQuestion },
         {class = ClickOrderQuestion},
+        {class = ColorOrderQuestion},
         {class = ColorTextQuestion}
     }
 }

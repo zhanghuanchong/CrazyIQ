@@ -92,6 +92,15 @@ function BaseQuestion:hideTip(animation, onComplete)
     end
 end
 
+function BaseQuestion:setButtonEnabled(bEnabled)
+    if type(self.buttons) ~= 'table' then
+        return
+    end
+    for i,btn in ipairs(self.buttons) do
+        btn:setTouchEnabled(bEnabled)
+    end
+end
+
 function BaseQuestion:getAvailableHeight()
     return display.height - 80 - self.tip:getContentSize().height
 end

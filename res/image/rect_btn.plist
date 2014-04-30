@@ -30,7 +30,7 @@
                 <key>sourceSize</key>
                 <string>{234,105}</string>
             </dict>
-            <key>rect_btn_red.png</key>
+            <key>rect_btn_orange.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{2,109},{234,105}}</string>
@@ -43,10 +43,36 @@
                 <key>sourceSize</key>
                 <string>{234,105}</string>
             </dict>
-            <key>rect_btn_yellow.png</key>
+            <key>rect_btn_purple.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{238,109},{234,105}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{234,105}}</string>
+                <key>sourceSize</key>
+                <string>{234,105}</string>
+            </dict>
+            <key>rect_btn_red.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{2,216},{234,105}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{234,105}}</string>
+                <key>sourceSize</key>
+                <string>{234,105}</string>
+            </dict>
+            <key>rect_btn_yellow.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{238,216},{234,105}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -66,7 +92,7 @@
             <key>size</key>
             <string>{512,512}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:66248943a67eb416227f9cb52df3fe44:1/1$</string>
+            <string>$TexturePacker:SmartUpdate:98b215b06e6bddb57195f418db8d179a:1/1$</string>
             <key>textureFileName</key>
             <string>rect_btn.png</string>
         </dict>

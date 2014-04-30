@@ -55,6 +55,7 @@ function ColorTextQuestion:ctor()
         btn:setTouchEnabled(true)
         btn:addTouchEventListener(function()
             self:setButtonEnabled(false)
+            ez:playEffect('sound/click.mp3')
             jumpAnimate(btn, function()
                 local t = self.randomTargetType
                 local pass = (t == 1 and btn.index == self.randomIndex)
@@ -91,12 +92,6 @@ function ColorTextQuestion:ctor()
     self:setButtonEnabled(false)
 end
 
-function ColorTextQuestion:setButtonEnabled(bEnabled)
-    for i,btn in ipairs(self.buttons) do
-        btn:setTouchEnabled(bEnabled)
-    end
-end
-
 function ColorTextQuestion:resetButtons()
     local max = table.getn(self.colors)
     local positions = ez:randomSequence(max)
@@ -130,7 +125,7 @@ function ColorTextQuestion:newLevel()
     local randomTargetType = math.random(1, 2)
     self.randomTargetType = randomTargetType
     local targetType = self.targetType[randomTargetType]
-    local target = color .. targetType 
+    local target = targetType .. ': ' .. color
 
     self:resetButtons()
 
@@ -159,17 +154,13 @@ function ColorTextQuestion:onEnterTransitionFinish()
     self:showTip(true)
 
     local seq = transition.sequence({
-        CCDelayTime:create(0),
-        -- for test
-        -- CCDelayTime:create(4),
+        CCDelayTime:create(4),
         CCCallFunc:create(function()
             self:hideTip(true, function()
                 self:setTip('', nil, self.tipHeight)
                 self:showTip(true, function()
                     ez.gameScene:showCountDown{
-                        from = 0,
-                        -- for test
-                        -- from = 3,
+                        from = 3,
                         y = self.tip:getPositionY() - self.tipHeight / 2 + 10,
                         onComplete = function()
                             self:newLevel()
