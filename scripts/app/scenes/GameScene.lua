@@ -107,7 +107,7 @@ end
 function GameScene:dieHeart()
     if table.getn(self.hearts) == 1 then
         app:enterGameOverScene()
-        return
+        return false
     end
     local heart = table.remove(self.hearts)
     transition.execute(heart, CCScaleTo:create(0.2, 0.1), {
@@ -120,6 +120,7 @@ function GameScene:dieHeart()
             end
         end
     })
+    return true
 end
 
 function GameScene:alertError(completeListener)
@@ -140,9 +141,10 @@ function GameScene:alertError(completeListener)
                 onComplete = function()
                     warning:removeFromParent()
                     layer:removeFromParent()
-                    self:dieHeart()
-                    if completeListener then
-                        completeListener()
+                    if self:dieHeart() then
+                        if completeListener then
+                            completeListener()
+                        end
                     end
                 end
             })

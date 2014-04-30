@@ -13,8 +13,11 @@ function ColorTextQuestion:ctor()
     self.timeCounter = TimeCounter.new{
         total = 10,
         listener = function()
-            self:alertError()
-            self:newLevel()
+            if self.buttons[1]:isTouchEnabled() then
+                self:alertError(function()
+                    self:newLevel()
+                end)
+            end
         end
     }
     self.timeCounter:setPosition(ccp(display.cx, 80))
@@ -59,8 +62,9 @@ function ColorTextQuestion:ctor()
                 if pass then
                     self:passLevel()
                 else
-                    self:alertError()
-                    self:newLevel()
+                    self:alertError(function()
+                        self:newLevel()
+                    end)
                 end
             end)
         end)
@@ -102,14 +106,14 @@ function ColorTextQuestion:resetButtons()
         transition.execute(btn, CCMoveTo:create(0.5, self.centerPos), {
             easing = 'backIn',
             onComplete = function()
+                index = positions2[i]
+                btn.label.randomIndex = index
+                btn.label:setString(self.buttonText[index])
                 transition.execute(btn, CCMoveTo:create(0.5, self.buttonPosition[index]), {
                     easing = 'backOut'
                 })
             end
         })
-        index = positions2[i]
-        btn.label.randomIndex = index
-        btn.label:setString(self.buttonText[index])
     end
 end
 

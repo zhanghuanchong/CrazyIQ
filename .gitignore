@@ -1,6 +1,7 @@
 debug.log
 .idea/workspace.xml
 .idea/tasks.xml
+.settings
 proj.win32/Debug
 proj.win32/CrazyIQ.opensdf
 proj.win32/CrazyIQ.sdf
