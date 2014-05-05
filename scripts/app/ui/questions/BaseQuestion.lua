@@ -92,11 +92,14 @@ function BaseQuestion:hideTip(animation, onComplete)
     end
 end
 
-function BaseQuestion:setButtonEnabled(bEnabled)
-    if type(self.buttons) ~= 'table' then
+function BaseQuestion:setButtonEnabled(bEnabled, buttons)
+    if buttons == nil then
+        buttons = self.buttons
+    end
+    if buttons == nil then
         return
     end
-    for i,btn in ipairs(self.buttons) do
+    for i,btn in ipairs(buttons) do
         btn:setTouchEnabled(bEnabled)
     end
 end

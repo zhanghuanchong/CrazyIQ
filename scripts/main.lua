@@ -104,6 +104,7 @@ function ez:swap(array, i, j)
     array[j] = t
 end
 
+-- cannot be same
 function ez:randomSequence(max)
     local bits = {}
     for i = 1, max do
@@ -116,6 +117,18 @@ function ez:randomSequence(max)
             ez:swap(bits, n, it)
         end
         it = it - 1
+    end
+    return bits
+end
+
+-- maybe same
+function ez:randomNumber(max, count)
+    local bits = {}
+    if count == nil then
+        count = max
+    end
+    for i = 1, count do
+        bits[i] = math.random(1, max)
     end
     return bits
 end
