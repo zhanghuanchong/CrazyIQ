@@ -18,7 +18,7 @@ function ColorOrderRepeatQuestion:ctor()
     self:setTip("请按照顺序\n点击相应的按钮。")
     self.tipHeight = self.tip:getContentSize().height
 
-    local height = self:getAvailableHeight()
+    self.orderIndexByUser = 1
 
     display.addSpriteFramesWithFile("image/round_btns.plist", "image/round_btns.png")
 
@@ -32,6 +32,16 @@ function ColorOrderRepeatQuestion:ctor()
         btn:setPosition(ccp(pos[1], pos[2] + 30))
         btn.color = color
         btn:addTouchEventListener(function()
+            self:resetButtons()
+            btn:setDisplayFrame(self.activeFrames[i])
+            if (i ~= self.orderTarget[self.orderIndexByUser]) then
+                self:alertError()
+            else
+                self.orderIndexByUser = self.orderIndexByUser + 1
+                if self.orderIndexByUser > #self.orderTarget then
+                    self:gotoNextQuestion()
+                end
+            end
         end)
         self.buttons[i] = btn
         self:addChild(btn)
@@ -55,6 +65,7 @@ function ColorOrderRepeatQuestion:onEnterTransitionFinish()
     local randoms = ez:randomSequence(max)
     print('==== randoms: ' .. table.concat(randoms) .. ' ====')
     local seq = {}
+    self.orderTarget = randoms
     for i,v in ipairs(randoms) do
         table.insert(seq, CCCallFunc:create(function()
             self:resetButtons()
