@@ -5,7 +5,7 @@ local ClickOrderQuestion = import("app.ui.questions.ClickOrderQuestion")
 local ColorOrderQuestion = import("app.ui.questions.ColorOrderQuestion")
 local ColorTextQuestion = import("app.ui.questions.ColorTextQuestion")
 local ColorOrderRepeatQuestion = import("app.ui.questions.ColorOrderRepeatQuestion")
-
+local ClickCharQuestion = import("app.ui.questions.ClickCharQuestion")
 
 local Levels = {}
 
@@ -18,7 +18,8 @@ Levels[1] = {
         {class = ClickOrderQuestion},
         {class = ColorOrderQuestion},
         {class = ColorTextQuestion},
-        {class = ColorOrderRepeatQuestion}
+        {class = ColorOrderRepeatQuestion},
+        {class = ClickCharQuestion}
     }
 }
 Levels[2] = {

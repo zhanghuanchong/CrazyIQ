@@ -122,13 +122,16 @@ function ez:randomSequence(max)
 end
 
 -- maybe same
-function ez:randomNumber(max, count)
+function ez:randomNumber(max, count, min)
     local bits = {}
     if count == nil then
         count = max
     end
+    if min == nil then
+        min = 1
+    end
     for i = 1, count do
-        bits[i] = math.random(1, max)
+        bits[i] = math.random(min, max)
     end
     return bits
 end
