@@ -12,20 +12,23 @@ function CrystalButton:ctor(params)
     params.sound = 'sound/click.mp3'
 
     self:setTouchEnabled(true)
-    self:addTouchEventListener(function()
-        if params.sound then
-            ez:playEffect(params.sound)
-        end
-        if params.prepare then
-            params.prepare()
-        end
-
-        jumpAnimate(self.bg, function()
-            if params.listener then
-                params.listener()
+    self:addTouchEventListener(function(event, touch)
+        if event == 'began' then
+            if params.sound then
+                ez:playEffect(params.sound)
             end
-        end)
-        jumpAnimate(self.label)
+            if params.prepare then
+                params.prepare()
+            end
+
+            jumpAnimate(self.bg, function()
+                if params.listener then
+                    params.listener()
+                end
+            end)
+            jumpAnimate(self.label)
+        end
+        return true
     end)
 
     local x, y = params.x, params.y

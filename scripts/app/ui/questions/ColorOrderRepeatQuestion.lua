@@ -31,17 +31,20 @@ function ColorOrderRepeatQuestion:ctor()
         local pos = self.positions[i]
         btn:setPosition(ccp(pos[1], pos[2] + 30))
         btn.color = color
-        btn:addTouchEventListener(function()
-            self:resetButtons()
-            btn:setDisplayFrame(self.activeFrames[i])
-            if (i ~= self.orderTarget[self.orderIndexByUser]) then
-                self:alertError()
-            else
-                self.orderIndexByUser = self.orderIndexByUser + 1
-                if self.orderIndexByUser > #self.orderTarget then
-                    self:gotoNextQuestion()
+        btn:addTouchEventListener(function(event)
+            if event == 'began' then
+                self:resetButtons()
+                btn:setDisplayFrame(self.activeFrames[i])
+                if (i ~= self.orderTarget[self.orderIndexByUser]) then
+                    self:alertError()
+                else
+                    self.orderIndexByUser = self.orderIndexByUser + 1
+                    if self.orderIndexByUser > #self.orderTarget then
+                        self:gotoNextQuestion()
+                    end
                 end
             end
+            return true
         end)
         self.buttons[i] = btn
         self:addChild(btn)
