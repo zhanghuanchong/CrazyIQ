@@ -5,7 +5,11 @@ function __G__TRACKBACK__(errorMessage)
     print("----------------------------------------")
 end
 
-function jumpAnimate(button, onComplete)
+function jumpAnimate(button, onComplete, zoom)
+    if zoom == nil then
+        zoom = true
+    end
+
     local function zoom1(offset, time, onComplete)
         local x, y = button:getPosition()
         local size = button:getContentSize()
@@ -13,26 +17,34 @@ function jumpAnimate(button, onComplete)
         local scaleX = button:getScaleX() * (size.width + offset) / size.width
         local scaleY = button:getScaleY() * (size.height - offset) / size.height
 
-        transition.moveTo(button, {y = y - offset, time = time})
-        transition.scaleTo(button, {
-            scaleX     = scaleX,
-            scaleY     = scaleY,
-            time       = time,
-            onComplete = onComplete,
-        })
+        if zoom then
+            transition.moveTo(button, {y = y - offset, time = time})
+            transition.scaleTo(button, {
+                scaleX     = scaleX,
+                scaleY     = scaleY,
+                time       = time,
+                onComplete = onComplete,
+            })
+        else
+            transition.moveTo(button, {y = y - offset, time = time, onComplete = onComplete})
+        end
     end
 
     local function zoom2(offset, time, onComplete)
         local x, y = button:getPosition()
         local size = button:getContentSize()
 
-        transition.moveTo(button, {y = y + offset, time = time / 2})
-        transition.scaleTo(button, {
-            scaleX     = 1.0,
-            scaleY     = 1.0,
-            time       = time,
-            onComplete = onComplete,
-        })
+        if zoom then
+            transition.moveTo(button, {y = y + offset, time = time / 2})
+            transition.scaleTo(button, {
+                scaleX     = 1.0,
+                scaleY     = 1.0,
+                time       = time,
+                onComplete = onComplete,
+            })
+        else
+            transition.moveTo(button, {y = y + offset, time = time / 2, onComplete = onComplete})
+        end
     end
 
     zoom1(40, 0.08, function()
@@ -58,11 +70,11 @@ function ez:getCurrentLevel()
 end
 
 function ez:newLabel(t)
-    t.font = t.font or 'HOPE';
-    t.size = t.size or 45;
-    t.color = t.color or ez.COLOR_BROWN;
-    t.x = t.x or 0;
-    t.y = t.y or 0;
+    t.font = t.font or 'HOPE'
+    t.size = t.size or 45
+    t.color = t.color or ez.COLOR_BROWN
+    t.x = t.x or 0
+    t.y = t.y or 0
     return ui.newTTFLabel(t)
 end
 
