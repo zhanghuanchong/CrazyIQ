@@ -51,14 +51,13 @@ function TimeCounter:reset(total)
         self.total = total
     end
     self.current = self.total
-    self:update()
+    self:update(true)
 end
 
 function TimeCounter:start()
     if self.current ~= self.total then
         self:reset()
     end
-    self:tick()
     self.scheduler = scheduler.scheduleGlobal(handler(self, self.tick), 1)
 end
 
@@ -84,17 +83,26 @@ function TimeCounter:tick()
     end
 end
 
-function TimeCounter:update()
-    local current = self.current + 1
-    if self.current == self.total then
-        current = self.current
+function TimeCounter:update(immediate)
+    local current = self.current
+    if current < 0 then
+        self.title:setString('00:00')
+        return
     end
-    self.title:setString(ez:getFormattedTime(current))
+    local duration = 1
+    if immediate then
+        duration = 0
+    end
+    local str = ez:getFormattedTime(current)
     local newPos = ccp((self.current / self.total - 3 / 2) * self.bgSize.width, 0)
-    transition.execute(self.front, CCMoveTo:create(1, newPos))
+    transition.execute(self.front, CCMoveTo:create(duration, newPos), {
+        onComplete = function()
+            self.title:setString(str)
+        end
+    })
     local green = 180 * self.current / self.total
     local red = 255 * (1 - self.current / self.total)
-    transition.execute(self.title, CCTintTo:create(1, red, green, 0))
+    transition.execute(self.title, CCTintTo:create(duration, red, green, 0))
 end
 
 function TimeCounter:onExit()
