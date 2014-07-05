@@ -8,6 +8,7 @@ local ColorOrderRepeatQuestion = import("app.ui.questions.ColorOrderRepeatQuesti
 local ClickCharQuestion = import("app.ui.questions.ClickCharQuestion")
 local ClickSmallestBtnQuestion = import("app.ui.questions.ClickSmallestBtnQuestion")
 local PuzzleQuestion = import("app.ui.questions.PuzzleQuestion")
+local MemoryQuestion = import("app.ui.questions.MemoryQuestion")
 
 local Levels = {}
 
@@ -23,7 +24,8 @@ Levels[1] = {
         {class = ColorOrderRepeatQuestion},
         {class = ClickCharQuestion},
         {class = ClickSmallestBtnQuestion},
-        {class = PuzzleQuestion}
+        {class = PuzzleQuestion},
+        {class = MemoryQuestion}
     }
 }
 Levels[2] = {
