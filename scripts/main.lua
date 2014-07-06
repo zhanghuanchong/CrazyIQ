@@ -5,6 +5,33 @@ function __G__TRACKBACK__(errorMessage)
     print("----------------------------------------")
 end
 
+function showAnimate(sprite, bShow, onComplete)
+    if bShow == nil then
+        bShow = true
+    end
+    local scale = 0.1
+    local easing = 'backIn'
+    if bShow then
+        sprite:setScale(0.1)
+        scale = 1
+        easing = 'backOut'
+    else
+        sprite:setScale(1)
+    end
+    sprite:setVisible(true)
+    transition.execute(sprite, CCScaleTo:create(0.3, scale), {
+        easing = easing,
+        onComplete = function()
+            if bShow == false then
+                sprite:setVisible(false)
+            end
+            if onComplete then
+                onComplete()
+            end
+        end
+    })
+end
+
 function jumpAnimate(button, onComplete, zoom)
     if zoom == nil then
         zoom = true

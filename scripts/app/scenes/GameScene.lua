@@ -47,7 +47,7 @@ function GameScene:ctor()
     self.questions = self.currentLevel['questions']
     -- self.currentQuestionIndex = 0
     --    for test
-    self.currentQuestionIndex = 11
+    self.currentQuestionIndex = 12
 end
 
 function GameScene:gotoNextQuestion()

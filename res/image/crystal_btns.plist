@@ -7,7 +7,7 @@
             <key>crystal_blue.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,2},{254,254}}</string>
+                <string>{{766,256},{254,254}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -20,7 +20,137 @@
             <key>crystal_green.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{258,2},{254,254}}</string>
+                <string>{{256,256},{254,254}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{254,254}}</string>
+                <key>sourceSize</key>
+                <string>{254,254}</string>
+            </dict>
+            <key>crystal_lightblue.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{511,256},{254,254}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{254,254}}</string>
+                <key>sourceSize</key>
+                <string>{254,254}</string>
+            </dict>
+            <key>crystal_mini_blue.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{364,511},{120,120}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{120,120}}</string>
+                <key>sourceSize</key>
+                <string>{120,120}</string>
+            </dict>
+            <key>crystal_mini_green.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{485,511},{120,120}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{120,120}}</string>
+                <key>sourceSize</key>
+                <string>{120,120}</string>
+            </dict>
+            <key>crystal_mini_lightblue.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{727,511},{120,120}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{120,120}}</string>
+                <key>sourceSize</key>
+                <string>{120,120}</string>
+            </dict>
+            <key>crystal_mini_orange.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{122,632},{120,120}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{120,120}}</string>
+                <key>sourceSize</key>
+                <string>{120,120}</string>
+            </dict>
+            <key>crystal_mini_purple.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{848,511},{120,120}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{120,120}}</string>
+                <key>sourceSize</key>
+                <string>{120,120}</string>
+            </dict>
+            <key>crystal_mini_red.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1,632},{120,120}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{120,120}}</string>
+                <key>sourceSize</key>
+                <string>{120,120}</string>
+            </dict>
+            <key>crystal_mini_white.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{243,511},{120,120}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{120,120}}</string>
+                <key>sourceSize</key>
+                <string>{120,120}</string>
+            </dict>
+            <key>crystal_mini_yellow.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1,511},{120,120}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{120,120}}</string>
+                <key>sourceSize</key>
+                <string>{120,120}</string>
+            </dict>
+            <key>crystal_orange.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{511,1},{254,254}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -33,7 +163,7 @@
             <key>crystal_purple.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{514,2},{254,254}}</string>
+                <string>{{766,1},{254,254}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -46,7 +176,7 @@
             <key>crystal_red.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,258},{254,254}}</string>
+                <string>{{256,1},{254,254}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -59,7 +189,7 @@
             <key>crystal_white.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{258,258},{254,254}}</string>
+                <string>{{1,256},{254,254}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -72,7 +202,7 @@
             <key>crystal_yellow.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{514,258},{254,254}}</string>
+                <string>{{1,1},{254,254}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -81,6 +211,32 @@
                 <string>{{0,0},{254,254}}</string>
                 <key>sourceSize</key>
                 <string>{254,254}</string>
+            </dict>
+            <key>match_bg.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{122,511},{120,120}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{120,120}}</string>
+                <key>sourceSize</key>
+                <string>{120,120}</string>
+            </dict>
+            <key>match_cover.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{606,511},{120,120}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{120,120}}</string>
+                <key>sourceSize</key>
+                <string>{120,120}</string>
             </dict>
         </dict>
         <key>metadata</key>
@@ -92,7 +248,7 @@
             <key>size</key>
             <string>{1024,1024}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:09ab6dd3acd7ee7c309717d5780c6ff0:1/1$</string>
+            <string>$TexturePacker:SmartUpdate:887352955e00c29f1c1661db9c7cb731:1/1$</string>
             <key>textureFileName</key>
             <string>crystal_btns.png</string>
         </dict>
