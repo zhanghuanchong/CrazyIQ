@@ -4,7 +4,12 @@ end)
 
 -- params: color, title, titleColor, scale, prepare, listener, x, y
 function CrystalButton:ctor(params)
-    self.bg = display.newSprite("#crystal_" .. params.color .. '.png')
+    local fileName = "#crystal_"
+    if params.mini then
+        fileName = '#crystal_mini_'
+    end
+
+    self.bg = display.newSprite(fileName .. params.color .. '.png')
     self:addChild(self.bg)
 
     self:setScale(params.scale)
@@ -39,14 +44,18 @@ function CrystalButton:ctor(params)
         local label = ez:newLabel{
             text = params.title,
             align = ui.TEXT_ALIGN_CENTER,
-            size = 200,
-            color = params.titleColor,
+            size = params.titleSize or 200,
+            color = params.titleColor or display.COLOR_BLACK,
             x = pos.width * 0.5,
             y = pos.height * 0.55
         }
         self:addChild(label)
         self.label = label
     end
+end
+
+function CrystalButton:setTitleVisible(v)
+    self.label:setVisible(v)
 end
 
 return CrystalButton

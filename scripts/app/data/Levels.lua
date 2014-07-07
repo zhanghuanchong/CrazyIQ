@@ -11,6 +11,7 @@ local PuzzleQuestion = import("app.ui.questions.PuzzleQuestion")
 local MemoryQuestion = import("app.ui.questions.MemoryQuestion")
 local RockScissorPaperQuestion = import("app.ui.questions.RockScissorPaperQuestion")
 local MatchQuestion = import("app.ui.questions.MatchQuestion")
+local ColorNumberQuestion = import("app.ui.questions.ColorNumberQuestion")
 
 local Levels = {}
 
@@ -29,7 +30,8 @@ Levels[1] = {
         {class = PuzzleQuestion},
         {class = MemoryQuestion},
         {class = RockScissorPaperQuestion},
-        {class = MatchQuestion}
+        {class = MatchQuestion},
+        {class = ColorNumberQuestion}
     }
 }
 Levels[2] = {

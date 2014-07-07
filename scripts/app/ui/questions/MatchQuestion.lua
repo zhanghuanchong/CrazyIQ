@@ -12,6 +12,7 @@ function MatchQuestion:ctor()
     self.timeCounter = TimeCounter.new{
         total = maxTime,
         listener = function()
+            self.timeCounter:setVisible(false)
             for i = 1, #self.cells do
                 transition.execute(self.cells[i], CCOrbitCamera:create(.5, 1, 0, 0, 90, 0, 0), {
                     easing = 'backIn',
