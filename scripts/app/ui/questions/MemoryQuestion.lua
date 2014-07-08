@@ -9,7 +9,7 @@ function MemoryQuestion:ctor()
     self:setTip("记住他们！")
 
     self.items = ez:randomSequence(16)
-    self.count = 8
+    self.count = 9
     self.interval = 1
 
     local height = self:getAvailableHeight()
@@ -67,16 +67,18 @@ function MemoryQuestion:onEnterTransitionFinish()
             local height = self:getAvailableHeight()
 
             local split = 2
-            local scale = 1
+            local scale = .9
             if self.count > 6 then
-                split = 3
-                scale = 0.7
+                scale = .7
+                if self.count > 8 then
+                    split = 3
+                    scale = .6
+                end
             end
 
             local randoms = ez:randomSequence(self.count)
             for i = 1, self.count do
                 local cell = self.cells[randoms[i]]
-                cell:setScale(.9)
 
                 local x = (i - 1) % split
                 local y = math.floor((self.count - i) / split)
