@@ -9,8 +9,8 @@ function MemoryQuestion:ctor()
     self:setTip("记住他们！")
 
     self.items = ez:randomSequence(16)
-    self.count = 5
-    self.interval = 2
+    self.count = 8
+    self.interval = 1
 
     local height = self:getAvailableHeight()
 
@@ -65,20 +65,28 @@ function MemoryQuestion:onEnterTransitionFinish()
             end)
 
             local height = self:getAvailableHeight()
-            local positions = {
-                {x = display.width * .25, y = height * .75},
-                {x = display.width * .75, y = height * .75},
-                {x = display.width * .5, y = height * .5},
-                {x = display.width * .25, y = height * .25},
-                {x = display.width * .75, y = height * .25}
-            }
+
+            local split = 2
+            local scale = 1
+            if self.count > 6 then
+                split = 3
+                scale = 0.7
+            end
 
             local randoms = ez:randomSequence(self.count)
             for i = 1, self.count do
                 local cell = self.cells[randoms[i]]
                 cell:setScale(.9)
-                cell:setPosition(ccp(positions[i].x, positions[i].y))
+
+                local x = (i - 1) % split
+                local y = math.floor((self.count - i) / split)
+
+                local cx = (640 - split * 120) / (split + 1) * (1 + x) + 60 * (1 + 2 * x)
+                local dis = (height - 120 * math.ceil(self.count / split)) / (math.ceil(self.count / split) + 1)
+                local cy = dis * (1 + y) + 60 * (1 + 2 * y)
+                cell:setPosition(ccp(cx, cy))
                 cell:setVisible(true)
+                cell:setScale(scale)
 
                 cell:setTouchEnabled(true)
                 cell:addTouchEventListener(function()
@@ -88,7 +96,7 @@ function MemoryQuestion:onEnterTransitionFinish()
                         else
                             self:alertError()
                         end
-                    end)
+                    end, false)
                 end)
             end
         else
