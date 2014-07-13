@@ -33,6 +33,7 @@ function showAnimate(sprite, bShow, onComplete)
 end
 
 function jumpAnimate(button, onComplete, zoom)
+    ez:playEffect('sound/click.mp3')
     if zoom == nil then
         zoom = true
     end

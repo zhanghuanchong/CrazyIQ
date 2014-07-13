@@ -50,7 +50,7 @@ Levels[4] = {
 Levels[5] = {
     title = '大学'
 }
-Levels[6] = {
+--[[Levels[6] = {
     title = '研究生'
 }
 Levels[7] = {
@@ -61,6 +61,6 @@ Levels[8] = {
 }
 Levels[9] = {
     title = '院士'
-}
+}]]
 
 return Levels

@@ -9,7 +9,6 @@ function LevelsListCell:ctor(size, levelIndex, title)
         if disable then
             return
         end
-        ez:playEffect('sound/click.mp3')
         jumpAnimate(self.levelIcon, function()
             print('level' .. levelIndex)
             app:enterGameScene()

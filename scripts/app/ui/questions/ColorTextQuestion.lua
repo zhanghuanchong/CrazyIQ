@@ -55,7 +55,6 @@ function ColorTextQuestion:ctor()
         btn:setTouchEnabled(true)
         btn:addTouchEventListener(function()
             self:setButtonEnabled(false)
-            ez:playEffect('sound/click.mp3')
             jumpAnimate(btn, function()
                 local t = self.randomTargetType
                 local pass = (t == 1 and btn.index == self.randomIndex)
