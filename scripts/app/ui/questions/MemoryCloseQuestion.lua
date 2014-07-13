@@ -9,7 +9,6 @@ function MemoryCloseQuestion:ctor()
     self:setTip("记忆时间！")
 
     self.count = 8
-    self.items = ez:randomSequence(100)
 
     display.addSpriteFramesWithFile("image/flags.plist", "image/flags.png")
 
@@ -52,7 +51,9 @@ function MemoryCloseQuestion:ctor()
                                 if answer.index == index then
                                     self:gotoNextQuestion()
                                 else
-                                    self:alertError()
+                                    self:alertError(function()
+                                        self:restart()
+                                    end)
                                 end
                             end)
                         end)
@@ -70,36 +71,67 @@ function MemoryCloseQuestion:ctor()
     self.timeCounter:setPosition(ccp(display.cx, 80))
     self:addChild(self.timeCounter, 1)
 
-    local baseHeight = self.timeCounter:getContentSize().height / 2 + 90
-    local height = self:getAvailableHeight() - baseHeight
+    self:build()
 
-    self.layer = display.newLayer()
-    self.layer:setPosition(ccp(display.cx, baseHeight + height / 2))
-    self:addChild(self.layer)
+    self.pad = display.newSprite('#pad.png')
+    self.pad:setPosition(ccp(display.cx, -self.pad:getContentSize().height / 2))
+    self:addChild(self.pad, 100)
+end
 
+function MemoryCloseQuestion:build()
     self.cells = {}
+    self.items = ez:randomSequence(100)
     local count = self.count
     local width = 90
     local column = 4
     local areaWidth = 500
     local areaHeight = 200
+    local baseHeight = self.timeCounter:getContentSize().height / 2 + 90
+    local height = self:getAvailableHeight() - baseHeight
     for i = 1, self.count do
         local x = (i - 1) % column
         local y = math.floor((count - i) / column)
 
-        local cx = -areaWidth / 2 + (areaWidth - column * width) / (column + 1) * (1 + x) + (width / 2) * (1 + 2 * x)
+        local cx = (640 - areaWidth) / 2 + (areaWidth - column * width) / (column + 1) * (1 + x) + (width / 2) * (1 + 2 * x)
         local dis = (areaHeight - width * math.ceil(count / column)) / (math.ceil(count / column) + 1)
-        local cy = - areaHeight / 2 + dis * (1 + y) + (width / 2) * (1 + 2 * y)
+        local cy = baseHeight + (height - areaHeight) / 2 + dis * (1 + y) + (width / 2) * (1 + 2 * y)
 
         local cell = display.newSprite('#flag_mini_' .. self.items[i] .. '.png')
         cell:setPosition(ccp(cx, cy))
-        self.layer:addChild(cell)
+        self:addChild(cell)
         self.cells[i] = cell
     end
+end
 
-    self.pad = display.newSprite('#pad.png')
-    self.pad:setPosition(ccp(display.cx, -self.pad:getContentSize().height / 2))
-    self:addChild(self.pad, 100)
+function MemoryCloseQuestion:restart()
+    self:hideTip(true, function()
+        self:setTip('记忆时间！')
+        self:showTip(true)
+    end)
+
+    for k, v in pairs(self.answers) do
+        transition.execute(v, CCScaleTo:create(0.2, 0.1), {
+            easing = 'backIn',
+            onComplete = function()
+                v:removeFromParentAndCleanup()
+            end
+        })
+    end
+
+    transition.execute(self.pad, CCMoveTo:create(0.3, ccp(display.cx,  -self.pad:getContentSize().height / 2)), {
+        easing = 'backIn',
+        delay = 0.2,
+        onComplete = function()
+            for k, v in pairs(self.cells) do
+                v:removeFromParentAndCleanup()
+            end
+
+            self:build()
+
+            self.timeCounter:setVisible(true)
+            self.timeCounter:start()
+        end
+    })
 end
 
 function MemoryCloseQuestion:onEnterTransitionFinish()
