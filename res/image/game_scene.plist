@@ -4,10 +4,23 @@
     <dict>
         <key>frames</key>
         <dict>
+            <key>pad.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{2,2},{640,350}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{640,350}}</string>
+                <key>sourceSize</key>
+                <string>{640,350}</string>
+            </dict>
             <key>paper_1.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,2},{640,130}}</string>
+                <string>{{2,354},{640,130}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -20,7 +33,7 @@
             <key>paper_2.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,134},{640,130}}</string>
+                <string>{{2,486},{640,130}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -33,7 +46,7 @@
             <key>paper_3.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,266},{640,130}}</string>
+                <string>{{2,618},{640,130}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -46,7 +59,7 @@
             <key>paper_4.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,398},{640,130}}</string>
+                <string>{{2,750},{640,130}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -59,7 +72,7 @@
             <key>paper_5.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,530},{640,130}}</string>
+                <string>{{2,882},{640,130}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -79,7 +92,7 @@
             <key>size</key>
             <string>{1024,1024}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:f7550cabdd7aa0d5d80f14bf35194f7f:1/1$</string>
+            <string>$TexturePacker:SmartUpdate:0bc19bc52261ad40d1a16c978cbf230c:1/1$</string>
             <key>textureFileName</key>
             <string>game_scene.png</string>
         </dict>

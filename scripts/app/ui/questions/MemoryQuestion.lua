@@ -109,7 +109,7 @@ function MemoryQuestion:onEnterTransitionFinish()
 end
 
 function MemoryQuestion:onExit()
-    display.removeSpriteFramesWithFile("image/puzzle_frame.plist")
+    display.removeSpriteFramesWithFile("image/memory_animals.plist")
 end
 
 return MemoryQuestion
