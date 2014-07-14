@@ -3,10 +3,10 @@ local Checkbox = class('Checkbox', function()
 end)
 
 function Checkbox:ctor(param)
-    self.unchecked = display.newSprite("image/checkbox_unchecked.png")
+    self.unchecked = display.newSprite("#checkbox_unchecked.png")
     self:addChild(self.unchecked)
 
-    self.checked = display.newSprite("image/checkbox_checked.png")
+    self.checked = display.newSprite("#checkbox_checked.png")
     self:addChild(self.checked)
     self.checked:setVisible(false)
 

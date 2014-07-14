@@ -6,11 +6,11 @@ function SplashScene:ctor()
     local layer = CCLayerColor:create(ccc4(0, 136, 203, 255))
     self:addChild(layer)
 
-    self.logo = display.newSprite("image/logoMobile.png", display.cx, display.height * 0.6)
+    self.logo = display.newSprite("#logoMobile.png", display.cx, display.height * 0.6)
     self.logo:setScale(0.2)
     self:addChild(self.logo)
 
-    self.motto = display.newSprite('image/motto.png', display.cx, display.height * -0.1)
+    self.motto = display.newSprite('#motto.png', display.cx, display.height * -0.1)
     self:addChild(self.motto)
 end
 

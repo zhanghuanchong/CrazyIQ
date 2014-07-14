@@ -159,7 +159,7 @@ function ColorTextQuestion:onEnterTransitionFinish()
                 self:setTip('', nil, self.tipHeight)
                 self:showTip(true, function()
                     ez.gameScene:showCountDown{
-                        from = 3,
+                        from = 0,
                         y = self.tip:getPositionY() - self.tipHeight / 2 + 10,
                         onComplete = function()
                             self:newLevel()

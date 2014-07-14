@@ -13,12 +13,12 @@ function GameScene:ctor()
 
     self.heartCount = ez:getHeartCount()
 
-    local topBg = display.newSprite('image/bgWoodTop.png', display.cx, display.height - 45)
+    local topBg = display.newSprite('#bgWoodTop.png', display.cx, display.height - 45)
     self.top:addChild(topBg)
 
     local pauseButton = WoodSquare.new{
-        image = 'image/back.png',
-        imageActive = 'image/backActive.png',
+        image = '#back.png',
+        imageActive = '#backActive.png',
         x = 45,
         y = display.height - 45,
         listener = function()
@@ -28,8 +28,8 @@ function GameScene:ctor()
     }
 
     local buyButton = WoodSquare.new{
-        image = 'image/buy.png',
-        imageActive = 'image/buyActive.png',
+        image = '#buy.png',
+        imageActive = '#buyActive.png',
         x = display.width - 45,
         y = display.height - 45,
         listener = function()
@@ -47,7 +47,7 @@ function GameScene:ctor()
     self.questions = self.currentLevel['questions']
     -- self.currentQuestionIndex = 0
     --    for test
-    self.currentQuestionIndex = 15
+    self.currentQuestionIndex = 0
 end
 
 function GameScene:gotoNextQuestion()
@@ -68,7 +68,7 @@ function GameScene:onEnterTransitionFinish()
     local count = self.heartCount
     self.hearts = {}
     for i = 1, count do
-        local heart = display.newSprite('image/heart.png')
+        local heart = display.newSprite('#heart.png')
         heart:setPosition(ccp(display.cx - (count / 2.0 + 0.5 - i) * 70, display.height - 45))
         self.top:addChild(heart)
         heart:setScale(0.1)

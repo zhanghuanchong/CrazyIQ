@@ -5,11 +5,11 @@ end)
 function TimeCounter:ctor(param)
     self:setNodeEventEnabled(true)
 
-    local bg = display.newSprite("image/loadingBg.png")
+    local bg = display.newSprite("#loadingBg.png")
     self:addChild(bg)
     self.bgSize = bg:getContentSize()
 
-    local stencil = display.newSprite('image/loadingStencil.png')
+    local stencil = display.newSprite('#loadingStencil.png')
     stencil:setPosition(ccp(3, 0))
 
     local clipper = CCClippingNode:create(stencil)
@@ -18,7 +18,7 @@ function TimeCounter:ctor(param)
 
     local cx = - self.bgSize.width / 2;
 
-    local front = CCScale9Sprite:create("image/loadingFront.png")
+    local front = CCScale9Sprite:createWithSpriteFrameName("loadingFront.png")
     front:setCapInsets(CCRect(25, 5, 405, 40))
     front:setAnchorPoint(ccp(0, 0.5))
     front:setPosition(ccp(cx, 0))

@@ -20,6 +20,8 @@ function MyApp:run()
     CCFileUtils:sharedFileUtils():addSearchPath("res/")
     ez:init()
 
+    display.addSpriteFramesWithFile("image/common.plist", "image/common.png")
+
     math.randomseed(os.time());
 
     for k, v in pairs{
@@ -68,6 +70,18 @@ end
 
 function MyApp:popWoodScene()
 
+end
+
+function MyApp:onEnterBackground()
+
+end
+
+function MyApp:onEnterForeground()
+
+end
+
+function MyApp:exit()
+    display.removeSpriteFramesWithFile("image/common.plist")
 end
 
 return MyApp

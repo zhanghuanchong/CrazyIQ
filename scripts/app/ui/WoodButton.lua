@@ -1,6 +1,6 @@
 local WoodButton = class('WoodButton', function()
-    local imageNormal = display.newSprite('image/btn.png')
-    local imageSelected = display.newSprite('image/btnActive.png')
+    local imageNormal = display.newSprite('#btn.png')
+    local imageSelected = display.newSprite('#btnActive.png')
     local item = MenuItemSpriteExtension:create(imageNormal, imageSelected)
     CCSpriteExtend.extend(item)
     return item

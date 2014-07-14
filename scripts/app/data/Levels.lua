@@ -26,10 +26,23 @@ Levels[1] = {
         {class = ClickOrderQuestion},
         {class = ColorOrderQuestion},
         {class = ColorTextQuestion},
-        {class = ColorOrderRepeatQuestion},
+        {class = ColorOrderRepeatQuestion}
+    }
+}
+Levels[2] = {
+    title = '小学',
+    questions = {
         {class = ClickCharQuestion},
         {class = ClickSmallestBtnQuestion},
         {class = PuzzleQuestion},
+        {class = MemoryQuestion},
+        {class = RockScissorPaperQuestion},
+        {class = MatchQuestion}
+    }
+}
+Levels[3] = {
+    title = '初中',
+    questions = {
         {class = MemoryQuestion},
         {class = RockScissorPaperQuestion},
         {class = MatchQuestion},
@@ -37,12 +50,6 @@ Levels[1] = {
         {class = MemoryCloseQuestion},
         {class = ColorAreaQuestion}
     }
-}
-Levels[2] = {
-    title = '小学'
-}
-Levels[3] = {
-    title = '初中'
 }
 Levels[4] = {
     title = '高中'

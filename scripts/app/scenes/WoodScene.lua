@@ -16,8 +16,8 @@ end
 
 function WoodScene:newBackMenu(listener)
     local backButton = WoodSquare.new{
-        image = 'image/back.png',
-        imageActive = 'image/backActive.png',
+        image = '#back.png',
+        imageActive = '#backActive.png',
         x = 80,
         y = display.height - 80,
         listener = listener or function()

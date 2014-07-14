@@ -5,7 +5,7 @@ end)
 function LogoLayer:ctor()
     self:setNodeEventEnabled(true)
 
-    local logo = display.newSprite("image/logoHome.png")
+    local logo = display.newSprite("#logoHome.png")
     self:addChild(logo)
 
     local stencil = CCDrawNode:create()
@@ -21,7 +21,7 @@ function LogoLayer:ctor()
     local clipper = CCClippingNode:create(stencil)
     self:addChild(clipper)
 
-    local electron = display.newSprite("image/elec.png")
+    local electron = display.newSprite("#elec.png")
     clipper:addChild(electron)
     clipper:setPosition(ccp(0, 68))
 

@@ -12,7 +12,7 @@ function MenuScene:ctor()
     logoLayer:setPosition(ccp(display.width * 1.5, display.height * 0.85))
     self.logoLayer = logoLayer
 
-    local titleSprite = display.newSprite("image/title.png")
+    local titleSprite = display.newSprite("#title.png")
     self:addChild(titleSprite)
     titleSprite:setPosition(ccp(display.width * 1.5, display.height * 0.67))
     self.titleSprite = titleSprite
@@ -44,15 +44,15 @@ function MenuScene:ctor()
 
     -- add the bottom button
     local btnFavorite = WoodSquare.new{
-        image = 'image/favorite.png',
-        imageActive = 'image/favoriteActive.png',
+        image = '#favorite.png',
+        imageActive = '#favoriteActive.png',
         listener = function()
             print("Favorite")
         end
     }
     local btnSetting = WoodSquare.new{
-        image = 'image/setting.png',
-        imageActive = 'image/settingActive.png',
+        image = '#setting.png',
+        imageActive = '#settingActive.png',
         listener = function()
             self:showSettingLayer()
         end
@@ -94,7 +94,7 @@ function MenuScene:showSettingLayer()
     settingNode:setPosition(display.cx, display.height * 0.85)
     node:addChild(settingNode)
 
-    local logo = display.newSprite("image/logo_wood.png")
+    local logo = display.newSprite("#logo_wood.png")
     logo:setPosition(ccp(display.cx, display.cy))
     node:addChild(logo)
 
