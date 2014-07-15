@@ -33,9 +33,9 @@ function MyApp:run()
         audio.preloadMusic("sound/"..v..".mp3")
     end
 
-    -- self:enterScene("SplashScene")
+    --    self:enterScene("SplashScene")
     --  for test
-    self:enterScene("GameScene")
+    self:enterGameScene()
 end
 
 function MyApp:enterMenuScene()
@@ -51,8 +51,7 @@ function MyApp:enterGameScene()
 end
 
 function MyApp:enterGameOverScene()
---    self:enterScene('GameOverScene', nil, 'fade', 0.5, display.COLOR_BLACK)
-    self:enterScene('LevelsScene', nil, 'fade', 0.5, display.COLOR_BLACK)
+    self:enterScene('GameOverScene', nil, 'fade', 0.5, display.COLOR_BLACK)
 end
 
 function MyApp:enterLevelClearScene()
@@ -73,15 +72,16 @@ function MyApp:popWoodScene()
 end
 
 function MyApp:onEnterBackground()
-
+    MyApp.super:onEnterBackground()
 end
 
 function MyApp:onEnterForeground()
-
+    MyApp.super:onEnterForeground()
 end
 
 function MyApp:exit()
     display.removeSpriteFramesWithFile("image/common.plist")
+    MyApp.super:exit()
 end
 
 return MyApp
