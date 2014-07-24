@@ -20,35 +20,92 @@ local Levels = {}
 Levels[1] = {
     title = '幼儿园',
     questions = {
-        {class = ClickRedBtnQuestion},
-        {class = BallPrepareQuestion},
-        {class = BallQuestion },
-        {class = ClickOrderQuestion},
-        {class = ColorOrderQuestion},
-        {class = ColorTextQuestion},
-        {class = ColorOrderRepeatQuestion}
+        {
+            class = ClickRedBtnQuestion,
+            score = 8
+        },
+        {
+            class = BallPrepareQuestion,
+            score = 0
+        },
+        {
+            class = BallQuestion,
+            score = 8
+        },
+        {
+            class = ClickOrderQuestion,
+            score = 8
+        },
+        {
+            class = ColorOrderQuestion,
+            score = 8
+        },
+        {
+            class = ColorTextQuestion,
+            score = 8
+        },
+        {
+            class = ColorOrderRepeatQuestion,
+            score = 8
+        }
     }
 }
 Levels[2] = {
     title = '小学',
     questions = {
-        {class = ClickCharQuestion},
-        {class = ClickSmallestBtnQuestion},
-        {class = PuzzleQuestion},
-        {class = MemoryQuestion},
-        {class = RockScissorPaperQuestion},
-        {class = MatchQuestion}
+        {
+            class = ClickCharQuestion,
+            score = 6
+        },
+        {
+            class = ClickSmallestBtnQuestion,
+            score = 6
+        },
+        {
+            class = PuzzleQuestion,
+            score = 6
+        },
+        {
+            class = MemoryQuestion,
+            score = 6
+        },
+        {
+            class = RockScissorPaperQuestion,
+            score = 6
+        },
+        {
+            class = MatchQuestion,
+            score = 6
+        }
     }
 }
 Levels[3] = {
     title = '初中',
     questions = {
-        {class = MemoryQuestion},
-        {class = RockScissorPaperQuestion},
-        {class = MatchQuestion},
-        {class = ColorNumberQuestion},
-        {class = MemoryCloseQuestion},
-        {class = ColorAreaQuestion}
+        {
+            class = MemoryQuestion,
+            score = 4
+        },
+        {
+            class = RockScissorPaperQuestion,
+            score = 4
+        },
+        {
+            class = MatchQuestion,
+            score = 4
+        },
+        {
+            class = ColorNumberQuestion,
+            score = 4
+        },
+        {
+            class = MemoryCloseQuestion,
+            score = 4
+        },
+        {
+            class = ColorAreaQuestion,
+            score = 4
+        }
     }
 }
 Levels[4] = {

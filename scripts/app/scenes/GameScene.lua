@@ -48,11 +48,13 @@ function GameScene:ctor()
     -- self.currentQuestionIndex = 0
     --    for test
     self.currentQuestionIndex = 0
+    self.levelScore = 0
 end
 
 function GameScene:gotoNextQuestion()
     if self.currentQuestionIndex > 0 and self.currentQuestionLayer then
         self.currentQuestionLayer:removeFromParent()
+        self.levelScore = self.levelScore + self.currentQuestion.score
     end
     self.currentQuestionIndex = self.currentQuestionIndex + 1
     if self.currentQuestionIndex > table.getn(self.questions) then
@@ -78,7 +80,9 @@ function GameScene:onEnterTransitionFinish()
         })
         table.insert(self.hearts, heart)
     end
-    self:gotoNextQuestion()
+--    self:gotoNextQuestion()
+    self.levelScore = 8
+    app:enterGameOverScene()
 end
 
 function GameScene:newModalLayer(param)

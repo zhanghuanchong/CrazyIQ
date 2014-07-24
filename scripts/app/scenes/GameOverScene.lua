@@ -3,9 +3,32 @@ local GameOverScene = class('GameOverScene', function()
 end)
 
 function GameOverScene:ctor()
-    self.logo = display.newSprite("#face_2.png", display.cx, display.height * 0.7)
+    self.logo = display.newSprite("#face_2.png", display.cx, display.height * 0.75)
     self.logo:setScale(0.1)
+    self.logo:setVisible(false)
     self:addChild(self.logo)
+
+    self.resultLayer = display.newLayer()
+    local label = ez:newLabel{
+        text = '智商：',
+        size = 64
+    }
+    local x = -100
+    if ez.gameScene.levelScore >= 100 then
+        x = -150
+    end
+    label:setPosition(ccp(x, 0))
+    self.resultLayer:addChild(label)
+    local score = ez:newLabel{
+        text = ez.gameScene.levelScore,
+        size = 150
+    }
+    score:setPosition(ccp(80, 20))
+    self.resultLayer:addChild(score)
+    local lines = display.newSprite("#score_lines.png", 80, -70)
+    self.resultLayer:addChild(lines)
+    self:addChild(self.resultLayer)
+    self.resultLayer:setPosition(ccp(display.width * 1.5, display.height * 0.5))
 
     local btnRestartGame = WoodButton.new{
         title = "重新开始",
@@ -14,37 +37,16 @@ function GameOverScene:ctor()
         end
     }
     local btnShare = WoodButton.new{
-        title = "分享成果",
+        title = "分享成绩",
         listener = function()
             print("Share")
         end
     }
     local mainMenu = ui.newMenu{btnRestartGame, btnShare}
     self:addChild(mainMenu)
-    mainMenu:setPosition(ccp(display.width * 1.5, display.height * 0.4))
+    mainMenu:setPosition(ccp(display.width * 1.5, display.height * 0.25))
     mainMenu:alignItemsVerticallyWithPadding(display.height * 0.04)
     self.mainMenu = mainMenu
-
-    -- add the bottom button
-    --[[local btnHome = WoodSquare.new{
-        image = '#favorite.png',
-        imageActive = '#favoriteActive.png',
-        listener = function()
-            print("Favorite")
-        end
-    }
-    local btnSetting = WoodSquare.new{
-        image = '#setting.png',
-        imageActive = '#settingActive.png',
-        listener = function()
-            self:showSettingLayer()
-        end
-    }
-    local settingMenu = ui.newMenu{btnFavorite, btnSetting}
-    self:addChild(settingMenu)
-    settingMenu:setPosition(ccp(display.width * 1.5, display.height * 0.1))
-    settingMenu:alignItemsHorizontallyWithPadding(display.cx)
-    self.settingMenu = settingMenu]]
 end
 
 function GameOverScene:easeIn(node, delay)
@@ -56,12 +58,14 @@ function GameOverScene:easeIn(node, delay)
 end
 
 function GameOverScene:onEnterTransitionFinish()
+    self.logo:setVisible(true)
     transition.execute(self.logo, CCScaleTo:create(0.5, 1), {
         easing = "bounceOut"
     })
     ez:playBackgroundMusic("sound/bg.mp3", true)
     for i,v in ipairs{
-        self.mainMenu
+        self.mainMenu,
+        self.resultLayer
     } do
         self:easeIn(v, i * 0.1)
     end
