@@ -1,8 +1,8 @@
-local GameOverScene = class('GameOverScene', function()
+local UpgradeScene = class('UpgradeScene', function()
     return WoodScene.new()
 end)
 
-function GameOverScene:ctor()
+function UpgradeScene:ctor()
     self.logo = display.newSprite("#face_2.png", display.cx, display.height * 0.8)
     self.logo:setScale(0.1)
     self.logo:setVisible(false)
@@ -60,7 +60,7 @@ function GameOverScene:ctor()
     self.mainMenu = mainMenu
 end
 
-function GameOverScene:easeIn(node, delay)
+function UpgradeScene:easeIn(node, delay)
     node:setPositionX(display.width * 1.5);
     transition.execute(node, CCMoveBy:create(0.6, ccp(-display.width, 0)), {
         delay = delay,
@@ -68,7 +68,7 @@ function GameOverScene:easeIn(node, delay)
     })
 end
 
-function GameOverScene:onEnterTransitionFinish()
+function UpgradeScene:onEnterTransitionFinish()
     self.logo:setVisible(true)
     transition.execute(self.logo, CCScaleTo:create(0.5, 1), {
         easing = "bounceOut"
@@ -96,4 +96,4 @@ function GameOverScene:onEnterTransitionFinish()
     })
 end
 
-return GameOverScene
+return UpgradeScene
