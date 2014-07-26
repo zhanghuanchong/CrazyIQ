@@ -89,6 +89,11 @@ function GameOverScene:onEnterTransitionFinish()
     })
     scheduler.performWithDelayGlobal(function()
         self.tipLabel:setVisible(true)
+        local backMenu, backBtn = self:newBackMenu(function()
+            app:enterLevelsScene()
+        end)
+        self:addChild(backMenu)
+        self:showBackButton(backMenu, backBtn, true)
     end, 0.8)
     transition.execute(self.tipLabel, CCScaleTo:create(0.3, 1), {
         easing = "bounceOut",

@@ -93,9 +93,9 @@ function GameScene:onEnterTransitionFinish()
         })
         table.insert(self.hearts, heart)
     end
-    self:gotoNextQuestion()
---    self.levelScore = 8
---    app:enterGameOverScene()
+--    self:gotoNextQuestion()
+    self.levelScore = 8
+    app:enterGameOverScene()
 --    app:enterUpgradeScene()
 end
 
