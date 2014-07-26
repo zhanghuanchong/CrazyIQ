@@ -49,7 +49,18 @@ function GameScene:ctor()
     -- self.currentQuestionIndex = 0
     --    for test
     self.currentQuestionIndex = 0
-    self.levelScore = 0
+    self.levelScore = self:getBaseScore()
+end
+
+function GameScene:getBaseScore()
+    local score = 0
+    for i = 1, ez.level - 1 do
+        for j = 1, #Levels[i].questions do
+            local q = Levels[i].questions[j]
+            score = score + q.score
+        end
+    end
+    return score
 end
 
 function GameScene:gotoNextQuestion()

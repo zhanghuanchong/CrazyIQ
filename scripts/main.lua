@@ -109,7 +109,7 @@ function ez:increaseLevel()
 end
 
 function ez:newLabel(t)
-    t.font = t.font or 'HOPE'
+    t.font = t.font or 'MYuppy-Bold-DDC' -- '迷你简丫丫' -- '叶根友童体简' --  'HOPE'
     t.size = t.size or 45
     t.color = t.color or ez.COLOR_BROWN
     t.x = t.x or 0
