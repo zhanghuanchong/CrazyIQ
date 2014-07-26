@@ -87,10 +87,12 @@ end
 ez = {}
 ez.COLOR_BROWN = ccc3(79, 57, 30)
 ez.userDefault = CCUserDefault:sharedUserDefault()
+ez.level = 1
 
 function ez:init()
     ez.isBgMusicEnabled = ez.userDefault:getBoolForKey("bgMusic", true)
     ez.isEffectEnabled = ez.userDefault:getBoolForKey("effect", true)
+    ez.level = ez:getCurrentLevel()
 end
 
 function ez:getCurrentLevel()
@@ -99,8 +101,11 @@ end
 
 function ez:increaseLevel()
     local level = ez:getCurrentLevel()
-    ez.userDefault:setIntegerForKey('currentLevel', level + 1)
-    return ez:getCurrentLevel()
+    if level <= ez.level then
+        ez.userDefault:setIntegerForKey('currentLevel', ez.level + 1)
+    end
+    ez.level = ez.level + 1
+    return ez.level
 end
 
 function ez:newLabel(t)

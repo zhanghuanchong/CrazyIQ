@@ -13,6 +13,10 @@ function LevelsScene:ctor()
     self:addChild(self.levelsList)
 end
 
+function LevelsScene:onEnter()
+    self.levelsList:scrollToCell(ez.level, false)
+end
+
 function LevelsScene:onEnterTransitionFinish()
     local backMenu, backBtn = self:newBackMenu(function()
         app:enterMenuScene()

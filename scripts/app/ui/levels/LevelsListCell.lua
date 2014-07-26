@@ -11,6 +11,7 @@ function LevelsListCell:ctor(size, levelIndex, title)
         end
         jumpAnimate(self.levelIcon, function()
             print('level' .. levelIndex)
+            ez.level = levelIndex
             app:enterGameScene()
         end)
     end

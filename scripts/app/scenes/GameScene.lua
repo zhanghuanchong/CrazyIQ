@@ -43,9 +43,9 @@ function GameScene:ctor()
     self.top:setPosition(ccp(0, 0))
     self:addChild(self.top, 10)
 
-    self.currentLevel = Levels[ez:getCurrentLevel()]
+    self.currentLevel = Levels[ez.level]
     self.questions = self.currentLevel['questions']
-    dump(self.questions)
+--    dump(self.questions)
     -- self.currentQuestionIndex = 0
     --    for test
     self.currentQuestionIndex = 0
