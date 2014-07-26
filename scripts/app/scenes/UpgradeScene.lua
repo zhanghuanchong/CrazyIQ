@@ -3,10 +3,10 @@ local UpgradeScene = class('UpgradeScene', function()
 end)
 
 function UpgradeScene:ctor()
-    self.logo = display.newSprite("#face_2.png", display.cx, display.height * 0.8)
+    self.logo = display.newSprite("#face_1.png", display.cx, display.height * 0.8)
     self.logo:setScale(0.1)
     self.logo:setVisible(false)
-    self:addChild(self.logo)
+    self:addChild(self.logo, 2)
 
     self.resultLayer = display.newLayer()
     local label = ez:newLabel{
@@ -30,19 +30,19 @@ function UpgradeScene:ctor()
     self.scoreLabel = score
     local lines = display.newSprite("#score_lines.png", 80, -70)
     self.resultLayer:addChild(lines)
-    self:addChild(self.resultLayer)
+    self:addChild(self.resultLayer, 2)
     self.resultLayer:setPosition(ccp(display.width * 1.5, display.height * 0.57))
 
     self.tipLabel = ez:newLabel{
-        text = "再接再厉！"
+        text = "恭喜晋级！"
     }
     self.tipLabel:setPosition(ccp(display.cx, display.height * .4))
     self.tipLabel:setScale(0.1)
     self.tipLabel:setVisible(false)
-    self:addChild(self.tipLabel)
+    self:addChild(self.tipLabel, 2)
 
     local btnRestartGame = WoodButton.new{
-        title = "重新开始",
+        title = "下一关",
         listener = function()
             app:enterGameScene()
         end
@@ -54,10 +54,15 @@ function UpgradeScene:ctor()
         end
     }
     local mainMenu = ui.newMenu{btnRestartGame, btnShare}
-    self:addChild(mainMenu)
+    self:addChild(mainMenu, 2)
     mainMenu:setPosition(ccp(display.width * 1.5, display.height * 0.2))
     mainMenu:alignItemsVerticallyWithPadding(display.height * 0.04)
     self.mainMenu = mainMenu
+
+    self.star =  CCParticleFireworks:create()
+    self.star.texture = CCTextureCache:sharedTextureCache():addImage('image/particle.png')
+    self.star.shapeType = CCParticleFireworks.STAR_SHAPE;
+    self.star:setPosition(ccp(display.cx, display.height * .3))
 end
 
 function UpgradeScene:easeIn(node, delay)
@@ -89,6 +94,7 @@ function UpgradeScene:onEnterTransitionFinish()
     })
     scheduler.performWithDelayGlobal(function()
         self.tipLabel:setVisible(true)
+        self:addChild(self.star, 1)
     end, 0.8)
     transition.execute(self.tipLabel, CCScaleTo:create(0.3, 1), {
         easing = "bounceOut",

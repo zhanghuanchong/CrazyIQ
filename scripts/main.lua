@@ -97,6 +97,12 @@ function ez:getCurrentLevel()
     return ez.userDefault:getIntegerForKey('currentLevel', 1)
 end
 
+function ez:increaseLevel()
+    local level = ez:getCurrentLevel()
+    ez.userDefault:setIntegerForKey('currentLevel', level + 1)
+    return ez:getCurrentLevel()
+end
+
 function ez:newLabel(t)
     t.font = t.font or 'HOPE'
     t.size = t.size or 45

@@ -55,9 +55,8 @@ function MyApp:enterGameOverScene()
     self:enterScene('GameOverScene', nil, 'fade', 0.5, display.COLOR_BLACK)
 end
 
-function MyApp:enterLevelClearScene()
---    self:enterScene('LevelClearScene', nil, 'fade', 0.5, display.COLOR_BLACK)
-    self:enterScene('LevelsScene', nil, 'fade', 0.5, display.COLOR_BLACK)
+function MyApp:enterUpgradeScene()
+    self:enterScene('UpgradeScene', nil, 'fade', 0.5, display.COLOR_BLACK)
 end
 
 function MyApp:enterPauseScene()

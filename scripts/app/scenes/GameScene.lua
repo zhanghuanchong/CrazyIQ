@@ -45,6 +45,7 @@ function GameScene:ctor()
 
     self.currentLevel = Levels[ez:getCurrentLevel()]
     self.questions = self.currentLevel['questions']
+    dump(self.questions)
     -- self.currentQuestionIndex = 0
     --    for test
     self.currentQuestionIndex = 0
@@ -58,7 +59,8 @@ function GameScene:gotoNextQuestion()
     end
     self.currentQuestionIndex = self.currentQuestionIndex + 1
     if self.currentQuestionIndex > table.getn(self.questions) then
-        app:enterLevelClearScene()
+        ez:increaseLevel()
+        app:enterUpgradeScene()
         return
     end
     self.currentQuestion = self.questions[self.currentQuestionIndex]
@@ -80,9 +82,10 @@ function GameScene:onEnterTransitionFinish()
         })
         table.insert(self.hearts, heart)
     end
---    self:gotoNextQuestion()
-    self.levelScore = 8
-    app:enterGameOverScene()
+    self:gotoNextQuestion()
+--    self.levelScore = 8
+--    app:enterGameOverScene()
+--    app:enterUpgradeScene()
 end
 
 function GameScene:newModalLayer(param)
