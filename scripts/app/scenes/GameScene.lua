@@ -51,6 +51,10 @@ function GameScene:ctor()
     self.levelScore = Levels:baseScore(ez.level)
 end
 
+function GameScene:hasMoreLevel()
+    return ez.level <= #Levels
+end
+
 function GameScene:gotoNextQuestion()
     if self.currentQuestionIndex > 0 and self.currentQuestionLayer then
         self.currentQuestionLayer:removeFromParent()
@@ -67,6 +71,12 @@ function GameScene:gotoNextQuestion()
     self.currentQuestion = self.questions[self.currentQuestionIndex]
     self.currentQuestionLayer = self.currentQuestion.class.new()
     self:addChild(self.currentQuestionLayer)
+end
+
+function GameScene:onEnter()
+    if self:hasMoreLevel() == false then
+        app:enterLevelsScene()
+    end
 end
 
 function GameScene:onEnterTransitionFinish()

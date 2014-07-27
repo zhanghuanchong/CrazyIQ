@@ -47,6 +47,9 @@ function UpgradeScene:ctor()
             app:enterGameScene()
         end
     }
+    if ez.gameScene:hasMoreLevel() == false then
+        btnRestartGame:setVisible(false)
+    end
     local btnShare = WoodButton.new{
         title = "分享成绩",
         listener = function()
