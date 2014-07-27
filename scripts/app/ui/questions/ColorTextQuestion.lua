@@ -11,7 +11,7 @@ function ColorTextQuestion:ctor()
     self.tipHeight = self.tip:getContentSize().height
 
     self.timeCounter = TimeCounter.new{
-        total = 10,
+        total = ez.gameScene.currentQuestion.timeout,
         listener = function()
             if self.buttons[1]:isTouchEnabled() then
                 self:alertError(function()

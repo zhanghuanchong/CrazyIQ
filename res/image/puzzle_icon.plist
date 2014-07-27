@@ -4,7 +4,7 @@
     <dict>
         <key>frames</key>
         <dict>
-            <key>frame_01.png</key>
+            <key>icon_01.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{0,0},{170,170}}</string>
@@ -17,7 +17,7 @@
                 <key>sourceSize</key>
                 <string>{170,170}</string>
             </dict>
-            <key>frame_02.png</key>
+            <key>icon_02.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{170,0},{170,170}}</string>
@@ -30,7 +30,7 @@
                 <key>sourceSize</key>
                 <string>{170,170}</string>
             </dict>
-            <key>frame_03.png</key>
+            <key>icon_03.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{340,0},{170,170}}</string>
@@ -43,7 +43,7 @@
                 <key>sourceSize</key>
                 <string>{170,170}</string>
             </dict>
-            <key>frame_04.png</key>
+            <key>icon_04.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{0,170},{170,170}}</string>
@@ -56,7 +56,7 @@
                 <key>sourceSize</key>
                 <string>{170,170}</string>
             </dict>
-            <key>frame_05.png</key>
+            <key>icon_05.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{170,170},{170,170}}</string>
@@ -69,7 +69,7 @@
                 <key>sourceSize</key>
                 <string>{170,170}</string>
             </dict>
-            <key>frame_06.png</key>
+            <key>icon_06.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{340,170},{170,170}}</string>
@@ -82,7 +82,7 @@
                 <key>sourceSize</key>
                 <string>{170,170}</string>
             </dict>
-            <key>frame_07.png</key>
+            <key>icon_07.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{0,340},{170,170}}</string>
@@ -95,7 +95,7 @@
                 <key>sourceSize</key>
                 <string>{170,170}</string>
             </dict>
-            <key>frame_08.png</key>
+            <key>icon_08.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{170,340},{170,170}}</string>
@@ -108,7 +108,7 @@
                 <key>sourceSize</key>
                 <string>{170,170}</string>
             </dict>
-            <key>frame_09.png</key>
+            <key>icon_09.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{340,340},{170,170}}</string>
@@ -131,7 +131,7 @@
             <key>size</key>
             <string>{512,512}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:9893ff5d3cfe531a218b01cc59a02db8:1/1$</string>
+            <string>$TexturePacker:SmartUpdate:e3dd2ba11c8f3661ad519de6af4f545a:1/1$</string>
             <key>textureFileName</key>
             <string>puzzle_icon.png</string>
         </dict>

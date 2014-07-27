@@ -59,7 +59,8 @@ Levels[1] = {
         },
         {
             class = ColorTextQuestion,
-            score = 8
+            score = 8,
+            timeout = 5
         },
         {
             class = ColorOrderRepeatQuestion,
@@ -80,7 +81,10 @@ Levels[2] = {
         },
         {
             class = PuzzleQuestion,
-            score = 6
+            score = 6,
+            grid = 9,
+            picture = 'icon',
+            timeout = 20
         },
         {
             class = MemoryQuestion,
@@ -99,6 +103,18 @@ Levels[2] = {
 Levels[3] = {
     title = '初中',
     questions = {
+        {
+            class = PuzzleQuestion,
+            score = 6,
+            grid = 16,
+            picture = 'earth',
+            timeout = 30
+        },
+        {
+            class = ColorTextQuestion,
+            score = 8,
+            timeout = 3
+        },
         {
             class = MemoryQuestion,
             score = 4
@@ -126,10 +142,19 @@ Levels[3] = {
     }
 }
 Levels[4] = {
-    title = '高中'
+    title = '高中',
+    questions = {
+    }
 }
 Levels[5] = {
-    title = '大学'
+    title = '大学',
+    questions = {
+        {
+            class = ColorTextQuestion,
+            score = 8,
+            timeout = 1
+        },
+    }
 }
 --[[Levels[6] = {
     title = '研究生'
