@@ -45,21 +45,24 @@ function RockScissorPaperQuestion:ctor()
             if self.answer <= 0 then
                 return
             end
-            jumpAnimate(btn, function()
-                if self:checkResult(i) then
-                    self.checkboxes[self.level]:setChecked(true)
-                    self.level = self.level + 1
-                    if self.level > #self.checkboxes then
-                        self:gotoNextQuestion()
+            if self.clickable then
+                self.clickable = false
+                jumpAnimate(btn, function()
+                    if self:checkResult(i) then
+                        self.checkboxes[self.level]:setChecked(true)
+                        self.level = self.level + 1
+                        if self.level > #self.checkboxes then
+                            self:gotoNextQuestion()
+                        else
+                            self:start()
+                        end
                     else
-                        self:start()
+                        self:alertError(function()
+                            self:start()
+                        end)
                     end
-                else
-                    self:alertError(function()
-                        self:start()
-                    end)
-                end
-            end)
+                end)
+            end
         end)
         self:addChild(btn)
 
@@ -114,6 +117,7 @@ function RockScissorPaperQuestion:start()
                             self.targets[self.enemy]:setVisible(true)
 
                             self.answer = math.random(1, 3)
+                            self.clickable = true
                             self.answerText = {'要赢我！', '要平局！', '要输给我！' }
                             self:setTip(self.answerText[self.answer])
                             self.timeCounter:start()

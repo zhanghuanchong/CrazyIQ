@@ -17,6 +17,23 @@ local ColorAreaQuestion = import("app.ui.questions.ColorAreaQuestion")
 
 local Levels = {}
 
+function Levels:levelScore(i)
+    local score = 0
+    for j = 1, #Levels[i].questions do
+        local q = Levels[i].questions[j]
+        score = score + q.score
+    end
+    return score
+end
+
+function Levels:baseScore(index)
+    local score = 0
+    for i = 1, index - 1 do
+        score = score + self:levelScore(i)
+    end
+    return score
+end
+
 Levels[1] = {
     title = '幼儿园',
     questions = {

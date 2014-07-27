@@ -46,28 +46,18 @@ function GameScene:ctor()
     self.currentLevel = Levels[ez.level]
     self.questions = self.currentLevel['questions']
 --    dump(self.questions)
-    -- self.currentQuestionIndex = 0
-    --    for test
+--    for test
     self.currentQuestionIndex = 0
-    self.levelScore = self:getBaseScore()
-end
-
-function GameScene:getBaseScore()
-    local score = 0
-    for i = 1, ez.level - 1 do
-        for j = 1, #Levels[i].questions do
-            local q = Levels[i].questions[j]
-            score = score + q.score
-        end
-    end
-    return score
+    self.levelScore = Levels:baseScore(ez.level)
 end
 
 function GameScene:gotoNextQuestion()
     if self.currentQuestionIndex > 0 and self.currentQuestionLayer then
         self.currentQuestionLayer:removeFromParent()
         self.levelScore = self.levelScore + self.currentQuestion.score
+        ez:checkBestScore(self.levelScore)
     end
+    print('************** best score: ' .. ez:getBestScore())
     self.currentQuestionIndex = self.currentQuestionIndex + 1
     if self.currentQuestionIndex > table.getn(self.questions) then
         ez:increaseLevel()
@@ -93,9 +83,9 @@ function GameScene:onEnterTransitionFinish()
         })
         table.insert(self.hearts, heart)
     end
---    self:gotoNextQuestion()
-    self.levelScore = 8
-    app:enterGameOverScene()
+    self:gotoNextQuestion()
+--    self.levelScore = 8
+--    app:enterGameOverScene()
 --    app:enterUpgradeScene()
 end
 

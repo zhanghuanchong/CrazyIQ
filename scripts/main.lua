@@ -93,6 +93,9 @@ function ez:init()
     ez.isBgMusicEnabled = ez.userDefault:getBoolForKey("bgMusic", true)
     ez.isEffectEnabled = ez.userDefault:getBoolForKey("effect", true)
     ez.level = ez:getCurrentLevel()
+
+    ez.userDefault:setIntegerForKey('currentLevel', 1)
+    ez.userDefault:setIntegerForKey('bestScore', 0)
 end
 
 function ez:getCurrentLevel()
@@ -108,8 +111,23 @@ function ez:increaseLevel()
     return ez.level
 end
 
-function ez:newLabel(t)
-    t.font = t.font or 'MYuppy-Bold-DDC' -- '迷你简丫丫' -- '叶根友童体简' --  'HOPE'
+function ez:getBestScore()
+    return ez.userDefault:getIntegerForKey('bestScore', 0)
+end
+
+function ez:checkBestScore(newScore)
+    local oldScore = ez:getBestScore()
+    if newScore > oldScore then
+        ez.userDefault:setIntegerForKey('bestScore', newScore)
+    end
+end
+
+function ez:newLabel(t, clear)
+    local defaultFont = 'HOPE'
+    if clear then
+        defaultFont = 'MYuppy-Bold-DDC'
+    end
+    t.font = t.font or defaultFont -- '迷你简丫丫' -- '叶根友童体简'
     t.size = t.size or 45
     t.color = t.color or ez.COLOR_BROWN
     t.x = t.x or 0
