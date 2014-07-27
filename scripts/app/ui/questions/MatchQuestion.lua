@@ -14,6 +14,7 @@ function MatchQuestion:ctor()
         listener = function()
             self.timeCounter:setVisible(false)
             for i = 1, #self.cells do
+                self.cells[i]:setTouchEnabled(true)
                 transition.execute(self.cells[i], CCOrbitCamera:create(.5, 1, 0, 0, 90, 0, 0), {
                     easing = 'backIn',
                     onComplete = function()
@@ -69,7 +70,7 @@ function MatchQuestion:ctor()
         cell.index = randoms[i]
         cell:addChild(btn, 1)
 
-        cell:setTouchEnabled(true)
+        cell:setTouchEnabled(false)
         cell:addTouchEventListener(function()
             transition.execute(cell, CCOrbitCamera:create(0.1, 1, 0, 0, 90, 0, 0), {
                 onComplete = function()

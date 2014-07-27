@@ -98,10 +98,19 @@ function MenuScene:showSettingLayer()
     logo:setPosition(ccp(display.cx, display.cy))
     node:addChild(logo)
 
+    local tip = ez:newLabel({
+        text = '本游戏纯属娱乐，所测智商不具备任何参考价值',
+        align = ui.TEXT_ALIGN_CENTER,
+        x = display.cx,
+        y = 15,
+        size = 30
+    }, true)
+    node:addChild(tip)
+
     for i, v in ipairs{
-        {text = "程序： Hans Zhang", y = 260},
-        {text = "美术： Ruth Wu", y = 180},
-        {text = "音乐： Frank Meacham", y = 100}
+        {text = "程序： Hans Zhang", y = 270},
+        {text = "美术： Ruth Wu", y = 190},
+        {text = "音乐： Frank Meacham", y = 110}
     } do
         ez:newLabel{
             text = v.text,

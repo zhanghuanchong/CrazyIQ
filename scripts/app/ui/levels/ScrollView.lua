@@ -15,7 +15,7 @@ function ScrollView:ctor(rect, direction)
            "ScrollView:ctor() - invalid direction")
 
     self.dragThreshold = 40
-    self.bouncThreshold = 140
+    self.bouncThreshold = 100
     self.defaultAnimateTime = 0.4
     self.defaultAnimateEasing = "backOut"
 

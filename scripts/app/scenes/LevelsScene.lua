@@ -8,7 +8,7 @@ function LevelsScene:ctor()
     display.addSpriteFramesWithFile("image/levels.plist", "image/levels.png")
     display.addSpriteFramesWithFile("image/levels_locked.plist", "image/levels_locked.png")
 
-    local rect = CCRect(display.left, display.bottom + 80, display.width, display.height - 280)
+    local rect = CCRect(display.left, display.bottom + 80, display.width, display.height - 240)
     self.levelsList = LevelsList.new(rect)
     self:addChild(self.levelsList)
 end

@@ -94,8 +94,8 @@ function ez:init()
     ez.isEffectEnabled = ez.userDefault:getBoolForKey("effect", true)
     ez.level = ez:getCurrentLevel()
 
-    ez.userDefault:setIntegerForKey('currentLevel', 1)
-    ez.userDefault:setIntegerForKey('bestScore', 0)
+--    ez.userDefault:setIntegerForKey('currentLevel', 2)
+--    ez.userDefault:setIntegerForKey('bestScore', 48)
 end
 
 function ez:getCurrentLevel()

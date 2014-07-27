@@ -68,6 +68,7 @@ function ColorOrderRepeatQuestion:onEnterTransitionFinish()
     local randoms = ez:randomSequence(max)
     print('==== randoms: ' .. table.concat(randoms) .. ' ====')
     local seq = {}
+    table.insert(seq, CCDelayTime:create(1))
     self.orderTarget = randoms
     for i,v in ipairs(randoms) do
         table.insert(seq, CCCallFunc:create(function()
