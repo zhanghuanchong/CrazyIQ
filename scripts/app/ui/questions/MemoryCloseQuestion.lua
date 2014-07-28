@@ -8,12 +8,12 @@ end)
 function MemoryCloseQuestion:ctor()
     self:setTip("记忆时间！")
 
-    self.count = 8
+    self.count = ez.gameScene.currentQuestion.count
 
     display.addSpriteFramesWithFile("image/flags.plist", "image/flags.png")
 
     self.timeCounter = TimeCounter.new{
-        total = 3,
+        total = ez.gameScene.currentQuestion.timeout,
         listener = function()
             self.timeCounter:setVisible(false)
 
@@ -85,7 +85,7 @@ function MemoryCloseQuestion:build()
     local width = 90
     local column = 4
     local areaWidth = 500
-    local areaHeight = 200
+    local areaHeight = 240
     local baseHeight = self.timeCounter:getContentSize().height / 2 + 90
     local height = self:getAvailableHeight() - baseHeight
     for i = 1, self.count do

@@ -108,6 +108,12 @@ Levels[3] = {
     title = '初中',
     questions = {
         {
+            class = MemoryCloseQuestion,
+            score = 4,
+            count = 8,
+            timeout = 2
+        },
+        {
             class = ColorNumberQuestion,
             score = 4,
             count = 4,
@@ -146,10 +152,6 @@ Levels[3] = {
             score = 4
         },
         {
-            class = MemoryCloseQuestion,
-            score = 4
-        },
-        {
             class = ColorAreaQuestion,
             score = 4
         }
@@ -163,6 +165,12 @@ Levels[4] = {
             score = 4,
             count = 6,
             timeout = 10
+        },
+        {
+            class = MemoryCloseQuestion,
+            score = 4,
+            count = 12,
+            timeout = 1
         },
     }
 }
