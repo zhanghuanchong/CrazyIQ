@@ -94,7 +94,8 @@ Levels[2] = {
         },
         {
             class = RockScissorPaperQuestion,
-            score = 6
+            score = 6,
+            timeout = 4
         },
         {
             class = MatchQuestion,

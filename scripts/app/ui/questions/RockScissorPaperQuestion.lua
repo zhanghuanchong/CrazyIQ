@@ -11,11 +11,13 @@ function RockScissorPaperQuestion:ctor()
     self.tipHeight = self.tip:getContentSize().height
 
     self.timeCounter = TimeCounter.new{
-        total = 5,
+        total = ez.gameScene.currentQuestion.timeout,
         listener = function()
-            self:alertError(function()
-                self:start()
-            end)
+            if self.clickable then
+                self:alertError(function()
+                    self:start()
+                end)
+            end
         end
     }
     self.timeCounter:setPosition(ccp(display.cx, 80))
