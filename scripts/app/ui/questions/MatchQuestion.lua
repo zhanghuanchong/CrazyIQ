@@ -6,11 +6,10 @@ local MatchQuestion = class('MatchQuestion', function()
 end)
 
 function MatchQuestion:ctor()
-    local maxTime = 30
-    self:setTip(maxTime .. "秒内记住它们的位置！")
+    self:setTip(ez.gameScene.currentQuestion.timeout .. "秒内记住它们的位置！")
 
     self.timeCounter = TimeCounter.new{
-        total = maxTime,
+        total = ez.gameScene.currentQuestion.timeout,
         listener = function()
             self.timeCounter:setVisible(false)
             for i = 1, #self.cells do

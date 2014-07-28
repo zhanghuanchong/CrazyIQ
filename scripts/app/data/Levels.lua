@@ -72,6 +72,11 @@ Levels[2] = {
     title = '小学',
     questions = {
         {
+            class = MatchQuestion,
+            score = 6,
+            timeout = 30
+        },
+        {
             class = ClickCharQuestion,
             score = 6
         },
@@ -97,10 +102,6 @@ Levels[2] = {
             score = 6,
             timeout = 4
         },
-        {
-            class = MatchQuestion,
-            score = 6
-        }
     }
 }
 Levels[3] = {
@@ -120,11 +121,19 @@ Levels[3] = {
         },
         {
             class = MemoryQuestion,
-            score = 4
+            score = 6,
+            count = 9,
+            timeout = 1
         },
         {
             class = RockScissorPaperQuestion,
-            score = 4
+            score = 6,
+            timeout = 2
+        },
+        {
+            class = MatchQuestion,
+            score = 6,
+            timeout = 15
         },
         {
             class = MatchQuestion,
