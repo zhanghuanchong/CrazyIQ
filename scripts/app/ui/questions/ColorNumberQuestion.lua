@@ -9,7 +9,7 @@ end)
 function ColorNumberQuestion:ctor()
     self.colors = {'green', 'orange', 'purple', 'red', 'blue', 'yellow', 'white', 'lightblue'}
     self.colorNames = {'绿色', '橙色', '紫色', '红色', '蓝色', '黄色', '白色', '浅蓝'}
-    local count = 6
+    local count = ez.gameScene.currentQuestion.count
     self.randoms = ez:randomSequence(count)
     self.randoms2 = ez:randomSequence(count)
 
@@ -19,7 +19,7 @@ function ColorNumberQuestion:ctor()
     self.positions = {}
 
     self.timeCounter = TimeCounter.new{
-        total = 10,
+        total = ez.gameScene.currentQuestion.timeout,
         listener = function()
             self.timeCounter:setVisible(false)
             self.randoms3 = ez:randomSequence(count)
@@ -44,12 +44,16 @@ function ColorNumberQuestion:ctor()
 
     display.addSpriteFramesWithFile("image/crystal_btns.plist", "image/crystal_btns.png")
 
+    local lines = 2
+    if count >= 6 then
+        lines = 3
+    end
     for i = 1, count do
-        local x = (i - 1) % 3
-        local y = math.floor((count - i) / 3)
+        local x = (i - 1) % lines
+        local y = math.floor((count - i) / lines)
 
-        local cx = (640 - 3 * 120) / (3 + 1) * (1 + x) + 60 * (1 + 2 * x)
-        local dis = (height - 120 * math.ceil(count / 3)) / (math.ceil(count / 3) + 1)
+        local cx = (640 - lines * 120) / (lines + 1) * (1 + x) + 60 * (1 + 2 * x)
+        local dis = (height - 120 * math.ceil(count / lines)) / (math.ceil(count / lines) + 1)
         local cy = baseHeight + dis * (1 + y) + 60 * (1 + 2 * y)
 
         local item = CrystalButton.new({
