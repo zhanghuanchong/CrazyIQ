@@ -9,8 +9,9 @@ function MemoryQuestion:ctor()
     self:setTip("记住他们！")
 
     self.items = ez:randomSequence(16)
-    self.count = 9
-    self.interval = 1
+    self.question = ez.gameScene.currentQuestion
+    self.count = self.question.count
+    self.interval = self.question.timeout
 
     local height = self:getAvailableHeight()
 

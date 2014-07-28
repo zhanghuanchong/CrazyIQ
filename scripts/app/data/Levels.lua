@@ -88,7 +88,9 @@ Levels[2] = {
         },
         {
             class = MemoryQuestion,
-            score = 6
+            score = 6,
+            count = 6,
+            timeout = 2
         },
         {
             class = RockScissorPaperQuestion,
