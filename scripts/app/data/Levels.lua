@@ -120,6 +120,22 @@ Levels[3] = {
             timeout = 8
         },
         {
+            class = ColorTextQuestion,
+            score = 8,
+            timeout = 3
+        },
+        {
+            class = ColorAreaQuestion,
+            score = 4,
+            timeout = 6,
+            count = 15
+        },
+    }
+}
+Levels[4] = {
+    title = '高中',
+    questions = {
+        {
             class = PuzzleQuestion,
             score = 6,
             grid = 16,
@@ -127,15 +143,9 @@ Levels[3] = {
             timeout = 30
         },
         {
-            class = ColorTextQuestion,
-            score = 8,
-            timeout = 3
-        },
-        {
-            class = MemoryQuestion,
+            class = MatchQuestion,
             score = 6,
-            count = 9,
-            timeout = 1
+            timeout = 15
         },
         {
             class = RockScissorPaperQuestion,
@@ -143,33 +153,9 @@ Levels[3] = {
             timeout = 2
         },
         {
-            class = MatchQuestion,
+            class = MemoryQuestion,
             score = 6,
-            timeout = 15
-        },
-        {
-            class = MatchQuestion,
-            score = 4
-        },
-        {
-            class = ColorAreaQuestion,
-            score = 4
-        }
-    }
-}
-Levels[4] = {
-    title = '高中',
-    questions = {
-        {
-            class = ColorNumberQuestion,
-            score = 4,
-            count = 6,
-            timeout = 10
-        },
-        {
-            class = MemoryCloseQuestion,
-            score = 4,
-            count = 12,
+            count = 9,
             timeout = 1
         },
     }
@@ -178,9 +164,27 @@ Levels[5] = {
     title = '大学',
     questions = {
         {
+            class = MemoryCloseQuestion,
+            score = 4,
+            count = 12,
+            timeout = 1
+        },
+        {
             class = ColorTextQuestion,
             score = 8,
             timeout = 1
+        },
+        {
+            class = ColorNumberQuestion,
+            score = 4,
+            count = 6,
+            timeout = 10
+        },
+        {
+            class = ColorAreaQuestion,
+            score = 4,
+            timeout = 3,
+            count = 20
         },
     }
 }

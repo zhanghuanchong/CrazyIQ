@@ -6,7 +6,7 @@ local ColorAreaQuestion = class('ColorAreaQuestion', function()
 end)
 
 function ColorAreaQuestion:ctor()
-    self.count = 15
+    self.count = ez.gameScene.currentQuestion.count
     self.colors = {
         display.COLOR_WHITE,
         display.COLOR_BLACK,
@@ -21,7 +21,7 @@ function ColorAreaQuestion:ctor()
     self.colorNames = {'白', '黑', '红', '绿', '蓝', '灰', '橘', '紫', '黄'}
 
     self.timeCounter = TimeCounter.new{
-        total = 3,
+        total = ez.gameScene.currentQuestion.timeout,
         listener = function()
             self:alertError(function()
                 self:restart()
