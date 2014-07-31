@@ -22,12 +22,15 @@ function ColorNumberQuestion:ctor()
         total = ez.gameScene.currentQuestion.timeout,
         listener = function()
             self.timeCounter:setVisible(false)
-            self.randoms3 = ez:randomSequence(count)
-            for i = 1, count do
-                self.buttons[i]:setTitleVisible(false)
-                transition.execute(self.buttons[i], CCMoveTo:create(1, self.positions[self.randoms3[i]]), {
-                    easing = 'backInOut'
-                })
+            for j = 1, ez.gameScene.currentQuestion.times do
+                local randoms = ez:randomSequence(count)
+                for i = 1, count do
+                    self.buttons[i]:setTitleVisible(false)
+                    transition.execute(self.buttons[i], CCMoveTo:create(1, self.positions[randoms[i]]), {
+                        easing = 'backInOut',
+                        delay = (j - 1) * 1
+                    })
+                end
             end
             self.target = math.random(1, count)
             self:hideTip(true, function()

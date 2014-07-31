@@ -108,16 +108,17 @@ Levels[3] = {
     title = '初中',
     questions = {
         {
+            class = ColorNumberQuestion,
+            score = 4,
+            count = 4,
+            timeout = 8,
+            times = 1
+        },
+        {
             class = MemoryCloseQuestion,
             score = 4,
             count = 8,
             timeout = 2
-        },
-        {
-            class = ColorNumberQuestion,
-            score = 4,
-            count = 4,
-            timeout = 8
         },
         {
             class = ColorTextQuestion,
@@ -146,6 +147,13 @@ Levels[4] = {
             class = MatchQuestion,
             score = 6,
             timeout = 15
+        },
+        {
+            class = ColorNumberQuestion,
+            score = 4,
+            count = 6,
+            timeout = 10,
+            times = 2
         },
         {
             class = RockScissorPaperQuestion,
@@ -178,7 +186,8 @@ Levels[5] = {
             class = ColorNumberQuestion,
             score = 4,
             count = 6,
-            timeout = 10
+            timeout = 8,
+            times = 3
         },
         {
             class = ColorAreaQuestion,
