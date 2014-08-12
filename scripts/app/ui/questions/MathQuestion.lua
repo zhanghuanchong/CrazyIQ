@@ -28,8 +28,9 @@ function MathQuestion:ctor()
     self.checkboxes = {}
     for i = 1, 3 do
         local checkbox = Checkbox.new()
-        checkbox:setPosition(ccp(display.cx - (3 / 2.0 + 0.5 - i) * 70, baseHeight + height * 0.9))
+        checkbox:setPosition(ccp(display.cx - (3 / 2.0 + 0.5 - i) * 70, baseHeight + height))
         self:addChild(checkbox)
+        checkbox:setVisible(false)
         self.checkboxes[i] = checkbox
     end
     self.level = 1
@@ -44,6 +45,7 @@ function MathQuestion:ctor()
             listener = function()
                 print(i - 1)
             end,
+            disableParent = false,
             x = ((i - 1) % 5 * 2 + 1) * r / 2 + ((i - 1) % 5 + 1) * dis,
             y = (3.5 - math.ceil(i / 5) * 1.2) * r + baseHeight
         }
@@ -52,11 +54,13 @@ function MathQuestion:ctor()
     self.menu = ui.newMenu(self.buttons)
     self.menu:setPosition(ccp(0, 0))
     self:addChild(self.menu)
+    self.menu:setTouchEnabled(false)
 end
 
-function MathQuestion:newLevel()    
---    self:setButtonEnabled(false)
+function MathQuestion:newLevel()
     self.timeCounter:reset()
+
+
 end
 
 function MathQuestion:passLevel()
@@ -72,9 +76,27 @@ function MathQuestion:passLevel()
 end
 
 function MathQuestion:onEnterTransitionFinish()
-    self:showTip(true, function()
---        self:newLevel()
-    end)
+    self:showTip(false)
+    scheduler.performWithDelayGlobal(function()
+        self:hideTip(true, function()
+            self:setTip('', nil, self.tipHeight)
+            self:showTip(true, function()
+                ez.gameScene:showCountDown{
+                    from = 0,
+                    y = self.tip:getPositionY() - self.tipHeight / 2 + 10,
+                    onComplete = function()
+                        self:hideTip(false, function()
+                            for k, v in pairs(self.checkboxes) do
+                                v:setVisible(true)
+                            end
+                            self.menu:setTouchEnabled(true)
+                            self:newLevel()
+                        end)
+                    end
+                }
+            end)
+        end)
+    end, 2)
 end
 
 return MathQuestion

@@ -21,9 +21,13 @@ function WoodSquare:ctor(params)
             params.prepare()
         end
 
-        button:getParent():setEnabled(false)
+        if params.disableParent ~= false then
+            button:getParent():setEnabled(false)
+        end
         jumpAnimate(button, function()
-            button:getParent():setEnabled(true)
+            if params.disableParent ~= false then
+                button:getParent():setEnabled(true)
+            end
             listener(tag)
         end)
     end
@@ -48,6 +52,10 @@ function WoodSquare:ctor(params)
         }, params.clear or null)
         button:addChild(label)
         self.label = label
+
+        button:setSelectedCallback(function() end)
+
+        button:setUnselectedCallback(function() end)
     end
 end
 
