@@ -7,7 +7,7 @@
             <key>back.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{886,241},{80,80}}</string>
+                <string>{{804,241},{80,80}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -20,7 +20,7 @@
             <key>backActive.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,323},{80,80}}</string>
+                <string>{{566,323},{80,80}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -46,7 +46,7 @@
             <key>btn.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,241},{308,79}}</string>
+                <string>{{496,160},{308,79}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -59,7 +59,7 @@
             <key>btnActive.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{496,160},{308,79}}</string>
+                <string>{{2,241},{308,79}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -72,7 +72,7 @@
             <key>btnHome.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{804,241},{80,80}}</string>
+                <string>{{484,323},{80,80}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -85,7 +85,7 @@
             <key>btnHomeActive.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{722,241},{80,80}}</string>
+                <string>{{648,323},{80,80}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -98,7 +98,7 @@
             <key>buy.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{84,323},{80,80}}</string>
+                <string>{{730,323},{80,80}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -111,7 +111,7 @@
             <key>buyActive.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{648,323},{80,80}}</string>
+                <string>{{886,241},{80,80}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -124,7 +124,7 @@
             <key>checkbox_checked.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{588,102},{50,50}}</string>
+                <string>{{640,102},{50,50}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -137,7 +137,7 @@
             <key>checkbox_unchecked.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{640,102},{50,50}}</string>
+                <string>{{588,102},{50,50}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -150,7 +150,7 @@
             <key>elec.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{248,323},{398,80}}</string>
+                <string>{{2,323},{398,80}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -189,7 +189,7 @@
             <key>favorite.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{166,323},{80,80}}</string>
+                <string>{{812,323},{80,80}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -202,7 +202,7 @@
             <key>favoriteActive.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{640,241},{80,80}}</string>
+                <string>{{402,323},{80,80}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -228,7 +228,7 @@
             <key>loadingBg.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,102},{584,48}}</string>
+                <string>{{2,2},{584,48}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -241,7 +241,7 @@
             <key>loadingFront.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,2},{584,48}}</string>
+                <string>{{2,52},{584,48}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -254,7 +254,7 @@
             <key>loadingStencil.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,52},{584,48}}</string>
+                <string>{{2,102},{584,48}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -319,7 +319,7 @@
             <key>pause.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{558,241},{80,80}}</string>
+                <string>{{312,241},{80,80}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -332,7 +332,7 @@
             <key>pauseActive.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{476,241},{80,80}}</string>
+                <string>{{640,241},{80,80}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -371,7 +371,7 @@
             <key>setting.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{312,241},{80,80}}</string>
+                <string>{{722,241},{80,80}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -384,7 +384,7 @@
             <key>settingActive.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{394,241},{80,80}}</string>
+                <string>{{558,241},{80,80}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -407,6 +407,32 @@
                 <key>sourceSize</key>
                 <string>{400,85}</string>
             </dict>
+            <key>woodSquare.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{394,241},{80,80}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{80,80}}</string>
+                <key>sourceSize</key>
+                <string>{80,80}</string>
+            </dict>
+            <key>woodSquareActive.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{476,241},{80,80}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{80,80}}</string>
+                <key>sourceSize</key>
+                <string>{80,80}</string>
+            </dict>
         </dict>
         <key>metadata</key>
         <dict>
@@ -417,7 +443,7 @@
             <key>size</key>
             <string>{1024,1024}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:79197ca1f1b89a7ec2ef067bd3b46e98:1/1$</string>
+            <string>$TexturePacker:SmartUpdate:df61544a2fd3ccb194a9b6b6e48d5d9f:1/1$</string>
             <key>textureFileName</key>
             <string>common.png</string>
         </dict>

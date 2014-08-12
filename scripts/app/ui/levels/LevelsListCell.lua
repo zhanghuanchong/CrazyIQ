@@ -10,6 +10,7 @@ function LevelsListCell:ctor(size, levelIndex, title)
         if disable then
             return
         end
+        disable = true
         jumpAnimate(self.levelIcon, function()
             print('level' .. levelIndex)
             ez.level = levelIndex

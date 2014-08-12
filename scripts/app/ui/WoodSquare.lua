@@ -1,7 +1,9 @@
 local WoodSquare = class('WoodSquare', function(params)
+    params.image = params.image or "#woodSquare.png"
+    params.imageActive = params.imageActive or "#woodSquareActive.png"
     local imageNormal = display.newSprite(params.image)
     local imageSelected = display.newSprite(params.imageActive)
-    local item = CCMenuItemSprite:create(imageNormal, imageSelected)
+    local item = MenuItemSpriteExtension:create(imageNormal, imageSelected)
     CCSpriteExtend.extend(item)
     return item
 end)
@@ -35,6 +37,18 @@ function WoodSquare:ctor(params)
     local tag = params.tag
     if x and y then self:setPosition(x, y) end
     if tag then self:setTag(tag) end
+
+    if params.title then
+        local pos = button:getContentSize()
+        local label = ez:newLabel({
+            text = params.title,
+            align = ui.TEXT_ALIGN_CENTER,
+            x = pos.width * 0.5,
+            y = pos.height * 0.5
+        }, params.clear or null)
+        button:addChild(label)
+        self.label = label
+    end
 end
 
 return WoodSquare

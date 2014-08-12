@@ -14,6 +14,7 @@ local MatchQuestion = import("app.ui.questions.MatchQuestion")
 local ColorNumberQuestion = import("app.ui.questions.ColorNumberQuestion")
 local MemoryCloseQuestion = import("app.ui.questions.MemoryCloseQuestion")
 local ColorAreaQuestion = import("app.ui.questions.ColorAreaQuestion")
+local MathQuestion = import("app.ui.questions.MathQuestion")
 
 local Levels = {}
 
@@ -107,6 +108,10 @@ Levels[2] = {
 Levels[3] = {
     title = '初中',
     questions = {
+        {
+            class = MathQuestion,
+            score = 4
+        },
         {
             class = ColorNumberQuestion,
             score = 4,
