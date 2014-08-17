@@ -110,7 +110,9 @@ Levels[3] = {
     questions = {
         {
             class = MathQuestion,
-            score = 4
+            score = 4,
+            timeout = 5,
+            count = 3
         },
         {
             class = ColorNumberQuestion,

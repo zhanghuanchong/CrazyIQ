@@ -68,6 +68,7 @@ function GameScene:gotoNextQuestion()
         app:enterUpgradeScene()
         return
     end
+    ez:playEffect('sound/pass.mp3')
     self.currentQuestion = self.questions[self.currentQuestionIndex]
     self.currentQuestionLayer = self.currentQuestion.class.new()
     self:addChild(self.currentQuestionLayer)

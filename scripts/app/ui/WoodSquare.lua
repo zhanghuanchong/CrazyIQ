@@ -24,6 +24,10 @@ function WoodSquare:ctor(params)
         if params.disableParent ~= false then
             button:getParent():setEnabled(false)
         end
+        if params.disableAnimation then
+            listener(tag)
+            return
+        end
         jumpAnimate(button, function()
             if params.disableParent ~= false then
                 button:getParent():setEnabled(true)

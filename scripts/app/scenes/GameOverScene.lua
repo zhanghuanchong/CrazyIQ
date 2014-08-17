@@ -73,7 +73,7 @@ function GameOverScene:onEnterTransitionFinish()
     transition.execute(self.logo, CCScaleTo:create(0.5, 1), {
         easing = "bounceOut"
     })
-    ez:playBackgroundMusic("sound/bg.mp3", true)
+    ez:playEffect("sound/gameover.mp3")
     for i,v in ipairs{
         self.resultLayer,
         self.mainMenu

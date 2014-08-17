@@ -36,6 +36,7 @@ function MyApp:run()
     --    self:enterScene("SplashScene")
     --  for test
     self:enterLevelsScene()
+--    self:enterUpgradeScene()
 --    self:enterGameScene()
 --    self:enterGameOverScene()
 end
