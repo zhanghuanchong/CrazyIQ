@@ -35,6 +35,7 @@ function Levels:baseScore(index)
     return score
 end
 
+-- Score: 48
 Levels[1] = {
     title = '幼儿园',
     questions = {
@@ -69,6 +70,8 @@ Levels[1] = {
         }
     }
 }
+
+-- Score: 36
 Levels[2] = {
     title = '小学',
     questions = {
@@ -105,6 +108,8 @@ Levels[2] = {
         },
     }
 }
+
+-- Score: 24
 Levels[3] = {
     title = '初中',
     questions = {
@@ -129,7 +134,7 @@ Levels[3] = {
         },
         {
             class = ColorTextQuestion,
-            score = 8,
+            score = 4,
             timeout = 3
         },
         {
@@ -140,65 +145,75 @@ Levels[3] = {
         },
     }
 }
+
+-- Score: 12
 Levels[4] = {
     title = '高中',
     questions = {
         {
             class = PuzzleQuestion,
-            score = 6,
+            score = 2,
             grid = 16,
             picture = 'earth',
             timeout = 30
         },
         {
             class = MatchQuestion,
-            score = 6,
+            score = 2,
             timeout = 15
         },
         {
             class = ColorNumberQuestion,
-            score = 4,
+            score = 2,
             count = 6,
             timeout = 10,
             times = 2
         },
         {
             class = RockScissorPaperQuestion,
-            score = 6,
+            score = 2,
             timeout = 2
         },
         {
             class = MemoryQuestion,
-            score = 6,
+            score = 2,
             count = 9,
             timeout = 1
         },
     }
 }
+
+-- Score: 6
 Levels[5] = {
     title = '大学',
     questions = {
         {
             class = MemoryCloseQuestion,
-            score = 4,
+            score = 1,
             count = 12,
             timeout = 1
         },
         {
+            class = MathQuestion,
+            score = 2,
+            timeout = 4,
+            count = 5
+        },
+        {
             class = ColorTextQuestion,
-            score = 8,
+            score = 1,
             timeout = 1
         },
         {
             class = ColorNumberQuestion,
-            score = 4,
+            score = 1,
             count = 6,
             timeout = 8,
             times = 3
         },
         {
             class = ColorAreaQuestion,
-            score = 4,
+            score = 1,
             timeout = 3,
             count = 20
         },
