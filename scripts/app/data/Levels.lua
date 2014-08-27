@@ -138,6 +138,13 @@ Levels[3] = {
             timeout = 3
         },
         {
+            class = PuzzleQuestion,
+            score = 2,
+            grid = 16,
+            picture = 'earth',
+            timeout = 30
+        },
+        {
             class = ColorAreaQuestion,
             score = 4,
             timeout = 6,
@@ -150,13 +157,6 @@ Levels[3] = {
 Levels[4] = {
     title = '高中',
     questions = {
-        {
-            class = PuzzleQuestion,
-            score = 2,
-            grid = 16,
-            picture = 'earth',
-            timeout = 30
-        },
         {
             class = MatchQuestion,
             score = 2,
@@ -179,6 +179,13 @@ Levels[4] = {
             score = 2,
             count = 9,
             timeout = 1
+        },
+        {
+            class = PuzzleQuestion,
+            score = 2,
+            grid = 25,
+            picture = 'football',
+            timeout = 45
         },
     }
 }

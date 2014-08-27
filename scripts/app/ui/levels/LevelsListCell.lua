@@ -43,7 +43,7 @@ function LevelsListCell:ctor(size, levelIndex, title)
     if currentLevel == levelIndex then
         scoreText = '最高智商： ' .. ez:getBestScore()
     elseif currentLevel > levelIndex then
-        scoreText = '顺利过关！ 智商 + ' .. Levels:levelScore(levelIndex)
+        scoreText = '顺利过关！ 智商 +' .. Levels:levelScore(levelIndex)
     end
 
     local fontColor = ez.COLOR_BROWN
@@ -55,14 +55,13 @@ function LevelsListCell:ctor(size, levelIndex, title)
         fontColor = ccc3(128, 128, 128)
     end
 
-    self.scoreLabel = ez:newLabel{
-        font = 'HOPE',
+    self.scoreLabel = ez:newLabel({
         text = scoreText,
         color = fontColor,
         align = ui.TEXT_ALIGN_CENTER,
         x = display.cx,
         y = display.height * .25
-    }
+    }, true)
     self:addChild(self.scoreLabel, 2)
 end
 
