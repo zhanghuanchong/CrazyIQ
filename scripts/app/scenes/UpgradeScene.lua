@@ -34,7 +34,7 @@ function UpgradeScene:ctor()
     self.resultLayer:setPosition(ccp(display.width * 1.5, display.height * 0.57))
 
     self.tipLabel = ez:newLabel{
-        text = "恭喜晋级！"
+        text = ez.gameScene.currentLevel.upgradeTip or "恭喜晋级！"
     }
     self.tipLabel:setPosition(ccp(display.cx, display.height * .4))
     self.tipLabel:setScale(0.1)

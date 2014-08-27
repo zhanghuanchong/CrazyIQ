@@ -34,7 +34,7 @@ function GameOverScene:ctor()
     self.resultLayer:setPosition(ccp(display.width * 1.5, display.height * 0.57))
 
     self.tipLabel = ez:newLabel{
-        text = "再接再厉！"
+        text =  ez.gameScene.currentLevel.gameOverTip or "再接再厉！"
     }
     self.tipLabel:setPosition(ccp(display.cx, display.height * .4))
     self.tipLabel:setScale(0.1)

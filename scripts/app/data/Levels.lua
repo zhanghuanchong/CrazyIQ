@@ -38,6 +38,8 @@ end
 -- Score: 48
 Levels[1] = {
     title = '幼儿园',
+    gameOverTip = '你确定你不是3岁小孩儿吗？',
+    upgradeTip = '恭喜，你的智商高于3岁小孩儿！',
     questions = {
         {
             class = ClickRedBtnQuestion,
@@ -74,6 +76,8 @@ Levels[1] = {
 -- Score: 36
 Levels[2] = {
     title = '小学',
+    gameOverTip = '药不能停！！',
+    upgradeTip = '恭喜，你小学毕业了！',
     questions = {
         {
             class = MatchQuestion,
@@ -112,6 +116,8 @@ Levels[2] = {
 -- Score: 24
 Levels[3] = {
     title = '初中',
+    gameOverTip = '何弃疗？！',
+    upgradeTip = '我宣你，我要为你生孩子！',
     questions = {
         {
             class = MathQuestion,
@@ -156,6 +162,8 @@ Levels[3] = {
 -- Score: 12
 Levels[4] = {
     title = '高中',
+    gameOverTip = '真为你的智商抓急！！',
+    upgradeTip = '我和我的小伙伴儿都惊呆了！',
     questions = {
         {
             class = MatchQuestion,
@@ -193,6 +201,8 @@ Levels[4] = {
 -- Score: 6
 Levels[5] = {
     title = '大学',
+    gameOverTip = '且行且珍惜！',
+    upgradeTip = '你这么Nubility，你家人造吗？',
     questions = {
         {
             class = MemoryCloseQuestion,
