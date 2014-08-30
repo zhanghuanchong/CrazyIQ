@@ -38,8 +38,11 @@ end
 -- Score: 48
 Levels[1] = {
     title = '幼儿园',
-    gameOverTip = '你确定你不是3岁小孩儿吗？',
-    upgradeTip = '恭喜，你的智商高于3岁小孩儿！',
+    gameOverTip = {
+        text = 'No zuo, no die！',
+        clear = true
+    },
+    upgradeTip = '涨姿势了！',
     questions = {
         {
             class = ClickRedBtnQuestion,
@@ -77,7 +80,10 @@ Levels[1] = {
 Levels[2] = {
     title = '小学',
     gameOverTip = '药不能停！！',
-    upgradeTip = '恭喜，你小学毕业了！',
+    upgradeTip = {
+        text = 'Nubility！',
+        clear = true
+    },
     questions = {
         {
             class = MatchQuestion,
@@ -202,7 +208,7 @@ Levels[4] = {
 Levels[5] = {
     title = '大学',
     gameOverTip = '且行且珍惜！',
-    upgradeTip = '你这么Nubility，你家人造吗？',
+    upgradeTip = '你这么屌，你家人造吗？',
     questions = {
         {
             class = MemoryCloseQuestion,

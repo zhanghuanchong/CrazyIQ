@@ -33,9 +33,15 @@ function GameOverScene:ctor()
     self:addChild(self.resultLayer)
     self.resultLayer:setPosition(ccp(display.width * 1.5, display.height * 0.57))
 
-    self.tipLabel = ez:newLabel{
-        text =  ez.gameScene.currentLevel.gameOverTip or "再接再厉！"
-    }
+    local tip = ez.gameScene.currentLevel.gameOverTip
+    local clear = false
+    if type(tip) == 'table' then
+        clear = tip.clear
+        tip = tip.text
+    end
+    self.tipLabel = ez:newLabel({
+        text =  tip or "再接再厉！"
+    }, clear)
     self.tipLabel:setPosition(ccp(display.cx, display.height * .4))
     self.tipLabel:setScale(0.1)
     self.tipLabel:setVisible(false)
