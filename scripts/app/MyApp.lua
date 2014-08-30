@@ -33,9 +33,9 @@ function MyApp:run()
         audio.preloadMusic("sound/"..v..".mp3")
     end
 
-    --    self:enterScene("SplashScene")
+        self:enterScene("SplashScene")
     --  for test
-    self:enterLevelsScene()
+--    self:enterLevelsScene()
 --    self:enterUpgradeScene()
 --    self:enterGameScene()
 --    self:enterGameOverScene()
