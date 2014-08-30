@@ -15,6 +15,7 @@ local ColorNumberQuestion = import("app.ui.questions.ColorNumberQuestion")
 local MemoryCloseQuestion = import("app.ui.questions.MemoryCloseQuestion")
 local ColorAreaQuestion = import("app.ui.questions.ColorAreaQuestion")
 local MathQuestion = import("app.ui.questions.MathQuestion")
+local AlpacaQuestion = import("app.ui.questions.AlpacaQuestion")
 
 local Levels = {}
 
@@ -201,6 +202,10 @@ Levels[4] = {
             picture = 'football',
             timeout = 45
         },
+        {
+            class = AlpacaQuestion,
+            score = 2
+        }
     }
 }
 

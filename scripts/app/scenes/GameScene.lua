@@ -47,7 +47,7 @@ function GameScene:ctor()
     self.questions = self.currentLevel['questions']
 --    dump(self.questions)
 --    for test
-    self.currentQuestionIndex = 4
+    self.currentQuestionIndex = 5
     self.levelScore = Levels:baseScore(ez.level)
 end
 
