@@ -238,6 +238,19 @@
                 <key>sourceSize</key>
                 <string>{100,100}</string>
             </dict>
+            <key>injector.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{300,300},{115,115}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{115,115}}</string>
+                <key>sourceSize</key>
+                <string>{115,115}</string>
+            </dict>
         </dict>
         <key>metadata</key>
         <dict>
@@ -248,7 +261,7 @@
             <key>size</key>
             <string>{512,512}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:7579a9a2fd42c3f1419a066434adf208:1/1$</string>
+            <string>$TexturePacker:SmartUpdate:74adf683f167566e1299a5f13359000d:1/1$</string>
             <key>textureFileName</key>
             <string>cnm.png</string>
         </dict>

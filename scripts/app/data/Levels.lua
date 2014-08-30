@@ -178,6 +178,11 @@ Levels[4] = {
             timeout = 15
         },
         {
+            class = AlpacaQuestion,
+            score = 2,
+            timeout = 0.5
+        },
+        {
             class = ColorNumberQuestion,
             score = 2,
             count = 6,
@@ -201,10 +206,6 @@ Levels[4] = {
             grid = 25,
             picture = 'football',
             timeout = 45
-        },
-        {
-            class = AlpacaQuestion,
-            score = 2
         }
     }
 }
@@ -226,6 +227,11 @@ Levels[5] = {
             score = 2,
             timeout = 4,
             count = 5
+        },
+        {
+            class = AlpacaQuestion,
+            score = 1,
+            timeout = 0.25
         },
         {
             class = ColorTextQuestion,
