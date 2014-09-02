@@ -10,7 +10,7 @@ function SplashScene:ctor()
     self.logo:setScale(0.2)
     self:addChild(self.logo)
 
-    self.motto = display.newSprite('#motto.png', display.cx, display.height * -0.1)
+    self.motto = display.newSprite('#motto.png', display.cx, display.height * - 0.1)
     self:addChild(self.motto)
 end
 
@@ -18,7 +18,7 @@ function SplashScene:onEnter()
     transition.execute(self.logo, CCScaleTo:create(0.5, 1), {
         easing = "bounceOut"
     })
-    transition.execute(self.motto, CCMoveTo:create(10, ccp(display.cx, display.height * 0.1)), {
+    transition.execute(self.motto, CCMoveTo:create(0.5, ccp(display.cx, display.height * 0.1)), {
         delay = 0.5,
         easing = "bounceOut"
     })

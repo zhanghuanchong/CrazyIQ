@@ -74,11 +74,17 @@ function MyApp:popWoodScene()
 end
 
 function MyApp:onEnterBackground()
-    MyApp.super:onEnterBackground()
+    audio.pauseBackgroundMusic()
+    audio.pauseAllEffects()
 end
 
 function MyApp:onEnterForeground()
-    MyApp.super:onEnterForeground()
+    if ez.isBgMusicEnabled then
+        audio.resumeBackgroundMusic()
+    end
+    if ez.isEffectEnabled then
+        audio.resumeAllEffects()
+    end
 end
 
 function MyApp:exit()
