@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A116A8919B5FD8B009F97FE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A116A8819B5FD8B009F97FE /* Images.xcassets */; };
+		3A116AA819B60207009F97FE /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3A116AA719B60207009F97FE /* Info.plist */; };
+		3A1358E419B4C05E007514CC /* scripts in Resources */ = {isa = PBXBuildFile; fileRef = F4730C1D16C1509700280298 /* scripts */; };
 		840FB65A18EB23B800C64F4B /* ActionEaseExtension.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 840FB65318EB23B800C64F4B /* ActionEaseExtension.cpp */; };
 		840FB65B18EB23B800C64F4B /* MenuItemSpriteExtension.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 840FB65618EB23B800C64F4B /* MenuItemSpriteExtension.cpp */; };
 		840FB65C18EB23B800C64F4B /* TransitionExtension.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 840FB65818EB23B800C64F4B /* TransitionExtension.cpp */; };
@@ -18,12 +21,6 @@
 		840FB66D18EB23F200C64F4B /* TransitionExtension_luabinding.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 840FB66518EB23F200C64F4B /* TransitionExtension_luabinding.cpp */; };
 		840FB66E18EB23F200C64F4B /* TransitionExtension_luabinding.tolua in Resources */ = {isa = PBXBuildFile; fileRef = 840FB66718EB23F200C64F4B /* TransitionExtension_luabinding.tolua */; };
 		84FF67B518EB0F5D006AA7D6 /* libquickcocos2dx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F48F590816D21F8C000651BE /* libquickcocos2dx.a */; };
-		F4482F2116A0555000FDDDAD /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F4482F1A16A0555000FDDDAD /* Default-568h@2x.png */; };
-		F4482F2216A0555000FDDDAD /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = F4482F1B16A0555000FDDDAD /* Default.png */; };
-		F4482F2316A0555000FDDDAD /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F4482F1C16A0555000FDDDAD /* Default@2x.png */; };
-		F4482F2416A0555000FDDDAD /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = F4482F1D16A0555000FDDDAD /* Icon-72.png */; };
-		F4482F2516A0555000FDDDAD /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = F4482F1E16A0555000FDDDAD /* Icon.png */; };
-		F4482F2616A0555000FDDDAD /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F4482F1F16A0555000FDDDAD /* Icon@2x.png */; };
 		F452BFC51687EEF900DC5BCC /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F452BFC41687EEF900DC5BCC /* CoreText.framework */; };
 		F452BFD01687F0F200DC5BCC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F452BFCF1687F0F200DC5BCC /* UIKit.framework */; };
 		F456ECC615EE018E00FCF3E2 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F456ECC515EE018E00FCF3E2 /* QuartzCore.framework */; };
@@ -37,7 +34,6 @@
 		F456F0FD15EE0CF600FCF3E2 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F456F0FC15EE0CF600FCF3E2 /* SystemConfiguration.framework */; };
 		F456F10515EE0D2D00FCF3E2 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F456F10415EE0D2D00FCF3E2 /* MobileCoreServices.framework */; };
 		F4730C1E16C1509700280298 /* res in Resources */ = {isa = PBXBuildFile; fileRef = F4730C1C16C1509700280298 /* res */; };
-		F4730C1F16C1509700280298 /* scripts in Resources */ = {isa = PBXBuildFile; fileRef = F4730C1D16C1509700280298 /* scripts */; };
 		F4949C791699553B00DB561E /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4949C781699553B00DB561E /* AddressBook.framework */; };
 		F4949C7B1699554600DB561E /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4949C7A1699554600DB561E /* CoreTelephony.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		F4D26BCC16C7D0D2004442B6 /* AppController.mm in Sources */ = {isa = PBXBuildFile; fileRef = F4D26BC816C7D0D2004442B6 /* AppController.mm */; };
@@ -59,6 +55,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3A116A8819B5FD8B009F97FE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		3A116AA719B60207009F97FE /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		840FB64F18EB22C200C64F4B /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
 		840FB65318EB23B800C64F4B /* ActionEaseExtension.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ActionEaseExtension.cpp; sourceTree = "<group>"; };
 		840FB65418EB23B800C64F4B /* ActionEaseExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionEaseExtension.h; sourceTree = "<group>"; };
@@ -77,13 +75,6 @@
 		840FB66518EB23F200C64F4B /* TransitionExtension_luabinding.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TransitionExtension_luabinding.cpp; sourceTree = "<group>"; };
 		840FB66618EB23F200C64F4B /* TransitionExtension_luabinding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransitionExtension_luabinding.h; sourceTree = "<group>"; };
 		840FB66718EB23F200C64F4B /* TransitionExtension_luabinding.tolua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TransitionExtension_luabinding.tolua; sourceTree = "<group>"; };
-		F4482F1A16A0555000FDDDAD /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		F4482F1B16A0555000FDDDAD /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		F4482F1C16A0555000FDDDAD /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		F4482F1D16A0555000FDDDAD /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
-		F4482F1E16A0555000FDDDAD /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
-		F4482F1F16A0555000FDDDAD /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
-		F4482F2016A0555000FDDDAD /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F4499C7116C7CDE20059FF37 /* quickcocos2dx.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = quickcocos2dx.xcodeproj; path = lib/proj.ios/quickcocos2dx.xcodeproj; sourceTree = QUICK_COCOS2DX_ROOT; };
 		F452BFC41687EEF900DC5BCC /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		F452BFCF1687F0F200DC5BCC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -223,6 +214,7 @@
 			children = (
 				F4E50FE216CF7B6500AA7E90 /* sources */,
 				F4D26BC616C7D0D2004442B6 /* ios */,
+				3A116A8819B5FD8B009F97FE /* Images.xcassets */,
 			);
 			path = crazyiq;
 			sourceTree = "<group>";
@@ -230,13 +222,7 @@
 		F48ABAD516A057D000A60C5B /* ios */ = {
 			isa = PBXGroup;
 			children = (
-				F4482F1A16A0555000FDDDAD /* Default-568h@2x.png */,
-				F4482F1B16A0555000FDDDAD /* Default.png */,
-				F4482F1C16A0555000FDDDAD /* Default@2x.png */,
-				F4482F1D16A0555000FDDDAD /* Icon-72.png */,
-				F4482F1E16A0555000FDDDAD /* Icon.png */,
-				F4482F1F16A0555000FDDDAD /* Icon@2x.png */,
-				F4482F2016A0555000FDDDAD /* Info.plist */,
+				3A116AA719B60207009F97FE /* Info.plist */,
 			);
 			name = ios;
 			sourceTree = "<group>";
@@ -296,6 +282,7 @@
 				F456ECBD15EE018E00FCF3E2 /* Sources */,
 				F456ECBE15EE018E00FCF3E2 /* Frameworks */,
 				F456ECBF15EE018E00FCF3E2 /* Resources */,
+				3A1358E519B4C13D007514CC /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -313,6 +300,11 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0440;
+				TargetAttributes = {
+					F456ECC015EE018E00FCF3E2 = {
+						DevelopmentTeam = 8S89Z3ZA8N;
+					};
+				};
 			};
 			buildConfigurationList = F456ECBB15EE018E00FCF3E2 /* Build configuration list for PBXProject "crazyiq" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -353,22 +345,34 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4482F2116A0555000FDDDAD /* Default-568h@2x.png in Resources */,
-				F4482F2216A0555000FDDDAD /* Default.png in Resources */,
+				3A116AA819B60207009F97FE /* Info.plist in Resources */,
+				3A1358E419B4C05E007514CC /* scripts in Resources */,
+				3A116A8919B5FD8B009F97FE /* Images.xcassets in Resources */,
 				840FB66918EB23F200C64F4B /* ActionEaseExtension_luabinding.tolua in Resources */,
-				F4482F2316A0555000FDDDAD /* Default@2x.png in Resources */,
-				F4482F2416A0555000FDDDAD /* Icon-72.png in Resources */,
-				F4482F2516A0555000FDDDAD /* Icon.png in Resources */,
 				840FB66A18EB23F200C64F4B /* build.bat in Resources */,
 				840FB66E18EB23F200C64F4B /* TransitionExtension_luabinding.tolua in Resources */,
-				F4482F2616A0555000FDDDAD /* Icon@2x.png in Resources */,
 				840FB66C18EB23F200C64F4B /* MenuItemSpriteExtension_luabinding.tolua in Resources */,
 				F4730C1E16C1509700280298 /* res in Resources */,
-				F4730C1F16C1509700280298 /* scripts in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3A1358E519B4C13D007514CC /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "_TARGET_BUILD_CONTENTS_PATH=$TARGET_BUILD_DIR/$CONTENTS_FOLDER_PATH\necho _TARGET_BUILD_CONTENTS_PATH: $_TARGET_BUILD_CONTENTS_PATH\necho PWD: $PWD\necho Cleaning $_TARGET_BUILD_CONTENTS_PATH/\n#函数作用:刷新资源文件夹，解决xcode不能刷新资源文件夹的bug\n#参数1:传入要操作的文件夹\nfunction operation_folder()\n{\n    rm -fr $_TARGET_BUILD_CONTENTS_PATH/$1/*\n    mkdir -p $_TARGET_BUILD_CONTENTS_PATH/$1/\n                                           \n    #判断文件夹不为空，才进行复制，防止cp命令报错\n    DIRECTORY=$PWD/../$1/\n    if [ \"`ls $DIRECTORY`\" != \"\" ]; then\n        cp -RLp $DIRECTORY/* $_TARGET_BUILD_CONTENTS_PATH/$1/\n        echo operation_folder:$1 completed!\n    fi\n}\n\noperation_folder scripts;\noperation_folder res;";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F456ECBD15EE018E00FCF3E2 /* Sources */ = {
@@ -493,10 +497,12 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = armv7;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: ZHANG HUANCHONG (Q8T75D3U64)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: ZHANG HUANCHONG (Q8T75D3U64)";
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -550,9 +556,9 @@
 					"-lz",
 					"-ObjC",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "3605c1a2-5edb-4a67-815e-9fff45dfd84e";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "3605c1a2-5edb-4a67-815e-9fff45dfd84e";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = armv7;
 				WRAPPER_EXTENSION = app;
@@ -564,6 +570,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = armv7;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -619,7 +627,7 @@
 					"-lz",
 					"-ObjC",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "${TARGET_NAME}";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				TARGETED_DEVICE_FAMILY = "1,2";

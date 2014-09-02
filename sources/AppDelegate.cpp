@@ -100,8 +100,8 @@ void AppDelegate::applicationDidEnterBackground()
 {
     CCDirector::sharedDirector()->stopAnimation();
     CCDirector::sharedDirector()->pause();
-    SimpleAudioEngine::sharedEngine()->pauseBackgroundMusic();
-    SimpleAudioEngine::sharedEngine()->pauseAllEffects();
+//    SimpleAudioEngine::sharedEngine()->pauseBackgroundMusic();
+//    SimpleAudioEngine::sharedEngine()->pauseAllEffects();
     CCNotificationCenter::sharedNotificationCenter()->postNotification("APP_ENTER_BACKGROUND");
 }
 
@@ -110,8 +110,8 @@ void AppDelegate::applicationWillEnterForeground()
 {
     CCDirector::sharedDirector()->startAnimation();
     CCDirector::sharedDirector()->resume();
-    SimpleAudioEngine::sharedEngine()->resumeBackgroundMusic();
-    SimpleAudioEngine::sharedEngine()->resumeAllEffects();
+//    SimpleAudioEngine::sharedEngine()->resumeBackgroundMusic();
+//    SimpleAudioEngine::sharedEngine()->resumeAllEffects();
     CCNotificationCenter::sharedNotificationCenter()->postNotification("APP_ENTER_FOREGROUND");
 }
 
