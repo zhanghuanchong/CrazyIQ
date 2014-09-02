@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A1358E419B4C05E007514CC /* scripts in Resources */ = {isa = PBXBuildFile; fileRef = F4730C1D16C1509700280298 /* scripts */; };
 		840FB65A18EB23B800C64F4B /* ActionEaseExtension.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 840FB65318EB23B800C64F4B /* ActionEaseExtension.cpp */; };
 		840FB65B18EB23B800C64F4B /* MenuItemSpriteExtension.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 840FB65618EB23B800C64F4B /* MenuItemSpriteExtension.cpp */; };
 		840FB65C18EB23B800C64F4B /* TransitionExtension.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 840FB65818EB23B800C64F4B /* TransitionExtension.cpp */; };
@@ -37,7 +38,6 @@
 		F456F0FD15EE0CF600FCF3E2 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F456F0FC15EE0CF600FCF3E2 /* SystemConfiguration.framework */; };
 		F456F10515EE0D2D00FCF3E2 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F456F10415EE0D2D00FCF3E2 /* MobileCoreServices.framework */; };
 		F4730C1E16C1509700280298 /* res in Resources */ = {isa = PBXBuildFile; fileRef = F4730C1C16C1509700280298 /* res */; };
-		F4730C1F16C1509700280298 /* scripts in Resources */ = {isa = PBXBuildFile; fileRef = F4730C1D16C1509700280298 /* scripts */; };
 		F4949C791699553B00DB561E /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4949C781699553B00DB561E /* AddressBook.framework */; };
 		F4949C7B1699554600DB561E /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4949C7A1699554600DB561E /* CoreTelephony.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		F4D26BCC16C7D0D2004442B6 /* AppController.mm in Sources */ = {isa = PBXBuildFile; fileRef = F4D26BC816C7D0D2004442B6 /* AppController.mm */; };
@@ -296,6 +296,7 @@
 				F456ECBD15EE018E00FCF3E2 /* Sources */,
 				F456ECBE15EE018E00FCF3E2 /* Frameworks */,
 				F456ECBF15EE018E00FCF3E2 /* Resources */,
+				3A1358E519B4C13D007514CC /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -313,6 +314,11 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0440;
+				TargetAttributes = {
+					F456ECC015EE018E00FCF3E2 = {
+						DevelopmentTeam = 8S89Z3ZA8N;
+					};
+				};
 			};
 			buildConfigurationList = F456ECBB15EE018E00FCF3E2 /* Build configuration list for PBXProject "crazyiq" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -353,6 +359,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A1358E419B4C05E007514CC /* scripts in Resources */,
 				F4482F2116A0555000FDDDAD /* Default-568h@2x.png in Resources */,
 				F4482F2216A0555000FDDDAD /* Default.png in Resources */,
 				840FB66918EB23F200C64F4B /* ActionEaseExtension_luabinding.tolua in Resources */,
@@ -364,11 +371,26 @@
 				F4482F2616A0555000FDDDAD /* Icon@2x.png in Resources */,
 				840FB66C18EB23F200C64F4B /* MenuItemSpriteExtension_luabinding.tolua in Resources */,
 				F4730C1E16C1509700280298 /* res in Resources */,
-				F4730C1F16C1509700280298 /* scripts in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3A1358E519B4C13D007514CC /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "_TARGET_BUILD_CONTENTS_PATH=$TARGET_BUILD_DIR/$CONTENTS_FOLDER_PATH\necho _TARGET_BUILD_CONTENTS_PATH: $_TARGET_BUILD_CONTENTS_PATH\necho PWD: $PWD\necho Cleaning $_TARGET_BUILD_CONTENTS_PATH/\n#函数作用:刷新资源文件夹，解决xcode不能刷新资源文件夹的bug\n#参数1:传入要操作的文件夹\nfunction operation_folder()\n{\n    rm -fr $_TARGET_BUILD_CONTENTS_PATH/$1/*\n    mkdir -p $_TARGET_BUILD_CONTENTS_PATH/$1/\n                                           \n    #判断文件夹不为空，才进行复制，防止cp命令报错\n    DIRECTORY=$PWD/../$1/\n    if [ \"`ls $DIRECTORY`\" != \"\" ]; then\n        cp -RLp $DIRECTORY/* $_TARGET_BUILD_CONTENTS_PATH/$1/\n        echo operation_folder:$1 completed!\n    fi\n}\n\noperation_folder scripts;\noperation_folder res;";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F456ECBD15EE018E00FCF3E2 /* Sources */ = {
@@ -495,8 +517,8 @@
 				ARCHS = armv7;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: ZHANG HUANCHONG (Q8T75D3U64)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: ZHANG HUANCHONG (Q8T75D3U64)";
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -551,8 +573,8 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				PROVISIONING_PROFILE = "3605c1a2-5edb-4a67-815e-9fff45dfd84e";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "3605c1a2-5edb-4a67-815e-9fff45dfd84e";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = armv7;
 				WRAPPER_EXTENSION = app;

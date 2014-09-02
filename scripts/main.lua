@@ -123,7 +123,7 @@ function ez:checkBestScore(newScore)
 end
 
 function ez:newLabel(t, clear)
-    local defaultFont = 'HOPE'
+    local defaultFont = 'MYuppy-Bold-DDC' --'HOPE'
     if clear then
         defaultFont = 'MYuppy-Bold-DDC'
     end

@@ -30,6 +30,12 @@
 	<string>1.0</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>res/fonts/HOPE.ttf</string>
+		<string>res/fonts/MYuppy.ttf</string>
+		<string>res/fonts/Pixel LCD7.ttf</string>
+	</array>
 	<key>UIPrerenderedIcon</key>
 	<true/>
 	<key>UIRequiredDeviceCapabilities</key>
