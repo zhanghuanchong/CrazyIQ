@@ -6,7 +6,8 @@ LOCAL_MODULE := game_shared
 
 LOCAL_MODULE_FILENAME := libgame
 
-LOCAL_SRC_FILES := ../../sources/ext/ActionEaseExtension.cpp \
+LOCAL_SRC_FILES := hellocpp/main.cpp \
+    ../../sources/ext/ActionEaseExtension.cpp \
     ../../sources/ext/MenuItemSpriteExtension.cpp \
     ../../sources/ext/TransitionExtension.cpp \
     ../../sources/luabinding/ActionEaseExtension_luabinding.cpp \
