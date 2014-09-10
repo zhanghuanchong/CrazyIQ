@@ -17,12 +17,13 @@ function GameScene:ctor()
     self.top:addChild(topBg)
 
     local pauseButton = WoodSquare.new{
-        image = '#pause.png',
-        imageActive = '#pauseActive.png',
+        image = '#back.png',
+        imageActive = '#backActive.png',
         x = 45,
         y = display.height - 45,
         listener = function()
-            app:enterGamePauseScene()
+--            app:enterPauseScene()
+            app:enterLevelsScene()
         end
     }
 

@@ -87,7 +87,6 @@ end
 ez = {}
 ez.COLOR_BROWN = ccc3(79, 57, 30)
 ez.userDefault = CCUserDefault:sharedUserDefault()
-ez.director = CCDirector:sharedDirector()
 ez.level = 1
 
 function ez:init()

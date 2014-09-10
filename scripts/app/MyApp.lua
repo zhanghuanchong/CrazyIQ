@@ -7,7 +7,6 @@ scheduler = require("framework.scheduler")
 WoodScene = require("app.scenes.WoodScene")
 LevelsScene = require('app.scenes.LevelsScene')
 GameScene = require('app.scenes.GameScene')
-PauseScene = require('app.scenes.PauseScene')
 WoodButton = require('app.ui.WoodButton')
 WoodSquare = require('app.ui.WoodSquare')
 
@@ -52,13 +51,6 @@ end
 
 function MyApp:enterGameScene()
     self:enterScene('GameScene', nil, 'fade', 0.5, display.COLOR_BLACK)
-end
-
-function MyApp:enterGamePauseScene()
-    local pauseScene = PauseScene.new() --display.newScene('PauseScene')
---    display.wrapSceneWithTransition(pauseScene, "fade", 0.5)
-    ez.director:pushScene(pauseScene)
---    self:enterScene('PauseScene', nil, 'fade', 0.5, display.COLOR_BLACK)
 end
 
 function MyApp:enterGameOverScene()
