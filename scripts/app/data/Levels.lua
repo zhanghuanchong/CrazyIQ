@@ -231,7 +231,7 @@ Levels[5] = {
         {
             class = AlpacaQuestion,
             score = 1,
-            timeout = 0.25
+            timeout = 0.3
         },
         {
             class = ColorTextQuestion,

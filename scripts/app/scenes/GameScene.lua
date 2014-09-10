@@ -81,6 +81,7 @@ function GameScene:onEnter()
 end
 
 function GameScene:onEnterTransitionFinish()
+    ez:playBackgroundMusic("sound/bg.mp3", true)
     local count = self.heartCount
     self.hearts = {}
     for i = 1, count do

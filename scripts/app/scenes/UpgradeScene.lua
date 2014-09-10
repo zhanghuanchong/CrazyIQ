@@ -87,6 +87,7 @@ function UpgradeScene:onEnterTransitionFinish()
     transition.execute(self.logo, CCScaleTo:create(0.5, 1), {
         easing = "bounceOut"
     })
+    audio.stopBackgroundMusic()
     ez:playEffect("sound/upgrade.mp3")
     for i,v in ipairs{
         self.resultLayer,
