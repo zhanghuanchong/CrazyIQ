@@ -41,6 +41,7 @@ function TimeCounter:ctor(param)
         color = ccc3(0, 180, 0),
         size = 55
     }
+    title:setPosition(ccp(0, -7))
     self:addChild(title)
     self.title = title
 end

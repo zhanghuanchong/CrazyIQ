@@ -28,6 +28,32 @@
 
 @implementation RootViewController
 
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        _dmAdView = [[DMAdView alloc] initWithPublisherId:@"56OJwNvIuN88/glXOM"
+                                              placementId:@"16TLuu_oAp242NU08zuHvFGs"];
+    }
+    return self;
+}
+
+- (void)addGameView:(UIView *)v
+{
+    _dmAdView.delegate = self;
+    _dmAdView.rootViewController = self;
+    [_dmAdView setFrame:CGRectMake(0, self.view.frame.size.height - 50, FLEXIBLE_SIZE.width, FLEXIBLE_SIZE.height)];
+    [self.view addSubview:_dmAdView];
+    [v setFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height - 50)];
+    [self.view addSubview:v];
+    [_dmAdView loadAd];
+}
+
+- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
+{
+    [_dmAdView orientationChanged];
+}
+
 // Override to allow orientations other than the default portrait orientation.
 // This method is deprecated on ios6
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
@@ -61,9 +87,13 @@
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
+    [_dmAdView removeFromSuperview];
 }
 
 - (void)dealloc {
+    _dmAdView.delegate = nil;
+    _dmAdView.rootViewController = nil;
+    [_dmAdView release];
     [super dealloc];
 }
 

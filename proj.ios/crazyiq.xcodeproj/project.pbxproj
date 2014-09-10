@@ -10,6 +10,15 @@
 		3A116A8919B5FD8B009F97FE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A116A8819B5FD8B009F97FE /* Images.xcassets */; };
 		3A116AA819B60207009F97FE /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3A116AA719B60207009F97FE /* Info.plist */; };
 		3A1358E419B4C05E007514CC /* scripts in Resources */ = {isa = PBXBuildFile; fileRef = F4730C1D16C1509700280298 /* scripts */; };
+		3A1F0D9719C0B9760070ED16 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A1F0D9619C0B9760070ED16 /* libz.dylib */; };
+		3A1F0D9A19C0B9830070ED16 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A1F0D9919C0B9830070ED16 /* libsqlite3.dylib */; };
+		3A1F0D9C19C0B98F0070ED16 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A1F0D9B19C0B98F0070ED16 /* CoreMedia.framework */; };
+		3A1F0D9E19C0B9990070ED16 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A1F0D9D19C0B9990070ED16 /* MediaPlayer.framework */; };
+		3A1F0DA019C0B9B10070ED16 /* PassKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A1F0D9F19C0B9B10070ED16 /* PassKit.framework */; };
+		3A1F0DA219C0B9BB0070ED16 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A1F0DA119C0B9BB0070ED16 /* Social.framework */; };
+		3A1F0DA419C0B9C40070ED16 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A1F0DA319C0B9C40070ED16 /* EventKit.framework */; };
+		3A1F0DAF19C0BA120070ED16 /* DomobAdSDKBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3A1F0DAD19C0BA120070ED16 /* DomobAdSDKBundle.bundle */; };
+		3A1F0DB019C0BA120070ED16 /* libDomobAdSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A1F0DAE19C0BA120070ED16 /* libDomobAdSDK.a */; };
 		840FB65A18EB23B800C64F4B /* ActionEaseExtension.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 840FB65318EB23B800C64F4B /* ActionEaseExtension.cpp */; };
 		840FB65B18EB23B800C64F4B /* MenuItemSpriteExtension.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 840FB65618EB23B800C64F4B /* MenuItemSpriteExtension.cpp */; };
 		840FB65C18EB23B800C64F4B /* TransitionExtension.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 840FB65818EB23B800C64F4B /* TransitionExtension.cpp */; };
@@ -57,6 +66,21 @@
 /* Begin PBXFileReference section */
 		3A116A8819B5FD8B009F97FE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3A116AA719B60207009F97FE /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A1F0D9619C0B9760070ED16 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		3A1F0D9919C0B9830070ED16 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		3A1F0D9B19C0B98F0070ED16 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		3A1F0D9D19C0B9990070ED16 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		3A1F0D9F19C0B9B10070ED16 /* PassKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PassKit.framework; path = System/Library/Frameworks/PassKit.framework; sourceTree = SDKROOT; };
+		3A1F0DA119C0B9BB0070ED16 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		3A1F0DA319C0B9C40070ED16 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
+		3A1F0DA619C0BA120070ED16 /* DMAdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMAdView.h; sourceTree = "<group>"; };
+		3A1F0DA719C0BA120070ED16 /* DMFeedsAdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMFeedsAdView.h; sourceTree = "<group>"; };
+		3A1F0DA819C0BA120070ED16 /* DMInterstitialAdController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMInterstitialAdController.h; sourceTree = "<group>"; };
+		3A1F0DA919C0BA120070ED16 /* DMRTSplashAdController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMRTSplashAdController.h; sourceTree = "<group>"; };
+		3A1F0DAA19C0BA120070ED16 /* DMSplashAdController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMSplashAdController.h; sourceTree = "<group>"; };
+		3A1F0DAB19C0BA120070ED16 /* DMTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMTools.h; sourceTree = "<group>"; };
+		3A1F0DAD19C0BA120070ED16 /* DomobAdSDKBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = DomobAdSDKBundle.bundle; sourceTree = "<group>"; };
+		3A1F0DAE19C0BA120070ED16 /* libDomobAdSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libDomobAdSDK.a; sourceTree = "<group>"; };
 		840FB64F18EB22C200C64F4B /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
 		840FB65318EB23B800C64F4B /* ActionEaseExtension.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ActionEaseExtension.cpp; sourceTree = "<group>"; };
 		840FB65418EB23B800C64F4B /* ActionEaseExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionEaseExtension.h; sourceTree = "<group>"; };
@@ -112,6 +136,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F456ECCC15EE018E00FCF3E2 /* AudioToolbox.framework in Frameworks */,
+				3A1F0DA419C0B9C40070ED16 /* EventKit.framework in Frameworks */,
+				3A1F0DA219C0B9BB0070ED16 /* Social.framework in Frameworks */,
+				3A1F0DA019C0B9B10070ED16 /* PassKit.framework in Frameworks */,
+				3A1F0D9E19C0B9990070ED16 /* MediaPlayer.framework in Frameworks */,
+				3A1F0DB019C0BA120070ED16 /* libDomobAdSDK.a in Frameworks */,
+				3A1F0D9C19C0B98F0070ED16 /* CoreMedia.framework in Frameworks */,
+				3A1F0D9A19C0B9830070ED16 /* libsqlite3.dylib in Frameworks */,
+				3A1F0D9719C0B9760070ED16 /* libz.dylib in Frameworks */,
 				84FF67B518EB0F5D006AA7D6 /* libquickcocos2dx.a in Frameworks */,
 				F452BFD01687F0F200DC5BCC /* UIKit.framework in Frameworks */,
 				F456F0FD15EE0CF600FCF3E2 /* SystemConfiguration.framework in Frameworks */,
@@ -125,7 +158,6 @@
 				F456F10515EE0D2D00FCF3E2 /* MobileCoreServices.framework in Frameworks */,
 				F456F0F915EE0CDB00FCF3E2 /* CFNetwork.framework in Frameworks */,
 				F456ECCA15EE018E00FCF3E2 /* OpenAL.framework in Frameworks */,
-				F456ECCC15EE018E00FCF3E2 /* AudioToolbox.framework in Frameworks */,
 				F456ECCE15EE018E00FCF3E2 /* AVFoundation.framework in Frameworks */,
 				F456ECD215EE018E00FCF3E2 /* Foundation.framework in Frameworks */,
 			);
@@ -134,6 +166,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A1F0DA519C0BA120070ED16 /* DomobAdSDK */ = {
+			isa = PBXGroup;
+			children = (
+				3A1F0DA619C0BA120070ED16 /* DMAdView.h */,
+				3A1F0DA719C0BA120070ED16 /* DMFeedsAdView.h */,
+				3A1F0DA819C0BA120070ED16 /* DMInterstitialAdController.h */,
+				3A1F0DA919C0BA120070ED16 /* DMRTSplashAdController.h */,
+				3A1F0DAA19C0BA120070ED16 /* DMSplashAdController.h */,
+				3A1F0DAB19C0BA120070ED16 /* DMTools.h */,
+				3A1F0DAC19C0BA120070ED16 /* DomobAdSDKBundle */,
+				3A1F0DAE19C0BA120070ED16 /* libDomobAdSDK.a */,
+			);
+			path = DomobAdSDK;
+			sourceTree = "<group>";
+		};
+		3A1F0DAC19C0BA120070ED16 /* DomobAdSDKBundle */ = {
+			isa = PBXGroup;
+			children = (
+				3A1F0DAD19C0BA120070ED16 /* DomobAdSDKBundle.bundle */,
+			);
+			path = DomobAdSDKBundle;
+			sourceTree = "<group>";
+		};
 		840FB65218EB23B800C64F4B /* ext */ = {
 			isa = PBXGroup;
 			children = (
@@ -171,6 +226,7 @@
 				F4499C7116C7CDE20059FF37 /* quickcocos2dx.xcodeproj */,
 				F456ECD515EE018E00FCF3E2 /* crazyiq */,
 				F48E6F76166B264500295A03 /* Resources */,
+				3A1F0DA519C0BA120070ED16 /* DomobAdSDK */,
 				F456ECC415EE018E00FCF3E2 /* Frameworks */,
 				F456ECC215EE018E00FCF3E2 /* Products */,
 			);
@@ -187,6 +243,13 @@
 		F456ECC415EE018E00FCF3E2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3A1F0DA319C0B9C40070ED16 /* EventKit.framework */,
+				3A1F0DA119C0B9BB0070ED16 /* Social.framework */,
+				3A1F0D9F19C0B9B10070ED16 /* PassKit.framework */,
+				3A1F0D9D19C0B9990070ED16 /* MediaPlayer.framework */,
+				3A1F0D9B19C0B98F0070ED16 /* CoreMedia.framework */,
+				3A1F0D9919C0B9830070ED16 /* libsqlite3.dylib */,
+				3A1F0D9619C0B9760070ED16 /* libz.dylib */,
 				840FB64F18EB22C200C64F4B /* libstdc++.dylib */,
 				F4949C781699553B00DB561E /* AddressBook.framework */,
 				F456ECCB15EE018E00FCF3E2 /* AudioToolbox.framework */,
@@ -348,6 +411,7 @@
 				3A116AA819B60207009F97FE /* Info.plist in Resources */,
 				3A1358E419B4C05E007514CC /* scripts in Resources */,
 				3A116A8919B5FD8B009F97FE /* Images.xcassets in Resources */,
+				3A1F0DAF19C0BA120070ED16 /* DomobAdSDKBundle.bundle in Resources */,
 				840FB66918EB23F200C64F4B /* ActionEaseExtension_luabinding.tolua in Resources */,
 				840FB66A18EB23F200C64F4B /* build.bat in Resources */,
 				840FB66E18EB23F200C64F4B /* TransitionExtension_luabinding.tolua in Resources */,
@@ -550,6 +614,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"\"$(QUICK_COCOS2DX_ROOT)/lib/cocos2d-x/cocos2dx/platform/third_party/ios/libraries\"",
 					"\"$(QUICK_COCOS2DX_ROOT)/lib/cocos2d-x/scripting/lua/luajit/ios\"",
+					"$(PROJECT_DIR)/DomobAdSDK",
 				);
 				OTHER_LDFLAGS = (
 					"-lxml2",
@@ -621,6 +686,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"\"$(QUICK_COCOS2DX_ROOT)/lib/cocos2d-x/cocos2dx/platform/third_party/ios/libraries\"",
 					"\"$(QUICK_COCOS2DX_ROOT)/lib/cocos2d-x/scripting/lua/luajit/ios\"",
+					"$(PROJECT_DIR)/DomobAdSDK",
 				);
 				OTHER_LDFLAGS = (
 					"-lxml2",
