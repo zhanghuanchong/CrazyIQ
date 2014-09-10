@@ -6,7 +6,7 @@ local MatchQuestion = class('MatchQuestion', function()
 end)
 
 function MatchQuestion:ctor()
-    self:setTip(ez.gameScene.currentQuestion.timeout .. "秒内记住它们的位置！")
+    self:setTip("记住同色方块的位置，消除他们！")
 
     self.timeCounter = TimeCounter.new{
         total = ez.gameScene.currentQuestion.timeout,
@@ -85,6 +85,9 @@ function MatchQuestion:ctor()
         cover:setVisible(false)
         cover:setTouchEnabled(true)
         cover:addTouchEventListener(function()
+            if self.lock then
+                return
+            end
             transition.execute(cover, CCOrbitCamera:create(0.1, 1, 0, 0, 90, 0, 0), {
                 onComplete = function()
                     cover:setVisible(false)
@@ -102,6 +105,7 @@ function MatchQuestion:ctor()
                                 end
                             end
                             if bFound > 0 then
+                                self.lock = true
                                 if bMatch then
                                     showAnimate(cell, false)
                                     showAnimate(self.cells[bFound], false, function()
@@ -112,6 +116,7 @@ function MatchQuestion:ctor()
                                                 break
                                             end
                                         end
+                                        self.lock = false
                                         if bFound == false then
                                             self:gotoNextQuestion()
                                         end
@@ -131,7 +136,9 @@ function MatchQuestion:ctor()
                                             transition.execute(self.covers[bFound], CCOrbitCamera:create(0.1, 1, 0, -90, 90, 0, 0))
                                         end
                                     })
-                                    self:alertError()
+                                    self:alertError(function()
+                                        self.lock = false
+                                    end)
                                 end
                             end
                         end
