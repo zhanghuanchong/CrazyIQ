@@ -18,6 +18,7 @@
 		3A1F0DA419C0B9C40070ED16 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A1F0DA319C0B9C40070ED16 /* EventKit.framework */; };
 		3A1F0DAF19C0BA120070ED16 /* DomobAdSDKBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3A1F0DAD19C0BA120070ED16 /* DomobAdSDKBundle.bundle */; };
 		3A1F0DB019C0BA120070ED16 /* libDomobAdSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A1F0DAE19C0BA120070ED16 /* libDomobAdSDK.a */; };
+		3A2540A619C1F39E00C697F4 /* res in Resources */ = {isa = PBXBuildFile; fileRef = F4730C1C16C1509700280298 /* res */; };
 		840FB65A18EB23B800C64F4B /* ActionEaseExtension.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 840FB65318EB23B800C64F4B /* ActionEaseExtension.cpp */; };
 		840FB65B18EB23B800C64F4B /* MenuItemSpriteExtension.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 840FB65618EB23B800C64F4B /* MenuItemSpriteExtension.cpp */; };
 		840FB65C18EB23B800C64F4B /* TransitionExtension.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 840FB65818EB23B800C64F4B /* TransitionExtension.cpp */; };
@@ -37,7 +38,6 @@
 		F456F0F915EE0CDB00FCF3E2 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F456F0F815EE0CDB00FCF3E2 /* CFNetwork.framework */; };
 		F456F0FD15EE0CF600FCF3E2 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F456F0FC15EE0CF600FCF3E2 /* SystemConfiguration.framework */; };
 		F456F10515EE0D2D00FCF3E2 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F456F10415EE0D2D00FCF3E2 /* MobileCoreServices.framework */; };
-		F4730C1E16C1509700280298 /* res in Resources */ = {isa = PBXBuildFile; fileRef = F4730C1C16C1509700280298 /* res */; };
 		F4949C791699553B00DB561E /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4949C781699553B00DB561E /* AddressBook.framework */; };
 		F4949C7B1699554600DB561E /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4949C7A1699554600DB561E /* CoreTelephony.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		F4D26BCC16C7D0D2004442B6 /* AppController.mm in Sources */ = {isa = PBXBuildFile; fileRef = F4D26BC816C7D0D2004442B6 /* AppController.mm */; };
@@ -395,7 +395,7 @@
 				3A116AA819B60207009F97FE /* Info.plist in Resources */,
 				3A116A8919B5FD8B009F97FE /* Images.xcassets in Resources */,
 				3A1F0DAF19C0BA120070ED16 /* DomobAdSDKBundle.bundle in Resources */,
-				F4730C1E16C1509700280298 /* res in Resources */,
+				3A2540A619C1F39E00C697F4 /* res in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

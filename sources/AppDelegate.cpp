@@ -89,6 +89,7 @@ bool AppDelegate::applicationDidFinishLaunching()
     
     pStack->setXXTEAKeyAndSign("zhclovewrh", 10, "encrypted", 9);
     pStack->loadChunksFromZIP("res/game.zip");
+    pStack->loadChunksFromZIP("res/images.zip");
     pStack->executeString("require 'main'");
 
 	lua_State* L = pStack->getLuaState();
