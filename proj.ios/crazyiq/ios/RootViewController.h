@@ -24,9 +24,14 @@
  ****************************************************************************/
 
 #import <UIKit/UIKit.h>
+#import "DMAdView.h"
 
-@interface RootViewController : UIViewController
+@interface RootViewController : UIViewController<DMAdViewDelegate>
+{
+    DMAdView *_dmAdView;
+}
 
 - (BOOL) prefersStatusBarHidden;
+- (void) addGameView:(UIView *)v;
 
 @end
