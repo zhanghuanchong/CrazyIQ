@@ -18,7 +18,6 @@
 		3A1F0DA419C0B9C40070ED16 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A1F0DA319C0B9C40070ED16 /* EventKit.framework */; };
 		3A1F0DAF19C0BA120070ED16 /* DomobAdSDKBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3A1F0DAD19C0BA120070ED16 /* DomobAdSDKBundle.bundle */; };
 		3A1F0DB019C0BA120070ED16 /* libDomobAdSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A1F0DAE19C0BA120070ED16 /* libDomobAdSDK.a */; };
-		3A23E55619C12F830038A727 /* game.zip in Resources */ = {isa = PBXBuildFile; fileRef = 3A23E55519C12F830038A727 /* game.zip */; };
 		840FB65A18EB23B800C64F4B /* ActionEaseExtension.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 840FB65318EB23B800C64F4B /* ActionEaseExtension.cpp */; };
 		840FB65B18EB23B800C64F4B /* MenuItemSpriteExtension.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 840FB65618EB23B800C64F4B /* MenuItemSpriteExtension.cpp */; };
 		840FB65C18EB23B800C64F4B /* TransitionExtension.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 840FB65818EB23B800C64F4B /* TransitionExtension.cpp */; };
@@ -77,7 +76,6 @@
 		3A1F0DAB19C0BA120070ED16 /* DMTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMTools.h; sourceTree = "<group>"; };
 		3A1F0DAD19C0BA120070ED16 /* DomobAdSDKBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = DomobAdSDKBundle.bundle; sourceTree = "<group>"; };
 		3A1F0DAE19C0BA120070ED16 /* libDomobAdSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libDomobAdSDK.a; sourceTree = "<group>"; };
-		3A23E55519C12F830038A727 /* game.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; name = game.zip; path = ../../../game.zip; sourceTree = "<group>"; };
 		840FB64F18EB22C200C64F4B /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
 		840FB65318EB23B800C64F4B /* ActionEaseExtension.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ActionEaseExtension.cpp; sourceTree = "<group>"; };
 		840FB65418EB23B800C64F4B /* ActionEaseExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionEaseExtension.h; sourceTree = "<group>"; };
@@ -281,7 +279,6 @@
 		F48E6F76166B264500295A03 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				3A23E55519C12F830038A727 /* game.zip */,
 				F4730C1C16C1509700280298 /* res */,
 				F48ABAD516A057D000A60C5B /* ios */,
 			);
@@ -397,7 +394,6 @@
 			files = (
 				3A116AA819B60207009F97FE /* Info.plist in Resources */,
 				3A116A8919B5FD8B009F97FE /* Images.xcassets in Resources */,
-				3A23E55619C12F830038A727 /* game.zip in Resources */,
 				3A1F0DAF19C0BA120070ED16 /* DomobAdSDKBundle.bundle in Resources */,
 				F4730C1E16C1509700280298 /* res in Resources */,
 			);
@@ -606,8 +602,8 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: ZHANG HUANCHONG (8S89Z3ZA8N)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: ZHANG HUANCHONG (8S89Z3ZA8N)";
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -661,8 +657,8 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = "${TARGET_NAME}";
-				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				PROVISIONING_PROFILE = "bab8f200-7280-45aa-bf31-648139e1e6f0";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "bab8f200-7280-45aa-bf31-648139e1e6f0";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VALID_ARCHS = armv7;
