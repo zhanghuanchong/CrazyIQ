@@ -1,7 +1,7 @@
 <?php
 return array(
 	'src'      => 'scripts',
-	'output'   => 'game.zip',
+	'output'   => 'res/game.zip',
 	'compile'  => 'zip',
 	'encrypt'  => 'xxtea_zip',
 	'key'      => 'zhclovewrh',
