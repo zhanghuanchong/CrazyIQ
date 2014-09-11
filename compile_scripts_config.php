@@ -5,6 +5,6 @@ return array(
 	'compile'  => 'zip',
 	'encrypt'  => 'xxtea_zip',
 	'key'      => 'zhclovewrh',
-	'sign'     => 'encrypted',
+	//'sign'     => 'encrypted',
 	'extname'  => 'lua'
 );
