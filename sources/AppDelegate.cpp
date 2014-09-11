@@ -40,8 +40,6 @@ bool AppDelegate::applicationDidFinishLaunching()
     CCScriptEngineManager::sharedManager()->setScriptEngine(pEngine);
 
     CCLuaStack *pStack = pEngine->getLuaStack();
-    
-    pStack->setXXTEAKeyAndSign("zhclovewrh", 10, "encrypted", 9);
 
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS || CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
     // load framework
@@ -82,15 +80,16 @@ bool AppDelegate::applicationDidFinishLaunching()
     string env = "__LUA_STARTUP_FILE__=\"";
     env.append(path);
     env.append("\"");
-    pEngine->executeString(env.c_str());*/
-    
-    pStack->loadChunksFromZIP("game.zip");
-    pStack->executeString("require 'main'");
+    pEngine->executeString(env.c_str());
 
     CCLOG("------------------------------------------------");
     CCLOG("LOAD LUA FILE: %s", path.c_str());
     CCLOG("------------------------------------------------");
-    pEngine->executeScriptFile(path.c_str());
+    pEngine->executeScriptFile(path.c_str());*/
+    
+    pStack->setXXTEAKeyAndSign("zhclovewrh", 10, "encrypted", 9);
+    pStack->loadChunksFromZIP("res/game.zip");
+    pStack->executeString("require 'main'");
 
 	lua_State* L = pStack->getLuaState();
 	luaopen_ActionEaseExtension_luabinding(L);
