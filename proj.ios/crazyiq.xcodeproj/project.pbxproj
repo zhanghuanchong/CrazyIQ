@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		3A116A8919B5FD8B009F97FE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A116A8819B5FD8B009F97FE /* Images.xcassets */; };
 		3A116AA819B60207009F97FE /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3A116AA719B60207009F97FE /* Info.plist */; };
-		3A1358E419B4C05E007514CC /* scripts in Resources */ = {isa = PBXBuildFile; fileRef = F4730C1D16C1509700280298 /* scripts */; };
 		3A1F0D9719C0B9760070ED16 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A1F0D9619C0B9760070ED16 /* libz.dylib */; };
 		3A1F0D9A19C0B9830070ED16 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A1F0D9919C0B9830070ED16 /* libsqlite3.dylib */; };
 		3A1F0D9C19C0B98F0070ED16 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A1F0D9B19C0B98F0070ED16 /* CoreMedia.framework */; };
@@ -19,16 +18,13 @@
 		3A1F0DA419C0B9C40070ED16 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A1F0DA319C0B9C40070ED16 /* EventKit.framework */; };
 		3A1F0DAF19C0BA120070ED16 /* DomobAdSDKBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3A1F0DAD19C0BA120070ED16 /* DomobAdSDKBundle.bundle */; };
 		3A1F0DB019C0BA120070ED16 /* libDomobAdSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A1F0DAE19C0BA120070ED16 /* libDomobAdSDK.a */; };
+		3A2540A619C1F39E00C697F4 /* res in Resources */ = {isa = PBXBuildFile; fileRef = F4730C1C16C1509700280298 /* res */; };
 		840FB65A18EB23B800C64F4B /* ActionEaseExtension.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 840FB65318EB23B800C64F4B /* ActionEaseExtension.cpp */; };
 		840FB65B18EB23B800C64F4B /* MenuItemSpriteExtension.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 840FB65618EB23B800C64F4B /* MenuItemSpriteExtension.cpp */; };
 		840FB65C18EB23B800C64F4B /* TransitionExtension.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 840FB65818EB23B800C64F4B /* TransitionExtension.cpp */; };
 		840FB66818EB23F200C64F4B /* ActionEaseExtension_luabinding.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 840FB65E18EB23F200C64F4B /* ActionEaseExtension_luabinding.cpp */; };
-		840FB66918EB23F200C64F4B /* ActionEaseExtension_luabinding.tolua in Resources */ = {isa = PBXBuildFile; fileRef = 840FB66018EB23F200C64F4B /* ActionEaseExtension_luabinding.tolua */; };
-		840FB66A18EB23F200C64F4B /* build.bat in Resources */ = {isa = PBXBuildFile; fileRef = 840FB66118EB23F200C64F4B /* build.bat */; };
 		840FB66B18EB23F200C64F4B /* MenuItemSpriteExtension_luabinding.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 840FB66218EB23F200C64F4B /* MenuItemSpriteExtension_luabinding.cpp */; };
-		840FB66C18EB23F200C64F4B /* MenuItemSpriteExtension_luabinding.tolua in Resources */ = {isa = PBXBuildFile; fileRef = 840FB66418EB23F200C64F4B /* MenuItemSpriteExtension_luabinding.tolua */; };
 		840FB66D18EB23F200C64F4B /* TransitionExtension_luabinding.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 840FB66518EB23F200C64F4B /* TransitionExtension_luabinding.cpp */; };
-		840FB66E18EB23F200C64F4B /* TransitionExtension_luabinding.tolua in Resources */ = {isa = PBXBuildFile; fileRef = 840FB66718EB23F200C64F4B /* TransitionExtension_luabinding.tolua */; };
 		84FF67B518EB0F5D006AA7D6 /* libquickcocos2dx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F48F590816D21F8C000651BE /* libquickcocos2dx.a */; };
 		F452BFC51687EEF900DC5BCC /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F452BFC41687EEF900DC5BCC /* CoreText.framework */; };
 		F452BFD01687F0F200DC5BCC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F452BFCF1687F0F200DC5BCC /* UIKit.framework */; };
@@ -42,7 +38,6 @@
 		F456F0F915EE0CDB00FCF3E2 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F456F0F815EE0CDB00FCF3E2 /* CFNetwork.framework */; };
 		F456F0FD15EE0CF600FCF3E2 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F456F0FC15EE0CF600FCF3E2 /* SystemConfiguration.framework */; };
 		F456F10515EE0D2D00FCF3E2 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F456F10415EE0D2D00FCF3E2 /* MobileCoreServices.framework */; };
-		F4730C1E16C1509700280298 /* res in Resources */ = {isa = PBXBuildFile; fileRef = F4730C1C16C1509700280298 /* res */; };
 		F4949C791699553B00DB561E /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4949C781699553B00DB561E /* AddressBook.framework */; };
 		F4949C7B1699554600DB561E /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4949C7A1699554600DB561E /* CoreTelephony.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		F4D26BCC16C7D0D2004442B6 /* AppController.mm in Sources */ = {isa = PBXBuildFile; fileRef = F4D26BC816C7D0D2004442B6 /* AppController.mm */; };
@@ -91,14 +86,10 @@
 		840FB65918EB23B800C64F4B /* TransitionExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransitionExtension.h; sourceTree = "<group>"; };
 		840FB65E18EB23F200C64F4B /* ActionEaseExtension_luabinding.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ActionEaseExtension_luabinding.cpp; sourceTree = "<group>"; };
 		840FB65F18EB23F200C64F4B /* ActionEaseExtension_luabinding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionEaseExtension_luabinding.h; sourceTree = "<group>"; };
-		840FB66018EB23F200C64F4B /* ActionEaseExtension_luabinding.tolua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ActionEaseExtension_luabinding.tolua; sourceTree = "<group>"; };
-		840FB66118EB23F200C64F4B /* build.bat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = build.bat; sourceTree = "<group>"; };
 		840FB66218EB23F200C64F4B /* MenuItemSpriteExtension_luabinding.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MenuItemSpriteExtension_luabinding.cpp; sourceTree = "<group>"; };
 		840FB66318EB23F200C64F4B /* MenuItemSpriteExtension_luabinding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuItemSpriteExtension_luabinding.h; sourceTree = "<group>"; };
-		840FB66418EB23F200C64F4B /* MenuItemSpriteExtension_luabinding.tolua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MenuItemSpriteExtension_luabinding.tolua; sourceTree = "<group>"; };
 		840FB66518EB23F200C64F4B /* TransitionExtension_luabinding.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TransitionExtension_luabinding.cpp; sourceTree = "<group>"; };
 		840FB66618EB23F200C64F4B /* TransitionExtension_luabinding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransitionExtension_luabinding.h; sourceTree = "<group>"; };
-		840FB66718EB23F200C64F4B /* TransitionExtension_luabinding.tolua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TransitionExtension_luabinding.tolua; sourceTree = "<group>"; };
 		F4499C7116C7CDE20059FF37 /* quickcocos2dx.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = quickcocos2dx.xcodeproj; path = lib/proj.ios/quickcocos2dx.xcodeproj; sourceTree = QUICK_COCOS2DX_ROOT; };
 		F452BFC41687EEF900DC5BCC /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		F452BFCF1687F0F200DC5BCC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -116,7 +107,6 @@
 		F456F10415EE0D2D00FCF3E2 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		F456F10615EE0D3500FCF3E2 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		F4730C1C16C1509700280298 /* res */ = {isa = PBXFileReference; lastKnownFileType = folder; name = res; path = ../../../res; sourceTree = "<group>"; };
-		F4730C1D16C1509700280298 /* scripts */ = {isa = PBXFileReference; lastKnownFileType = folder; name = scripts; path = ../../../scripts; sourceTree = "<group>"; };
 		F4949C781699553B00DB561E /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		F4949C7A1699554600DB561E /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		F4D26BC716C7D0D2004442B6 /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = "<group>"; };
@@ -208,14 +198,10 @@
 			children = (
 				840FB65E18EB23F200C64F4B /* ActionEaseExtension_luabinding.cpp */,
 				840FB65F18EB23F200C64F4B /* ActionEaseExtension_luabinding.h */,
-				840FB66018EB23F200C64F4B /* ActionEaseExtension_luabinding.tolua */,
-				840FB66118EB23F200C64F4B /* build.bat */,
 				840FB66218EB23F200C64F4B /* MenuItemSpriteExtension_luabinding.cpp */,
 				840FB66318EB23F200C64F4B /* MenuItemSpriteExtension_luabinding.h */,
-				840FB66418EB23F200C64F4B /* MenuItemSpriteExtension_luabinding.tolua */,
 				840FB66518EB23F200C64F4B /* TransitionExtension_luabinding.cpp */,
 				840FB66618EB23F200C64F4B /* TransitionExtension_luabinding.h */,
-				840FB66718EB23F200C64F4B /* TransitionExtension_luabinding.tolua */,
 			);
 			path = luabinding;
 			sourceTree = "<group>";
@@ -294,7 +280,6 @@
 			isa = PBXGroup;
 			children = (
 				F4730C1C16C1509700280298 /* res */,
-				F4730C1D16C1509700280298 /* scripts */,
 				F48ABAD516A057D000A60C5B /* ios */,
 			);
 			name = Resources;
@@ -345,7 +330,6 @@
 				F456ECBD15EE018E00FCF3E2 /* Sources */,
 				F456ECBE15EE018E00FCF3E2 /* Frameworks */,
 				F456ECBF15EE018E00FCF3E2 /* Resources */,
-				3A1358E519B4C13D007514CC /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -409,34 +393,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A116AA819B60207009F97FE /* Info.plist in Resources */,
-				3A1358E419B4C05E007514CC /* scripts in Resources */,
 				3A116A8919B5FD8B009F97FE /* Images.xcassets in Resources */,
 				3A1F0DAF19C0BA120070ED16 /* DomobAdSDKBundle.bundle in Resources */,
-				840FB66918EB23F200C64F4B /* ActionEaseExtension_luabinding.tolua in Resources */,
-				840FB66A18EB23F200C64F4B /* build.bat in Resources */,
-				840FB66E18EB23F200C64F4B /* TransitionExtension_luabinding.tolua in Resources */,
-				840FB66C18EB23F200C64F4B /* MenuItemSpriteExtension_luabinding.tolua in Resources */,
-				F4730C1E16C1509700280298 /* res in Resources */,
+				3A2540A619C1F39E00C697F4 /* res in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		3A1358E519B4C13D007514CC /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "_TARGET_BUILD_CONTENTS_PATH=$TARGET_BUILD_DIR/$CONTENTS_FOLDER_PATH\necho _TARGET_BUILD_CONTENTS_PATH: $_TARGET_BUILD_CONTENTS_PATH\necho PWD: $PWD\necho Cleaning $_TARGET_BUILD_CONTENTS_PATH/\n#函数作用:刷新资源文件夹，解决xcode不能刷新资源文件夹的bug\n#参数1:传入要操作的文件夹\nfunction operation_folder()\n{\n    rm -fr $_TARGET_BUILD_CONTENTS_PATH/$1/*\n    mkdir -p $_TARGET_BUILD_CONTENTS_PATH/$1/\n                                           \n    #判断文件夹不为空，才进行复制，防止cp命令报错\n    DIRECTORY=$PWD/../$1/\n    if [ \"`ls $DIRECTORY`\" != \"\" ]; then\n        cp -RLp $DIRECTORY/* $_TARGET_BUILD_CONTENTS_PATH/$1/\n        echo operation_folder:$1 completed!\n    fi\n}\n\noperation_folder scripts;\noperation_folder res;";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F456ECBD15EE018E00FCF3E2 /* Sources */ = {
@@ -639,8 +602,8 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: ZHANG HUANCHONG (8S89Z3ZA8N)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: ZHANG HUANCHONG (8S89Z3ZA8N)";
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -694,8 +657,8 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = "${TARGET_NAME}";
-				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				PROVISIONING_PROFILE = "bab8f200-7280-45aa-bf31-648139e1e6f0";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "bab8f200-7280-45aa-bf31-648139e1e6f0";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VALID_ARCHS = armv7;

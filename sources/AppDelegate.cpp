@@ -59,7 +59,7 @@ bool AppDelegate::applicationDidFinishLaunching()
     string path = CCFileUtils::sharedFileUtils()->fullPathForFilename(m_projectConfig.getScriptFileRealPath().c_str());
 #endif
 
-    size_t pos;
+    /*size_t pos;
     while ((pos = path.find_first_of("\\")) != std::string::npos)
     {
         path.replace(pos, 1, "/");
@@ -85,7 +85,12 @@ bool AppDelegate::applicationDidFinishLaunching()
     CCLOG("------------------------------------------------");
     CCLOG("LOAD LUA FILE: %s", path.c_str());
     CCLOG("------------------------------------------------");
-    pEngine->executeScriptFile(path.c_str());
+    pEngine->executeScriptFile(path.c_str());*/
+    
+    pStack->setXXTEAKeyAndSign("zhclovewrh", 10, "encrypted", 9);
+    pStack->loadChunksFromZIP("res/game.zip");
+    pStack->loadChunksFromZIP("res/images.zip");
+    pStack->executeString("require 'main'");
 
 	lua_State* L = pStack->getLuaState();
 	luaopen_ActionEaseExtension_luabinding(L);
