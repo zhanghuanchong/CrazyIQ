@@ -1,0 +1,1 @@
+D:\game\quick-cocos2d-x\bin\compile_scripts.bat -c compile_scripts_config.php
