@@ -53,13 +53,13 @@ function GameOverScene:ctor()
             app:enterGameScene()
         end
     }
-    local btnShare = WoodButton.new{
+    --[[local btnShare = WoodButton.new{
         title = "分享成绩",
         listener = function()
             print("Share")
         end
-    }
-    local mainMenu = ui.newMenu{btnRestartGame, btnShare}
+    }]]
+    local mainMenu = ui.newMenu{btnRestartGame--[[, btnShare]]}
     self:addChild(mainMenu)
     mainMenu:setPosition(ccp(display.width * 1.5, display.height * 0.2))
     mainMenu:alignItemsVerticallyWithPadding(display.height * 0.04)

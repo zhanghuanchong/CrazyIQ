@@ -27,7 +27,7 @@ function GameScene:ctor()
         end
     }
 
-    local buyButton = WoodSquare.new{
+    --[[local buyButton = WoodSquare.new{
         image = '#buy.png',
         imageActive = '#buyActive.png',
         x = display.width - 45,
@@ -35,9 +35,9 @@ function GameScene:ctor()
         listener = function()
             print("Buy...")
         end
-    }
+    }]]
 
-    local topMenu = ui.newMenu{pauseButton, buyButton}
+    local topMenu = ui.newMenu{pauseButton--[[, buyButton]]}
     self.top:addChild(topMenu)
 
     self.top:setPosition(ccp(0, 0))

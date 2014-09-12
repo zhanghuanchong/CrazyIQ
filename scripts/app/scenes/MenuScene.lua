@@ -24,7 +24,7 @@ function MenuScene:ctor()
             app:enterLevelsScene()
         end
     }
-    local btnInvite = WoodButton.new{
+    --[[local btnInvite = WoodButton.new{
         title = "邀请好友",
         listener = function()
             print("Invite friends")
@@ -35,33 +35,39 @@ function MenuScene:ctor()
         listener = function()
             print("Free coins")
         end
-    }
-    local mainMenu = ui.newMenu{btnStartGame, btnInvite, btnCoin}
-    self:addChild(mainMenu)
-    mainMenu:setPosition(ccp(display.width * 1.5, display.height * 0.4))
-    mainMenu:alignItemsVerticallyWithPadding(display.height * 0.04)
-    self.mainMenu = mainMenu
-
-    -- add the bottom button
-    local btnFavorite = WoodSquare.new{
-        image = '#favorite.png',
-        imageActive = '#favoriteActive.png',
-        listener = function()
-            print("Favorite")
-        end
-    }
-    local btnSetting = WoodSquare.new{
-        image = '#setting.png',
-        imageActive = '#settingActive.png',
+    }]]
+    local btnSettingWider = WoodButton.new{
+        title = "设置",
         listener = function()
             self:showSettingLayer()
         end
     }
-    local settingMenu = ui.newMenu{btnFavorite, btnSetting}
-    self:addChild(settingMenu)
-    settingMenu:setPosition(ccp(display.width * 1.5, display.height * 0.1))
-    settingMenu:alignItemsHorizontallyWithPadding(display.cx)
-    self.settingMenu = settingMenu
+    local mainMenu = ui.newMenu{btnStartGame--[[, btnInvite, btnCoin]], btnSettingWider}
+    self:addChild(mainMenu)
+    mainMenu:setPosition(ccp(display.width * 1.5, display.height *--[[ 0.4]] 0.3))
+    mainMenu:alignItemsVerticallyWithPadding(display.height * 0.04)
+    self.mainMenu = mainMenu
+
+    -- add the bottom button
+    --[[ local btnFavorite = WoodSquare.new{
+         image = '#favorite.png',
+         imageActive = '#favoriteActive.png',
+         listener = function()
+             print("Favorite")
+         end
+     }
+     local btnSetting = WoodSquare.new{
+         image = '#setting.png',
+         imageActive = '#settingActive.png',
+         listener = function()
+             self:showSettingLayer()
+         end
+     }
+     local settingMenu = ui.newMenu{btnFavorite, btnSetting}
+     self:addChild(settingMenu)
+     settingMenu:setPosition(ccp(display.width * 1.5, display.height * 0.1))
+     settingMenu:alignItemsHorizontallyWithPadding(display.cx)
+     self.settingMenu = settingMenu]]
 end
 
 function MenuScene:easeIn(node, delay)
@@ -77,8 +83,8 @@ function MenuScene:onEnterTransitionFinish()
     for i,v in ipairs{
         self.logoLayer,
         self.titleSprite,
-        self.mainMenu,
-        self.settingMenu
+        self.mainMenu--[[,
+        self.settingMenu]]
     } do
         self:easeIn(v, i * 0.1)
     end
@@ -125,7 +131,7 @@ function MenuScene:showSettingLayer()
             easing = "backIn",
             onComplete = function()
                 node:removeFromParent()
-                self.settingMenu:setEnabled(true)
+--                self.settingMenu:setEnabled(true)
                 self.mainMenu:setEnabled(true)
             end
         })
@@ -135,7 +141,7 @@ function MenuScene:showSettingLayer()
     node:setPositionX(display.width)
     self:addChild(node)
 
-    self.settingMenu:setEnabled(false)
+--    self.settingMenu:setEnabled(false)
     self.mainMenu:setEnabled(false)
 
     transition.execute(node, CCMoveTo:create(0.5, ccp(0, 0)), {
