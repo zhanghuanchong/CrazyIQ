@@ -16,8 +16,6 @@
 		3A1F0DA019C0B9B10070ED16 /* PassKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A1F0D9F19C0B9B10070ED16 /* PassKit.framework */; };
 		3A1F0DA219C0B9BB0070ED16 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A1F0DA119C0B9BB0070ED16 /* Social.framework */; };
 		3A1F0DA419C0B9C40070ED16 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A1F0DA319C0B9C40070ED16 /* EventKit.framework */; };
-		3A1F0DAF19C0BA120070ED16 /* DomobAdSDKBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3A1F0DAD19C0BA120070ED16 /* DomobAdSDKBundle.bundle */; };
-		3A1F0DB019C0BA120070ED16 /* libDomobAdSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A1F0DAE19C0BA120070ED16 /* libDomobAdSDK.a */; };
 		3A2540A619C1F39E00C697F4 /* res in Resources */ = {isa = PBXBuildFile; fileRef = F4730C1C16C1509700280298 /* res */; };
 		840FB65A18EB23B800C64F4B /* ActionEaseExtension.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 840FB65318EB23B800C64F4B /* ActionEaseExtension.cpp */; };
 		840FB65B18EB23B800C64F4B /* MenuItemSpriteExtension.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 840FB65618EB23B800C64F4B /* MenuItemSpriteExtension.cpp */; };
@@ -68,14 +66,6 @@
 		3A1F0D9F19C0B9B10070ED16 /* PassKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PassKit.framework; path = System/Library/Frameworks/PassKit.framework; sourceTree = SDKROOT; };
 		3A1F0DA119C0B9BB0070ED16 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		3A1F0DA319C0B9C40070ED16 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
-		3A1F0DA619C0BA120070ED16 /* DMAdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMAdView.h; sourceTree = "<group>"; };
-		3A1F0DA719C0BA120070ED16 /* DMFeedsAdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMFeedsAdView.h; sourceTree = "<group>"; };
-		3A1F0DA819C0BA120070ED16 /* DMInterstitialAdController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMInterstitialAdController.h; sourceTree = "<group>"; };
-		3A1F0DA919C0BA120070ED16 /* DMRTSplashAdController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMRTSplashAdController.h; sourceTree = "<group>"; };
-		3A1F0DAA19C0BA120070ED16 /* DMSplashAdController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMSplashAdController.h; sourceTree = "<group>"; };
-		3A1F0DAB19C0BA120070ED16 /* DMTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMTools.h; sourceTree = "<group>"; };
-		3A1F0DAD19C0BA120070ED16 /* DomobAdSDKBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = DomobAdSDKBundle.bundle; sourceTree = "<group>"; };
-		3A1F0DAE19C0BA120070ED16 /* libDomobAdSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libDomobAdSDK.a; sourceTree = "<group>"; };
 		840FB64F18EB22C200C64F4B /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
 		840FB65318EB23B800C64F4B /* ActionEaseExtension.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ActionEaseExtension.cpp; sourceTree = "<group>"; };
 		840FB65418EB23B800C64F4B /* ActionEaseExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionEaseExtension.h; sourceTree = "<group>"; };
@@ -131,7 +121,6 @@
 				3A1F0DA219C0B9BB0070ED16 /* Social.framework in Frameworks */,
 				3A1F0DA019C0B9B10070ED16 /* PassKit.framework in Frameworks */,
 				3A1F0D9E19C0B9990070ED16 /* MediaPlayer.framework in Frameworks */,
-				3A1F0DB019C0BA120070ED16 /* libDomobAdSDK.a in Frameworks */,
 				3A1F0D9C19C0B98F0070ED16 /* CoreMedia.framework in Frameworks */,
 				3A1F0D9A19C0B9830070ED16 /* libsqlite3.dylib in Frameworks */,
 				3A1F0D9719C0B9760070ED16 /* libz.dylib in Frameworks */,
@@ -156,29 +145,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3A1F0DA519C0BA120070ED16 /* DomobAdSDK */ = {
-			isa = PBXGroup;
-			children = (
-				3A1F0DA619C0BA120070ED16 /* DMAdView.h */,
-				3A1F0DA719C0BA120070ED16 /* DMFeedsAdView.h */,
-				3A1F0DA819C0BA120070ED16 /* DMInterstitialAdController.h */,
-				3A1F0DA919C0BA120070ED16 /* DMRTSplashAdController.h */,
-				3A1F0DAA19C0BA120070ED16 /* DMSplashAdController.h */,
-				3A1F0DAB19C0BA120070ED16 /* DMTools.h */,
-				3A1F0DAC19C0BA120070ED16 /* DomobAdSDKBundle */,
-				3A1F0DAE19C0BA120070ED16 /* libDomobAdSDK.a */,
-			);
-			path = DomobAdSDK;
-			sourceTree = "<group>";
-		};
-		3A1F0DAC19C0BA120070ED16 /* DomobAdSDKBundle */ = {
-			isa = PBXGroup;
-			children = (
-				3A1F0DAD19C0BA120070ED16 /* DomobAdSDKBundle.bundle */,
-			);
-			path = DomobAdSDKBundle;
-			sourceTree = "<group>";
-		};
 		840FB65218EB23B800C64F4B /* ext */ = {
 			isa = PBXGroup;
 			children = (
@@ -212,7 +178,6 @@
 				F4499C7116C7CDE20059FF37 /* quickcocos2dx.xcodeproj */,
 				F456ECD515EE018E00FCF3E2 /* crazyiq */,
 				F48E6F76166B264500295A03 /* Resources */,
-				3A1F0DA519C0BA120070ED16 /* DomobAdSDK */,
 				F456ECC415EE018E00FCF3E2 /* Frameworks */,
 				F456ECC215EE018E00FCF3E2 /* Products */,
 			);
@@ -394,7 +359,6 @@
 			files = (
 				3A116AA819B60207009F97FE /* Info.plist in Resources */,
 				3A116A8919B5FD8B009F97FE /* Images.xcassets in Resources */,
-				3A1F0DAF19C0BA120070ED16 /* DomobAdSDKBundle.bundle in Resources */,
 				3A2540A619C1F39E00C697F4 /* res in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -657,8 +621,8 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = "${TARGET_NAME}";
-				PROVISIONING_PROFILE = "bab8f200-7280-45aa-bf31-648139e1e6f0";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "bab8f200-7280-45aa-bf31-648139e1e6f0";
+				PROVISIONING_PROFILE = "69056f64-088d-4009-a8f0-5e8952ec5ef8";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "69056f64-088d-4009-a8f0-5e8952ec5ef8";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VALID_ARCHS = armv7;
