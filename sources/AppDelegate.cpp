@@ -69,11 +69,13 @@ bool AppDelegate::applicationDidFinishLaunching()
     {
         const string dir = path.substr(0, p);
         pStack->addSearchPath(dir.c_str());
+        CCLOG("%s", dir.c_str());
 
         p = dir.find_last_of("/\\");
         if (p != dir.npos)
         {
             pStack->addSearchPath(dir.substr(0, p).c_str());
+            CCLOG("%s", dir.substr(0, p).c_str());
         }
     }
 
@@ -89,7 +91,6 @@ bool AppDelegate::applicationDidFinishLaunching()
     
     pStack->setXXTEAKeyAndSign("zhclovewrh", 10, "encrypted", 9);
     pStack->loadChunksFromZIP("res/game.zip");
-    pStack->loadChunksFromZIP("res/images.zip");
     pStack->executeString("require 'main'");
 
 	lua_State* L = pStack->getLuaState();

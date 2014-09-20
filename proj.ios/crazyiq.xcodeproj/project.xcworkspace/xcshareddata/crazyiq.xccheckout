@@ -10,29 +10,29 @@
 	<string>crazyiq</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>6374CBBA-3051-4A63-A056-A9250799C990</key>
+		<key>3625190A7AF2B4A390A7DC465493ED2BD2DC248C</key>
 		<string>https://git.oschina.net/ezburg/CrazyIQ.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>proj.ios/crazyiq.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>6374CBBA-3051-4A63-A056-A9250799C990</key>
+		<key>3625190A7AF2B4A390A7DC465493ED2BD2DC248C</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://git.oschina.net/ezburg/CrazyIQ.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>6374CBBA-3051-4A63-A056-A9250799C990</string>
+	<string>3625190A7AF2B4A390A7DC465493ED2BD2DC248C</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>6374CBBA-3051-4A63-A056-A9250799C990</string>
+			<string>3625190A7AF2B4A390A7DC465493ED2BD2DC248C</string>
 			<key>IDESourceControlWCCName</key>
 			<string>CrazyIQ</string>
 		</dict>
